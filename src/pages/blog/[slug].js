@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { posts } from "@/data/post";
+import { posts } from "@/data/data";
 import { NextSeo } from "next-seo";
 import Loader from "@/components/Loader";
 

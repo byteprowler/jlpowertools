@@ -1,33 +1,69 @@
-import React from 'react'
-
-import { Head, Main, Html, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en-NG"> {/* Nigeria locale */}
       <Head>
         {/* Primary Meta Tags */}
-        <meta charSet='UTF-8' />
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="theme-color" content="#FACC15" /> {/* Brand yellow */}
+        <meta name="author" content="J&L Powertools" />
+        <meta name="robots" content="index, follow" />
         
-        <meta name="title" content="Aluminium Ladder Store - Durable & Reliable" />
-        <meta name="descriptions" content="Shop the best best aluminium ladders in Nigeria - strong, affordable, built to last. Natiowide Delivery available" />
-        <meta name="keywords" content="aluminium ladder, foldable ladder, industrial ladder, buy ladder in Nigeria, home ladder" />
-        <meta name="author" content="byteprowler"  />
-        <meta name="robots" content='index, follow' />
-        <meta name="theme-color" content="#ffffff" />
-      
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.yoursite.come" />
-        <meta property="og:title" content="Aluminium Ladder Store - Durabl& Reliable" />
-        <meta property="og:description" content="Shop the best aluminium ladders in Nigeria - strong, affordable and built to last." />
-        <meta property="og:image" content="/public/jlp.png" />
-      
-        {/* Twitter */}
+        {/* Favicon */}
+        <link rel="icon" href="/jlpics/favicon.ico" />
+        <link rel="apple-touch-icon" href="/jlpics/apple-touch-icon.png" />
+        
+        {/* Preconnect to critical domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Nigeria/West Africa Geo Tags */}
+        <meta name="geo.region" content="NG" />
+        <meta name="geo.placename" content="Lagos" />
+        <meta name="geo.position" content="6.5244;3.3792" />
+        <meta name="ICBM" content="6.5244, 3.3792" />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "J&L Powertools",
+              "image": "https://www.jlpowertools.com.ng/jlpics/logo.jpg",
+              "description": "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "12 Industrial Estate Road",
+                "addressLocality": "Lagos",
+                "addressRegion": "Lagos",
+                "postalCode": "100001",
+                "addressCountry": "NG"
+              },
+              "telephone": "+2348123456789",
+              "openingHours": "Mo-Fr 08:00-17:00",
+              "priceRange": "₦₦₦₦"
+            })
+          }}
+        />
       </Head>
       <body>
         <Main />
         <NextScript />
+        
+        {/* WhatsApp Widget Script (for Nigerian customers) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.whatsappWidget = {
+                phone: '2348123456789',
+                callToAction: 'Chat with us on WhatsApp!'
+              };
+            `
+          }}
+        />
       </body>
     </Html>
   )

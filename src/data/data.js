@@ -41,4 +41,70 @@ export const posts = [
         <p><strong>Final Thoughts:</strong> There's no shortcuts when it comes to safety. Investing in high-quality scaffolding gives Nigerian businesses a competitive edge—faster project completion, safer work environments, and higher client trust. Make the smart move—equip your team with trusted scaffold solutions today.</p>
       `
     }
-  ];
+];
+
+export const products = [
+    {
+      name: "6ft Aluminium Ladder",
+      image: "/ladder-ceo.jpg",
+      height: "6ft",
+      category: "Aluminium",
+    },
+    {
+      name: "10ft Multi-Purpose",
+      image: "https://images.unsplash.com/photo-1575737685561-3ce224445a59?q=80&w=800",
+      height: "10ft",
+      category: "Multipurpose",
+    },
+    {
+      name: "Foldable Extension",
+      image: "/aluminium-scaffold-tower.jpg",
+      height: "8ft",
+      category: "Extension",
+    },
+    {
+      name: "Extension Ladder",
+      image: "/extension-ladder.jpg",
+      height: "16ft",
+      category: "Extension",
+    },
+];
+ 
+export const ladders = [
+  {
+    name: "6ft Aluminium Ladder",
+    image: "/ladder-ceo.jpg",
+    height: "6ft",
+    category: "Aluminium",
+  },
+  {
+    name: "10ft Multi-Purpose",
+    image: "https://images.unsplash.com/photo-1575737685561-3ce224445a59?q=80&w=800",
+    height: "10ft",
+    category: "Multipurpose",
+  },
+  {
+    name: "Foldable Extension",
+    image: "/hdhyeg",
+    height: "8ft",
+    category: "Extension",
+  },
+  {
+    name: "Aluminium Scaffold Tower",
+    image: "/aluminium-scaffold-tower.jpg",
+    height: "8ft",
+    category: "Extension",
+  },
+  {
+    name: "Extension Ladder",
+    image: "/extension-ladder.jpg",
+    height: "16ft",
+    category: "Extension",
+  },
+  {
+    name: "Frame Scaffolding",
+    image: "/frame-scaffolding.jpg",
+    height: "16ft",
+    category: "Extension",
+  },
+];

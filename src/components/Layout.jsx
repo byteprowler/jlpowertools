@@ -2,22 +2,14 @@ import { useRouter } from 'next/router';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import React, { useState } from 'react'
+import Head from 'next/head';
 
 
-export default function Layout({children}) {
-    const [loading, setLoading] = useState(false);
+export default function MainLayout({children}) {
     const router = useRouter();
-
-    // if (status === "loading") {
-    //     return (
-    //       <div className="bg-indigo-900 flex w-screen h-screen items-center justify-center flex-col">
-    //         <Loader />
-    //         <span className="text-white text-3xl">Loading...</span>
-    //       </div>
-    //     );
-    //   }
     
   return (
+    <>
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex-grow">
@@ -25,5 +17,6 @@ export default function Layout({children}) {
       </div>
       <Footer />
     </div>
+    </>
   )
 }
