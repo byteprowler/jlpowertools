@@ -27,7 +27,7 @@ export default function Home() {
         description: "Wholesale construction equipment available at our Lagos facility",
         images: [
           {
-            url: "/jlp.png", // Show actual showroom image
+            url: "/Logo.png", // Show actual showroom image
             width: 1200,
             height: 630,
             alt: "J&L Powertools Lagos Showroom",
