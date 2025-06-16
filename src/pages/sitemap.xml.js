@@ -1,22 +1,30 @@
-// pages/sitemap.xml.js
-import { getAllPosts, getAllProducts } from '@/lib/api';
+import { posts, products } from '@/data/data'; // Import from your local data
 
 export async function getServerSideProps({ res }) {
-  const posts = await getAllPosts();
-  const products = await getAllProducts();
-  
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <!-- Homepage -->
       <url>
         <loc>https://www.jlpowertools.com.ng</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
       </url>
+
+      <!-- Blog Posts -->
       ${posts.map(post => `
         <url>
           <loc>https://www.jlpowertools.com.ng/blog/${post.slug}</loc>
           <lastmod>${new Date(post.date).toISOString()}</lastmod>
+          <changefreq>weekly</changefreq>
+        </url>
+      `).join('')}
+
+      <!-- Product Pages -->
+      ${products.map(product => `
+        <url>
+          <loc>https://www.jlpowertools.com.ng/products/${product.slug}</loc>
+          <lastmod>${new Date().toISOString()}</lastmod>
         </url>
       `).join('')}
     </urlset>
