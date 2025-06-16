@@ -15,7 +15,7 @@ const SEO_CONFIG = {
     siteName: "J&L Powertools",
     images: [
       {
-        url: "/jlp.png", // Local path
+        url: "/Logo.png", // Local path
         width: 1200,
         height: 630,
         alt: "J&L Powertools Lagos Showroom - Scaffolding & Ladders",
@@ -30,7 +30,7 @@ const SEO_CONFIG = {
   additionalMetaTags: [
     {
       name: "keywords",
-      content: "scaffolding showroom Lagos, buy ladders Nigeria, construction equipment West Africa, industrial ladders showroom, J&L Powertools",
+      content: "Scaffolding showroom Lagos, buy ladders Nigeria, construction equipment West Africa, industrial ladders showroom, J&L Powertools",
     },
     // Geo tags focused on Lagos only
     { name: "geo.region", content: "NG-LA" }, // Lagos State

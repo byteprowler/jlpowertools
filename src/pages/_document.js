@@ -2,18 +2,16 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en-NG"> {/* Nigeria locale */}
+    <Html lang="en-NG"> 
       <Head>
-        {/* Primary Meta Tags */}
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#FACC15" /> {/* Brand yellow */}
-        <meta name="author" content="J&L Powertools" />
+        <meta name="author" content="J&L Powertools LTD" />
         <meta name="robots" content="index, follow" />
         
         {/* Favicon */}
-        <link rel="icon" href="/jlpics/favicon.ico" />
-        <link rel="apple-touch-icon" href="/jlpics/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico" />
         
         {/* Preconnect to critical domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,12 +30,12 @@ export default function Document() {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "J&L Powertools",
-              "image": "https://www.jlpowertools.com.ng/jlpics/logo.jpg",
+              "image": "https://jlpowertools.vercel.app/Logo.jpg",
               "description": "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "12 Industrial Estate Road",
-                "addressLocality": "Lagos",
+                "streetAddress": "73 Cemetry Road",
+                "addressLocality": "Yaba",
                 "addressRegion": "Lagos",
                 "postalCode": "100001",
                 "addressCountry": "NG"
