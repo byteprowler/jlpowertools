@@ -1,8 +1,14 @@
-// next-sitemap.config.js
 module.exports = {
-    siteUrl: 'https://yourdomain.com', // replace with actual domain
-    generateRobotsTxt: true, 
-    sitemapSize: 7000,
-    changefreq: 'daily',
-    priority: 0.7,
-  };  
+  siteUrl: 'https://www.jlpowertools.com.ng',
+  generateRobotsTxt: true,
+  exclude: ['/admin/*', '/cart/*'],
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/admin', '/cart'],
+      }
+    ],
+  },
+};

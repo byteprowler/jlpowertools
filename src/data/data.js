@@ -1,6 +1,7 @@
 export const posts = [
     {
       slug: "best-aluminum-ladders-nigeria",
+      image: "/Logo.png",
       title: "Best Aluminum Ladders for Nigerian Roofers",
       description: ["Discover the top aluminum ladders tailored for Nigerian roofers. Learn why they’re the safest, most efficient option in the market."],
       date: "2025-05-05",
@@ -15,6 +16,7 @@ export const posts = [
     },
     {
       slug: "ladder-types-and-their-uses",
+      image: "/Logo.png",
       title: "Top 3 Ladder Types and Their Uses in Nigeria",
       description: ["Step, extension, and platform ladders—learn how each ladder type fits different Nigerian industries and home use cases."],
       date: "2025-05-05",
@@ -29,6 +31,7 @@ export const posts = [
     },
     {
       slug: "why-invest-in-scaffoldings",
+      image: "/ladder-ceo.jpg",
       title: "Why Investing in Scaffolding Equipment Matters for Nigerian Businesses",
       description: ["Explore why quality scaffolding is a must-have for Nigerian construction, maintenance, and industrial sectors."],
       date: "05-05-2025",
@@ -106,5 +109,35 @@ export const ladders = [
     image: "/frame-scaffolding.jpg",
     height: "16ft",
     category: "Extension",
+  },
+];
+
+export const faqs = [
+  {
+    question: "Are your ladders suitable for Nigerian weather conditions?",
+    answer: "Yes, all our aluminum ladders are corrosion-resistant and built to withstand West Africa's tropical climate.",
+  },
+  {
+    question: "Do you offer installation services?",
+    answer: "We provide professional installation guidance for all our scaffolding systems at our Lagos showroom.",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "Bank transfers, credit cards, and cash payments at our Lagos office.",
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Emeka O. (Lekki, Lagos)",
+    quote: "Purchased scaffolding for our construction company - superior quality compared to others in Nigeria.",
+  },
+  {
+    name: "Ghana Construction Ltd. (Accra)",
+    quote: "Though we had to arrange our own shipping, the product quality made it worth importing from Lagos.",
+  },
+  {
+    name: "Abuja Builders Consortium",
+    quote: "Reliable supplier for all our northern Nigeria projects. We send our team to Lagos for procurement.",
   },
 ];

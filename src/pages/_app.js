@@ -50,8 +50,6 @@ export default function App({ Component, pageProps }) {
     <Layout>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Favicon */}
-        <link rel="icon" href="/jlpics/favicon.ico" />
         {/* Preconnect to Google Maps */}
         <link rel="preconnect" href="https://maps.googleapis.com" />
         {/* Francophone support */}

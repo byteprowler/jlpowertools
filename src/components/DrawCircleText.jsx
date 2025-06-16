@@ -1,9 +1,13 @@
 import React from 'react'
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 
 export default function DrawCircleText() {
   return (
-    <div className="grid place-content-center px-4 py-24 text-yellow-50">
+    <motion.div
+    initial={{ opacity: 0, y: -30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+     className="grid place-content-center px-4 py-12 space-y-8 text-yellow-50">
       <h1>
       Premium {" "}
       <span className="relative">
@@ -28,23 +32,13 @@ export default function DrawCircleText() {
       </span>{" "}
       Ladders for Every Job
       </h1>
-    </div>
+      <motion.p
+      className='text-lg md:text-xl mb-6'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 1 }}>
+        West Africa&apos;s Trusted Scafolding Showroom
+      </motion.p>
+    </motion.div>
   )
 }
-
-// import React from "react";
-
-// export const DrawCircleText = () => {
-//   return (
-//     <div >
-//       <h1 className="max-w-2xl text-center text-5xl leading-snug">
-//         Scale your{" "}
-//         <span className="relative">
-//           Marketing
-          
-//         </span>{" "}
-//         with Simple AI Tools
-//       </h1>
-//     </div>
-//   );
-// };

@@ -7,38 +7,9 @@ import { NextSeo } from "next-seo";
 import Image from "next/image";
 import DrawOutline from '@/components/DrawOutline'
 import DrawCircleText from '@/components/DrawCircleText';
-import { posts, products } from "@/data/data";
+import { posts, products, faq, testimonials } from "@/data/data";
 import { ChevronDown } from "lucide-react";
 
-const faqs = [
-  {
-    question: "Are your ladders suitable for Nigerian weather conditions?",
-    answer: "Yes, all our aluminum ladders are corrosion-resistant and built to withstand West Africa's tropical climate.",
-  },
-  {
-    question: "Do you offer installation services?",
-    answer: "We provide professional installation guidance for all our scaffolding systems at our Lagos showroom.",
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "Bank transfers, credit cards, and cash payments at our Lagos office.",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Emeka O. (Lekki, Lagos)",
-    quote: "Purchased scaffolding for our construction company - superior quality compared to others in Nigeria.",
-  },
-  {
-    name: "Ghana Construction Ltd. (Accra)",
-    quote: "Though we had to arrange our own shipping, the product quality made it worth importing from Lagos.",
-  },
-  {
-    name: "Abuja Builders Consortium",
-    quote: "Reliable supplier for all our northern Nigeria projects. We send our team to Lagos for procurement.",
-  },
-];
 
 export default function Home() {
   const latest = posts.sort((a,b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
@@ -81,26 +52,23 @@ export default function Home() {
         id="hero"
         className="relative min-h-screen flex flex-col overflow-hidden items-center justify-center text-center px-6 text-white"
         style={{
-          backgroundImage: "url('/ladder-ceo.jpg')", // Showroom exterior
+          backgroundImage: "url('/showroom.jpeg')", // Showroom exterior
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
         <div className="absolute inset-0 bg-black/60 z-0"/>
         <div className="relative z-10 max-w-3xl">
           <motion.h1
-            className="text-5xl md:text-6xl font-extrabold mb-2"
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}>
-            <DrawCircleText text="J&L Powertools Lagos" /> {/* Updated */}
+            className="text-5xl md:text-6xl font-extrabold mb-2">
+            <DrawCircleText />
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             className="text-lg md:text-xl text-gray-100 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}>
             West Africa&apos;s Trusted Scaffolding Showroom
-          </motion.p>
+          </motion.p> */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -109,6 +77,17 @@ export default function Home() {
             <DrawOutline href="/visit">
               Visit Our Showroom
             </DrawOutline>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="md:hidden block">
+              <Link
+               href={'/products'}
+               className="inline-block bg-white text-black font-semibold px-6 py-3 rounded-full shadow transition">
+                Browse Products
+              </Link>
           </motion.div>
         </div>
       </section>
@@ -226,7 +205,7 @@ export default function Home() {
               </p>
               <div className="space-y-2">
                 <p><strong>Address:</strong> 73 Cemetry Road, Yaba, Lagos 100001, Lagos, Nigeria.</p>
-                <p><strong>Hours:</strong> Mon-Fri: 8AM - 5PM | Sat: 9AM - 2PM</p>
+                <p><strong>Hours:</strong> Mon-Fri: 8AM - 5PM | Sat: 9AM - 4PM</p>
                 <p><strong>Phone:</strong> +234 812 345 6789</p>
               </div>
               <Link 
