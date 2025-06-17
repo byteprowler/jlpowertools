@@ -59,7 +59,7 @@ export default function ProductsPage() {
               key={category}
               onClick={() => setFilter(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === category
+                filter 
                   ? "bg-[#FACC15] text-black shadow-md"
                   : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50"
               }`}
@@ -83,7 +83,7 @@ export default function ProductsPage() {
               {/* Product Image */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
-                  src={`/jlpics/products/${ladder.image}`}
+                  src={ladder.image}
                   alt={`${ladder.name} - ${ladder.material} ladder available in Lagos`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"

@@ -86,7 +86,6 @@ export default function AboutPage() {
         &ldquo;To empower West African builders with durable, affordable access      equipment that meets 
         international safety standards while creating local jobs and expertise.&rdquo;
         </blockquote>
-
         <p className="mt-6 text-gray-600 font-medium">– Obinna Eboh, <span className="text-gray-800 font-semibold">Managing Director</span></p>
       </motion.div>
 
