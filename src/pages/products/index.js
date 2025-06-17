@@ -6,7 +6,7 @@ import { FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { NextSeo } from "next-seo";
 import { ladders } from "@/data/data";
 
-const categories = ["All", "Aluminium", "Fiberglass", "Extension", "Industrial"];
+const uniqueCategories = ["All", ...new Set(ladders.map(l => l.category))];
 
 export default function ProductsPage() {
   const [filter, setFilter] = useState("All");
@@ -54,12 +54,12 @@ export default function ProductsPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          {categories.map((category) => (
+          {uniqueCategories.map((category) => (
             <button
-              key={category}
+              key={category.id}
               onClick={() => setFilter(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter 
+                filter === category 
                   ? "bg-[#FACC15] text-black shadow-md"
                   : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50"
               }`}
