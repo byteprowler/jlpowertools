@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Footer from './Footer';
 import Navbar from './Navbar';
-import React, { useState } from 'react'
+import React from 'react'
 
 
 export default function MainLayout({children}) {

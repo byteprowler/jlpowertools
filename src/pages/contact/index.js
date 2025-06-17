@@ -1,98 +1,149 @@
 import { NextSeo } from 'next-seo';
+import { FaWhatsapp, FaPhoneAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
+import { CiMail } from 'react-icons/ci';
 
 export default function ContactPage() {
   return (
     <>
       <NextSeo
-        title="Contact J&L Powertools LTD | Scaffolding & Ladders (Nigeria)"
-        description="Visit our Lagos office or call ☎ +234 812 345 6789 for wholesale scaffolding & ladders. Serving Nigeria, Ghana, Benin, Togo."
+        title="Scaffolding Supplier in West Africa | J&L Powertools Contact"
+        description="Lagos-based industrial ladder specialists serving Nigeria, Ghana, Benin & Togo. Visit our showroom at 73 Cemetery Street or call ☎ +234 818 407 7464."
         canonical="https://www.jlpowertools.com.ng/contact"
+        openGraph={{
+          type: 'website',
+          locale: 'en_NG',
+          url: 'https://www.jlpowertools.com.ng/contact',
+          siteName: 'J&L Powertools',
+          images: [{
+            url: '/jlpics/west-africa-coverage.jpg',
+            width: 1200,
+            height: 630,
+            alt: 'J&L Powertools West Africa Coverage',
+          }],
+        }}
+        additionalMetaTags={[
+          {
+            name: 'geo.region',
+            content: 'NG,GH,BJ,TG'
+          },
+          {
+            name: 'keywords',
+            content: 'scaffolding Nigeria, ladders Ghana, construction equipment Benin, industrial ladders Togo, West Africa supplier'
+          }
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "J&L Powertools LTD",
+          "image": "/Logo.png",
+          "description": "Industrial scaffolding and ladder supplier serving West Africa",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "73 Cemetery Street",
+            "addressLocality": "Yaba",
+            "addressRegion": "Lagos",
+            "postalCode": "100001",
+            "addressCountry": "NG"
+          },
+          "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": 6.485928,
+              "longitude": 3.383022
+            },
+            "geoRadius": 1000000 // Covers ~1000km radius from Lagos
+          },
+          "telephone": "+2348123456789"
+        }}
       />
 
-      <main className="px-6 py-12 max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Visit or Call J&L Powertools</h1>
+      <main className="px-4 mt-12 py-12 max-w-4xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6">Serving West Africa from Lagos</h1>
         
-        {/* Google Maps Embed */}
-        <div className="mb-12 rounded-xl overflow-hidden shadow-lg">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2819994781858!2d3.383022573541852!3d6.485928293506036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d007f647cc3%3A0xfc0655f7e2900e4a!2sJ%20%26%20L%20POWERTOOLS%20LTD!5e0!3m2!1sen!2sng!4v1749918015202!5m2!1sen!2sng" 
-          width="100%" 
-          height="400" 
-          style={{ border: 0 }} 
-          allowfullscreen 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"
-          title="J&L Powertools LTD" />
-        </div>
-
-        {/* Contact Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Nigeria HQ */}
-          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-            <h2 className="text-2xl font-bold mb-4 flex items-center">
-              <span className="mr-2">🇳🇬</span> Lagos Headquarters
-            </h2>
-            <address className="not-italic">
-              <p className="mb-3">
-                <strong>Address:</strong><br />
-                73 Cemetry Road,<br />
-                Yaba, Lagos 100001, Lagos, Nigeria.
-              </p>
-              <p className="mb-3">
-                <strong>Phone:</strong><br />
-                <a href="tel:+2348123456789" className="text-blue-600 hover:underline">
-                  +234 812 345 6789
-                </a>
-              </p>
-              <p>
-                <strong>WhatsApp:</strong><br />
-                <a 
-                  href="https://wa.me/2348123456789" 
-                  className="text-green-600 hover:underline inline-flex items-center"
-                >
-                  Chat Now <span className="ml-1">→</span>
-                </a>
-              </p>
-            </address>
-          </div>
-
-          {/* Ghana Branch */}
-          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-            <h2 className="text-2xl font-bold mb-4 flex items-center">
-              <span className="mr-2">🇬🇭</span> Accra Branch
-            </h2>
-            <address className="not-italic">
-              <p className="mb-3">
-                <strong>Address:</strong><br />
-                23 Construction Avenue,<br />
-                Industrial Area, Accra, Ghana
-              </p>
-              <p>
-                <strong>Phone:</strong><br />
-                <a href="tel:+233123456789" className="text-blue-600 hover:underline">
-                  +233 123 456 789
-                </a>
-              </p>
-            </address>
-          </div>
-        </div>
-
-        {/* Business Hours */}
-        <div className="mt-12 bg-yellow-50 p-6 rounded-xl border border-yellow-100">
-          <h2 className="text-2xl font-bold mb-4">Business Hours</h2>
-          <ul className="space-y-2">
-            <li className="flex justify-between max-w-xs">
-              <span className="font-medium">Monday - Friday:</span>
-              <span>8:00 AM - 5:00 PM</span>
-            </li>
-            <li className="flex justify-between max-w-xs">
-              <span className="font-medium">Saturday:</span>
-              <span>10:00 AM - 3:00 PM</span>
-            </li>
-            <li className="flex justify-between max-w-xs">
-              <span className="font-medium">Sunday:</span>
-              <span>Closed</span>
-            </li>
+        {/* Location Strategy Section */}
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-10">
+          <h2 className="text-xl font-bold mb-3 text-blue-800">Regional Coverage</h2>
+          <p className="mb-4">
+            While our showroom is in Lagos, we serve clients across:
+          </p>
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {['Nigeria', 'Ghana', 'Benin', 'Togo'].map(country => (
+              <li key={country} className="bg-white px-3 py-2 rounded-md shadow-sm text-center">
+                {country}
+              </li>
+            ))}
           </ul>
+        </div>
+
+        {/* Lagos HQ */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 flex items-center">
+            <FaMapMarkerAlt className="text-red-500 mr-2" />
+            Lagos Headquarters (Main Showroom)
+          </h2>
+          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <p className="mb-4">
+                  <strong>Address:</strong><br />
+                  73 Cemetery Street, Yaba,<br />
+                  Lagos, Nigeria
+                </p>
+                <div className="space-y-3">
+                  <a href="tel:+2348184077464" className="flex items-center text-lg hover:text-[#FACC15] transition-colors">
+                    <FaPhoneAlt className="mr-2" /> +234 818 407 7464
+                  </a>
+                  <a 
+                    href="https://wa.me/2348123456789" 
+                    target="_blank"
+                    rel="noopener"
+                    className="flex items-center text-lg hover:text-[#FACC15] transition-colors"
+                  >
+                    <FaWhatsapp className="mr-2" /> WhatsApp Chat
+                  </a>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="font-semibold mb-3 flex items-center">
+                  <FaClock className="mr-2" />
+                  Opening Hours
+                </h3>
+                <ul className="space-y-1">
+                  <li className="flex justify-between">
+                    <span>Mon-Fri</span>
+                    <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Saturday</span>
+                    <span>9:00 AM - 4:00 PM</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* International Clients */}
+        <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h2 className="text-xl font-bold mb-3">For International Clients</h2>
+          <p className="mb-4">
+            We arrange shipping to all West African countries. Contact us for:
+          </p>
+          <ul className="list-disc pl-5 space-y-2 mb-6">
+            <li>Bulk order discounts</li>
+            <li>Customs documentation assistance</li>
+            <li>Regional delivery timelines</li>
+          </ul>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="mailto:jlpowertools@yahoo.com"
+              className="inline-flex items-center bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-medium"
+            >
+              <CiMail className="mr-2" /> Export Inquiry
+            </a>
+          </div>
         </div>
       </main>
     </>

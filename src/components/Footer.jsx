@@ -1,101 +1,175 @@
-import React from 'react'
-import Link from 'next/link'
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import { FaXTwitter, FaConnectdevelop } from "react-icons/fa6";
-import {motion} from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaLinkedinIn, 
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaMapMarkerAlt
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { motion } from 'framer-motion';
 import { CiMail } from "react-icons/ci";
+import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 
 export default function Footer() {
   return (
-<motion.footer
-  className="bg-gray-900 text-white px-6 py-10 mt-20"
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
->
-  <div className="max-w-6xl space-between mx-auto grid md:grid-cols-3 gap-6 text-sm">
-    {[
-      {
-        title: "About Us",
-        content: (
-          <p>
-            We specialize in crafting premium aluminium ladders for professionals and homeowners.
-          </p>
-        ),
-      },
-      {
-        title: "Quick Links",
-        content: (
-          <ul className="space-y-1">
-            <li><a href="/" className="hover:underline">Home</a></li>
-            <li><a href="/products" className="hover:underline">Products</a></li>
-            <li><a href="/contact" className="hover:underline">Contact</a></li>
-          </ul>
-        ),
-      },
-      {
-        title: "Contact",
-       content: (
-  <div>
-    <div className="flex flex-col gap-2">
-          <Link className="flex text-center items-center" href={'/'}>
-             <CiMail /> <span className="ml-2">Email</span>
-          </Link>
-          <Link className="flex text-center items-center" href={'/'}>
-             <FaFacebookF /> <span className="ml-2">Facebook</span>
-          </Link>
-          <Link className="flex text-center items-center" href={'/'}>
-             <FaInstagram /> <span className="ml-2">Instagram</span>
-          </Link>
-          <Link className="flex text-center items-center" href={'/'}>
-             <FaXTwitter /> <span className="ml-2">Twitter</span>
-          </Link>
-          <Link className="flex text-center items-center" href={'/'}>
-             <FaLinkedinIn /> <span className="ml-2">LinkedIn</span>
-          </Link>
-          <Link className="flex text-center items-center" href={'https://byteprowler.vercel.app'}>
-             <FaConnectdevelop /> <span className="ml-2">Developer</span>
-          </Link>
-    </div>
-  </div>
-),
-      },
-    ].map((item, i) => (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 30 }}
+    <>
+      <NextSeo
+        noindex={false}
+        nofollow={false}
+      />
+      
+      <motion.footer
+        className="bg-gray-900 text-white px-6 py-12 mt-20"
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.2, duration: 0.6 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-        <div>
-        {item.content}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
+          {/* About Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+           <Image 
+           src="/footer.png"
+           fiil
+           width={100}
+           height={100}
+           alt="J&L Powertools LTD Logo"
+           />
+            <p className="text-gray-300">
+              Leading supplier of industrial scaffolding and aluminum ladders in Lagos, Nigeria. 
+              Serving contractors across West Africa since 2010.
+            </p>
+          </motion.div>
+
+          {/* Quick Links Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li><Link href="/products" className="hover:text-[#FACC15] transition-colors">Our Products</Link></li>
+              <li><Link href="/insights" className="hover:text-[#FACC15] transition-colors">Insights</Link></li>
+              <li><Link href="/about" className="hover:text-[#FACC15] transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-[#FACC15] transition-colors">Contact</Link></li>
+            </ul>
+          </motion.div>
+
+          {/* Showroom Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="font-semibold text-lg mb-4">Our Showroom</h4>
+            <address className="not-italic text-gray-300 space-y-2">
+              <Link href={'https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy'} className="flex items-start hover:text-[#FACC15]">
+                <FaMapMarkerAlt className="mt-1 mr-2 flex-shrink-0" />
+                <span>73 Cemetry Street, Yaba, Lagos</span>
+              </Link>
+              <div className="flex items-center">
+                <FaPhoneAlt className="mr-2" />
+                <a href="tel:+2348184077464" className="hover:text-[#FACC15] transition-colors">
+                  +234 818 407 7464
+                </a>
+              </div>
+              <div className="flex items-center">
+                <CiMail className="mr-2 text-base" />
+                <a href="mailto:jlpowertools@yahoo.com" className="hover:text-[#FACC15] transition-colors">
+                  jlpowertools@yahoo.com
+                </a>
+              </div>
+            </address>
+          </motion.div>
+
+          {/* Social Media Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="font-semibold text-lg mb-4">Connect With Us</h4>
+            <div className="flex flex-wrap gap-3 mb-4">
+              <a 
+                href="https://facebook.com/jlpowertools" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-[#1877F2] text-white p-2 rounded-full transition-colors"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
+              <a 
+                href="https://instagram.com/jlpowertools" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-[#E1306C] text-white p-2 rounded-full transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a 
+                href="https://twitter.com/jlpowertools" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-black text-white p-2 rounded-full transition-colors"
+                aria-label="Twitter"
+              >
+                <FaXTwitter />
+              </a>
+              <a 
+                href="https://linkedin.com/company/jlpowertools" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-[#0A66C2] text-white p-2 rounded-full transition-colors"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a 
+                href="https://wa.me/2348035717860" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-[#25D366] text-white p-2 rounded-full transition-colors"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp />
+              </a>
+            </div>
+            <div className="text-gray-300 text-sm">
+              <p>Hours: Mon-Fri 8AM-5PM</p>
+              <p>Sat 9AM-4PM</p>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-    ))}
-  </div>
 
-  <motion.div
-  className="flex justify-center gap-4 mt-8"
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.5, duration: 0.6 }}
-  viewport={{ once: true }}
->
-
-</motion.div>  
-
-  <motion.div
-    className="text-center text-xs text-gray-400 mt-8"
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.6, duration: 0.5 }}
-    viewport={{ once: true }}
-  >
-    &copy; {new Date().getFullYear()} J&L Powertools. All rights reserved.
-  </motion.div>
-</motion.footer>
-  )
+        {/* Copyright */}
+        <motion.div
+          className="text-center text-xs text-gray-400 mt-12 pt-6 border-t border-gray-800"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <p>&copy; {new Date().getFullYear()} J&L Powertools. All rights reserved.</p>
+          <p className="mt-2">
+            Designed by <a href="https://byteprowler.vercel.app" target="_blank" rel="noopener" className="text-[#FACC15] hover:underline">ByteProwler</a>
+          </p>
+        </motion.div>
+      </motion.footer>
+    </>
+  );
 }

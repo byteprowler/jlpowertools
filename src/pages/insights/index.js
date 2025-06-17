@@ -59,7 +59,7 @@ const Typewrite = ({ examples }) => {
 };
 
 
-export default function BlogHome() {
+export default function Insights() {
   return (
     <>
     <NextSeo
@@ -88,7 +88,7 @@ export default function BlogHome() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}>
-            <Link href={`/blog/${post.slug}`} className="group">
+            <Link href={`/insights/${post.slug}`} className="group">
               <article className="flex flex-col md:flex-row gap-6">
                 <div className="relative w-full md:w-64 h-48 overflow-hidden rounded-lg bg-gray-100">
                   {post.image && (

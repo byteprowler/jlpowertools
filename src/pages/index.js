@@ -52,7 +52,7 @@ export default function Home() {
         id="hero"
         className="relative min-h-screen flex flex-col overflow-hidden items-center justify-center text-center px-6 text-white"
         style={{
-          backgroundImage: "url('/showroom.jpeg')", // Showroom exterior
+          backgroundImage: "url('/ladder-ceo.jpg')", // Showroom exterior
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
@@ -62,13 +62,6 @@ export default function Home() {
             className="text-5xl md:text-6xl font-extrabold mb-2">
             <DrawCircleText />
           </motion.h1>
-          {/* <motion.p
-            className="text-lg md:text-xl text-gray-100 mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 1 }}>
-            West Africa&apos;s Trusted Scaffolding Showroom
-          </motion.p> */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -175,7 +168,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold">{post.title}</h3>
               <p className="text-sm text-gray-600 mt-2">{post.description}</p>
               <Link 
-                href={`/blog/${post.slug}`} 
+                href={`/insights/${post.slug}`} 
                 className="text-yellow-600 hover:underline mt-3 inline-block font-medium"
               >
                 Read Article →
@@ -185,7 +178,7 @@ export default function Home() {
         </div>
         <div className="text-center mt-8">
           <Link
-            href="/blog"
+            href="/insights"
             className="inline-block border border-yellow-400 text-yellow-600 px-6 py-2 rounded-full font-medium hover:bg-yellow-600 hover:text-white transition"
           >
             View All Articles
@@ -204,7 +197,7 @@ export default function Home() {
                 While we don&apos;t offer delivery, our showroom in Yaba, Lagos welcomes clients from across West Africa for quality inspection and purchase.
               </p>
               <div className="space-y-2">
-                <p><strong>Address:</strong> 73 Cemetry Road, Yaba, Lagos 100001, Lagos, Nigeria.</p>
+                <p><strong>Address:</strong> 73 Cemetry Street, Yaba, Lagos 100001, Lagos, Nigeria.</p>
                 <p><strong>Hours:</strong> Mon-Fri: 8AM - 5PM | Sat: 9AM - 4PM</p>
                 <p><strong>Phone:</strong> +234 812 345 6789</p>
               </div>

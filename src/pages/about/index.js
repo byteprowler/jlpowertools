@@ -1,5 +1,7 @@
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
+import { motion } from "framer-motion";
+import CountUp from 'react-countup';
 
 export default function AboutPage() {
   return (
@@ -38,7 +40,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>
-                Founded in <strong>Lagos (2010)</strong>, J&L Powertools began as a small supplier of 
+                Founded in <strong>Lagos (2000)</strong>, J&L Powertools began as a small supplier of 
                 industrial ladders to local construction companies. Today, we serve <strong>over 500+ 
                 contractors</strong> across West Africa.
               </p>
@@ -58,28 +60,36 @@ export default function AboutPage() {
         {/* Milestones */}
         <div className="mt-20 grid sm:grid-cols-3 gap-6 text-center">
           {[
-            { number: "12+", label: "Years in Business" },
-            { number: "5,000+", label: "Ladders Supplied" },
-            { number: "8", label: "West African Countries Served" },
+            { number: "25", suffix: "+", label: "Years in Business" },
+            { number: "20000", suffix: "+", label: "Ladders Supplied" },
+            { number: "8", suffix: "+", label: "West African Countries Served" },
           ].map((item, index) => (
             <div key={index} className="bg-yellow-50 p-6 rounded-xl border border-yellow-100">
-              <p className="text-4xl font-bold text-yellow-600">{item.number}</p>
+              <p className="text-4xl font-bold text-yellow-600">
+                <CountUp duration={6} start={1} end={item.number} />{item.suffix}
+                </p>
               <p className="mt-2 font-medium">{item.label}</p>
             </div>
           ))}
         </div>
 
-        {/* Mission Section */}
-        <div className="mt-20 bg-gray-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-          <blockquote className="text-xl italic text-gray-700 border-l-4 border-yellow-400 pl-6 py-2">
-            &quot;To empower West African builders with durable, affordable access equipment that meets 
-            international safety standards while creating local jobs and expertise.&quot;
-          </blockquote>
-          <p className="mt-6 text-gray-600">
-            - Chief Obinna Ekoh, Founder & CEO
-          </p>
-        </div>
+{/* Mission Section */}
+      <motion.div
+       initial={{ opacity: 0, y: 50 }}
+       animate={{ opacity: 1, y: 0 }}
+       viewport={{ once: false, amount: 0.4 }}
+       transition={{ duration: 0.8, ease: "easeOut" }}
+       className="mt-20 bg-gray-50 p-8 rounded-xl shadow-sm">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Mission</h2>
+  
+        <blockquote className="relative text-xl italic text-gray-700 border-l-4 border-yellow-400 pl-6 py-4">
+        &ldquo;To empower West African builders with durable, affordable access      equipment that meets 
+        international safety standards while creating local jobs and expertise.&rdquo;
+        </blockquote>
+
+        <p className="mt-6 text-gray-600 font-medium">– Obinna Eboh, <span className="text-gray-800 font-semibold">Managing Director</span></p>
+      </motion.div>
+
       </main>
     </>
   );

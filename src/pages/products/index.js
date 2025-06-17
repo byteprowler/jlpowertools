@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaWhatsapp, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { NextSeo } from "next-seo";
 import { ladders } from "@/data/data";
 
@@ -24,7 +24,7 @@ export default function ProductsPage() {
         openGraph={{
           url: 'https://www.jlpowertools.com.ng/products',
           images: [{
-            url: '/jlpics/products-og-image.jpg',
+            url: '/Logo.png',
             width: 1200,
             height: 630,
             alt: 'J&L Powertools product showcase',
@@ -32,7 +32,7 @@ export default function ProductsPage() {
         }}
       />
 
-      <main className="px-4 py-12 max-w-7xl mx-auto">
+      <main className="px-4 mt-12 py-12 max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="text-center mb-12">
           <motion.h1
@@ -43,7 +43,7 @@ export default function ProductsPage() {
             Industrial-Grade Equipment
           </motion.h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Test quality in person at our Ikeja showroom
+            Test quality in person at our Lagos showroom
           </p>
         </section>
 
@@ -140,19 +140,19 @@ export default function ProductsPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold mb-3">Visit Our Ikeja Showroom</h3>
+          <h3 className="text-2xl font-bold mb-3">Visit Our Lagos Showroom</h3>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-            See and test our equipment in person at 12 Industrial Estate Road, Ikeja. Open Mon-Fri: 8AM-5PM, Sat: 9AM-2PM.
+            See and test our equipment in person at 73 Cemetry Street, Yaba, Lagos. Open Mon-Fri: 8AM-5PM, Sat: 9AM-4PM.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+2348035717860"
+              href="tel:+2348184077464"
               className="flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium"
             >
-              <FaPhone /> +234 803 571 7860
+              <FaPhoneAlt /> +234 818 407 7464
             </a>
             <a
-              href="https://goo.gl/maps/Z9SCxYUJy8mDDm926"
+              href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 px-6 py-3 rounded-lg font-medium"

@@ -1,13 +1,24 @@
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
+
 import Loader from "@/components/Loader";
 import { posts } from "@/data/data";
-import { FaCalendarAlt, FaClock, FaShareAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaClock, FaShareAlt, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { MdOutlineArrowBack } from "react-icons/md";
 
-export default function BlogPost() {
+
+export default function InsightsPost() {
   const router = useRouter();
+
+  const SocialIcons ={
+    Twitter: <FaXTwitter />,
+    Facebook: <FaFacebook />,
+    LinkedIn: <FaLinkedinIn />,
+    WhatsApp: <FaWhatsapp />, // Placeholder, replace with actual LinkedIn icon
+  }
+
   const { slug } = router.query;
 
   const post = posts.find((p) => p.slug === slug);
@@ -27,17 +38,17 @@ export default function BlogPost() {
       <NextSeo
         title={`${post.title} | J&L Powertools - Scaffolding Experts`}
         description={post.description}
-        canonical={`https://www.jlpowertools.com.ng/blog/${post.slug}`}
+        canonical={`https://www.jlpowertools.com.ng/insights/${post.slug}`}
         openGraph={{
           type: 'article',
           article: {
             publishedTime: post.date,
             tags: post.tags || ['construction', 'scaffolding', 'ladders'],
           },
-          url: `https://www.jlpowertools.com.ng/blog/${post.slug}`,
+          url: `https://www.jlpowertools.com.ng/insights/${post.slug}`,
           images: [
             {
-              url: `/jlpics/blog/${post.featuredImage || 'default-og.jpg'}`,
+              url: `/jlpics/insights/${post.featuredImage || 'default-og.jpg'}`,
               width: 1200,
               height: 630,
               alt: post.title,
@@ -52,14 +63,14 @@ export default function BlogPost() {
         ]}
       />
 
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+      <main className="max-w-3xl mx-auto mt-12 px-4 sm:px-6 py-12">
         {/* Back Button */}
         <button 
-          onClick={() => router.push('/blog')}
-          className="flex items-center text-[#FACC15] hover:text-yellow-600 mb-8 transition-colors"
+          onClick={() => router.push('/insights')}
+          className="flex items-center text-[#FACC15] hover:text-yellow-600 mb-8 hover:cursor-pointer transition-colors"
         >
           <MdOutlineArrowBack className="mr-2" />
-          Back to Blog
+          Back to insights
         </button>
 
         {/* Article Header */}
@@ -84,15 +95,14 @@ export default function BlogPost() {
               </span>
             </div>
 
-            {post.featuredImage && (
+            {post.image && (
               <div className="relative h-64 md:h-80 rounded-xl overflow-hidden mb-8">
                 <Image
-                  src={post.featuredImage}
+                  src={post.image}
                   alt={`Featured image for ${post.title}`}
                   fill
                   loading="lazy"
                   className="object-cover"
-                  priority
                 />
               </div>
             )}
@@ -118,6 +128,9 @@ export default function BlogPost() {
                 >
                   <FaShareAlt />
                   {platform}
+                  <span className="ml-0 mr-1 inline-flex items-center">
+                  {SocialIcons [platform]}
+                  </span>
                 </button>
               ))}
             </div>
@@ -130,7 +143,7 @@ export default function BlogPost() {
 
 // Helper function for sharing
 const shareArticle = (platform, post) => {
-  const url = `https://www.jlpowertools.com.ng/blog/${post.slug}`;
+  const url = `https://www.jlpowertools.com.ng/insights/${post.slug}`;
   const text = `Check out this article from J&L Powertools LTD: ${post.title}`;
 
   switch(platform) {
