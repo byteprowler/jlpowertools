@@ -50,12 +50,14 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-screen flex flex-col overflow-hidden items-center justify-center text-center px-6 text-white"
-        style={{
-          backgroundImage: "url('/ladder-ceo.jpg')", // Showroom exterior
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
+        className="relative min-h-screen flex flex-col overflow-hidden items-center justify-center text-center px-6 text-white">
+        <Image
+          src="/ladder-ceo.jpg"
+          alt="Hero"
+          loading='lazy'
+          fill
+          style={{ objectFit: "cover", objectPosition: "center"}} 
+        />
         <div className="absolute inset-0 bg-black/60 z-0"/>
         <div className="relative z-10 max-w-3xl">
           <motion.h1
@@ -82,12 +84,12 @@ export default function Home() {
                 Browse Products
               </Link>
           </motion.div>
-          {/* <motion.div
-          className="absolute bottom-1 inline-block items-center justify-center text-white py-2"
+          <motion.div
+          className="absolute left-1/2 -translate-x-1/2 block md:hidden items-center justify-center text-white py-2"
           animate={{ y: [0, 10, 0]}}
           transition={{ repeat: Infinity, duration: 2 }}>
             <ChevronDown className="w-8 h-8 opacity-70" />
-          </motion.div> */}
+          </motion.div>
         </div>
       </section>
 
@@ -206,10 +208,11 @@ export default function Home() {
               <div className="space-y-2">
                 <p><strong>Address:</strong> 73 Cemetry Street, Yaba, Lagos 100001, Lagos, Nigeria.</p>
                 <p><strong>Hours:</strong> Mon-Fri: 8AM - 5PM | Sat: 9AM - 4PM</p>
-                <p><strong>Phone:</strong> +234 812 345 6789</p>
+                <p><strong>Hotline:</strong>{' '}<a className="hover:underline" href={"tel:+234803717860"}>+234 803 571 7860</a></p>
+                <p><strong>Alt Line:</strong>{' '}<a className='hover:underline' href={'tel:+2348184077464'}>+234 818 407 7464</a></p>
               </div>
               <Link 
-                href="/visit" 
+                href={'https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy'} 
                 className="inline-block mt-6 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
                 Get Directions
               </Link>

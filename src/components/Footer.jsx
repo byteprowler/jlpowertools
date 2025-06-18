@@ -81,8 +81,14 @@ export default function Footer() {
               </Link>
               <div className="flex items-center">
                 <FaPhoneAlt className="mr-2" />
+                <a href="tel:+2348035717860" className="hover:text-[#FACC15] font-semibold transition-colors">
+                 Hotline: +234 803 571 7860
+                </a>
+              </div>
+              <div className="flex items-center">
+                <FaPhoneAlt className="mr-2" />
                 <a href="tel:+2348184077464" className="hover:text-[#FACC15] transition-colors">
-                  +234 818 407 7464
+                 Alt Line: +234 818 407 7464
                 </a>
               </div>
               <div className="flex items-center">
