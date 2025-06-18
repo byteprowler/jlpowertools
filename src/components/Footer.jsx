@@ -46,7 +46,7 @@ export default function Footer() {
            />
             <p className="text-gray-300">
               Leading supplier of industrial scaffolding and aluminum ladders in Lagos, Nigeria. 
-              Serving contractors across West Africa since 2010.
+              Serving contractors across West Africa since 2000.
             </p>
           </motion.div>
 
@@ -94,7 +94,7 @@ export default function Footer() {
             </address>
           </motion.div>
 
-          {/* Social Media Column */}
+          {/* Social Media Column */}     
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ export default function Footer() {
           transition={{ delay: 0.6, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <p>&copy; {new Date().getFullYear()} J&L Powertools. All rights reserved.</p>
+          <p>&copy; 2000 - {new Date().getFullYear()} J&L Powertools LTD. All rights reserved.</p>
           <p className="mt-2">
             Designed by <a href="https://byteprowler.vercel.app" target="_blank" rel="noopener" className="text-[#FACC15] hover:underline">ByteProwler</a>
           </p>

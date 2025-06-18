@@ -7,23 +7,23 @@ import { NextSeo } from "next-seo";
 import Image from "next/image";
 import DrawOutline from '@/components/DrawOutline'
 import DrawCircleText from '@/components/DrawCircleText';
-import { posts, products, faq, testimonials } from "@/data/data";
+import { posts, products, testimonials, ladders } from "@/data/data";
 import { ChevronDown } from "lucide-react";
 
 
 export default function Home() {
   const latest = posts.sort((a,b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
-  const topProducts = products.slice(0, 3);
+  const topProducts = ladders.slice(0, 3);
 
   return (
     <>
     <NextSeo
-      title="Premium Aluminium Ladders & Scaffolding | J&L Powertools (Lagos, Nigeria)"
+      title="Premium Aluminium Ladders & Scaffolding | J&L Powertools LTD (Lagos, Nigeria)"
       description="Nigeria's premier showroom for industrial ladders & scaffolding. Serving clients from across West Africa. Visit our Lagos facility for quality inspection."
       canonical="https://www.jlpowertools.com.ng"
       openGraph={{
         url: "https://www.jlpowertools.com.ng",
-        title: "Industrial Ladders & Scaffolding Showroom | J&L Powertools Lagos",
+        title: "Industrial Ladders & Scaffolding Showroom | J&L Powertools LTD",
         description: "Wholesale construction equipment available at our Lagos facility",
         images: [
           {
@@ -82,6 +82,12 @@ export default function Home() {
                 Browse Products
               </Link>
           </motion.div>
+          {/* <motion.div
+          className="absolute bottom-1 inline-block items-center justify-center text-white py-2"
+          animate={{ y: [0, 10, 0]}}
+          transition={{ repeat: Infinity, duration: 2 }}>
+            <ChevronDown className="w-8 h-8 opacity-70" />
+          </motion.div> */}
         </div>
       </section>
 
@@ -125,9 +131,10 @@ export default function Home() {
                 src={product.image}
                 alt={`${product.name} - Available at our Lagos showroom`}
                 className="rounded-t-xl w-full h-64 object-cover" />
-              <div className="p-4">
+              <div className="p-4 shadow-md rounded-t-xl overflow-hidden">
                 <h4 className="font-bold text-sm mt-1">{product.name}</h4>
                 <p className="text-gray-500 text-sm mt-1">Height: {product.height}</p>
+                <p className="text-gray-500 text-sm mt-1">Material: {product.material}</p>
                 <p className="text-yellow-600 font-semibold mt-2">Inspect in Lagos</p>
               </div>
             </motion.div>
@@ -136,7 +143,7 @@ export default function Home() {
         <div className="text-center mt-8">
           <Link
             href="/products"
-            className="inline-block bg-[#FACC15] hover:bg-yellow-400 text-white px-6 py-2 rounded-full font-semibold">
+            className="inline-block bg-white transition-colors hover:bg-yellow-400 text-[#FACC15] border hover:text-white px-6 py-2 rounded-full font-semibold">
             View Full Catalog
           </Link>
         </div>

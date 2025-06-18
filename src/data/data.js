@@ -26,7 +26,7 @@ export const posts = [
       description: ["Step, extension, and platform ladders—learn how each ladder type fits different Nigerian industries and home use cases."],
       date: "2025-05-05",
       content: `
-          <p>When it comes to ladders, one size doesn’t fit all jobs. Different tasks across Nigeria require specific ladder types, and using the wrong one can result in poor performance—or worse, serious injuries. In this blog, we’ll highlight the top three ladder types: step, extension, and platform ladders, and how they serve both industrial and home users across Nigeria and West Africa.</p>
+          <p>When it comes to ladders, one size doesn’t fit all jobs. Different tasks across Nigeria require specific ladder types, and using the wrong one can result in poor performance—or worse, serious injuries. In this article, we’ll highlight the top three ladder types: step, extension, and platform ladders, and how they serve both industrial and home users across Nigeria and West Africa.</p>
 
           <p><strong>1. Step Ladders:</strong> These are perfect for indoor use—changing light bulbs, accessing top shelves, or doing small paint jobs. Step ladders are freestanding, stable, and reliable. Whether you're a homeowner, painter, or electrician, a good aluminum step ladder is your best friend for day-to-day tasks.</p>
 
@@ -36,7 +36,7 @@ export const posts = [
 
           <p><strong>Precautions:</strong> No matter the type, safety is key. Look for features like anti-slip feet, reinforced steps, and stabilizer bars. Always inspect your ladder before use and never compromise on build quality—especially in a high-risk environment.</p>
 
-          <p><strong>Where to Buy:</strong> All these ladder types and more are available at J&L Powertools—your trusted source for premium ladders in Nigeria and West Africa. Visit their only branch at 73 Cemetry Street, Yaba, Lagos 100001, for expert guidance and reliable equipment.</p>
+          <p><strong>Where to Buy:</strong> All these ladder types and more are available at J&L Powertools—your trusted source for premium ladders in Nigeria and West Africa. Visit our branch at 73 Cemetry Street, Yaba, Lagos 100001, for expert guidance and reliable equipment.</p>
 
           <p><strong>Final Thoughts:</strong> Matching the right ladder to the right job improves safety, saves time, and boosts efficiency. Whether you're at home or on a commercial site, J&L Powertools has the perfect ladder to help you reach your goals—literally.</p>
 `
@@ -56,7 +56,7 @@ export const posts = [
 
           <p><strong>Return on Investment:</strong> Good scaffolding isn’t a cost—it’s a long-term investment. It lasts for years, supports multiple workers at once, and eliminates the constant need for repositioning ladders. That means faster completion times and better work output for your team.</p>
 
-          <p><strong>Where to Buy:</strong> For trusted scaffolding solutions, visit J&L Powertools—your one-stop shop for quality, safety-rated equipment. They offer everything from compact indoor setups to large-scale industrial towers. You can find them at their only branch: 73 Cemetry Street, Yaba, Lagos 100001, Nigeria.</p>
+          <p><strong>Where to Buy:</strong> For trusted scaffolding solutions, visit J&L Powertools—your one-stop shop for quality, safety-rated equipment. We offer everything from compact indoor setups to large-scale industrial towers. You can find us at our branch: 73 Cemetry Street, Yaba, Lagos 100001, Nigeria.</p>
 
           <p><strong>Final Thoughts:</strong> No shortcuts in construction—especially when lives are on the line. Smart Nigerian businesses are investing in durable, certified scaffolding to increase productivity, improve safety, and gain client confidence. Don’t cut corners—elevate your work with scaffolds from J&L Powertools.</p>
 `
@@ -72,23 +72,18 @@ export const products = [
       category: "Aluminium",
     },
     {
-      name: "10ft Multi-Purpose",
-      image: "https://images.unsplash.com/photo-1575737685561-3ce224445a59?q=80&w=800",
-      height: "10ft",
-      category: "Multipurpose",
-    },
-    {
-      name: "Foldable Extension",
-      image: "/aluminium-scaffold-tower.jpg",
-      height: "8ft",
-      category: "Extension",
-    },
-    {
       name: "Extension Ladder",
       image: "/extension-ladder.jpg",
       height: "16ft",
       category: "Extension",
     },
+    {
+    name: "Aluminium Scaffold Tower",
+    image: "/aluminium-scaffold-tower.jpg",
+    height: "8ft",
+    material: "Aluminium",
+    category: "Scaffold",
+  },
 ];
  
 export const ladders = [
@@ -96,18 +91,7 @@ export const ladders = [
     name: "6ft Aluminium Ladder",
     image: "/ladder-ceo.jpg",
     height: "6ft",
-    category: "Aluminium",
-  },
-  {
-    name: "10ft Multi-Purpose",
-    image: "https://images.unsplash.com/photo-1575737685561-3ce224445a59?q=80&w=800",
-    height: "10ft",
-    category: "Multipurpose",
-  },
-  {
-    name: "Foldable Extension",
-    image: "/hdhyeg",
-    height: "8ft",
+    material: "Aluminium",
     category: "Extension",
   },
   {
@@ -126,12 +110,12 @@ export const ladders = [
     material: "Fiberglass",
     category: "Extension",
   },
-  {
-    name: "Frame Scaffolding",
-    image: "/frame-scaffolding.jpg",
-    height: "16ft",
-    category: "Extension",
-  },
+  // {
+  //   name: "Frame Scaffolding",
+  //   image: "/frame-scaffolding.jpg",
+  //   height: "16ft",
+  //   category: "Extension",
+  // },
   {
     name: "4ft Fiberglass Step Ladder",
     image: "/step-ladder.jpg",

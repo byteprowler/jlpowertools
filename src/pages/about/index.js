@@ -24,15 +24,15 @@ export default function AboutPage() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 overflow-hidden gap-12 items-center">
           <div>
             <Image
               src="/ladder-ceo.jpg"
               alt="J&L Powertools team at construction site in Lagos"
-              width={500}
+              width={300}
               height={300}
               className="rounded-xl shadow-lg"
-              priority
+              loading='lazy'
             />
           </div>
 
