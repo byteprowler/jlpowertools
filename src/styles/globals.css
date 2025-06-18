@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+/* Poppins (for modern Nigerian businesses) */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap; /* Prevents layout shift */
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Open Sans (great for Yoruba/English content) */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/opensans-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}

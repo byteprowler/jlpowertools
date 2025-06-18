@@ -23,30 +23,47 @@ export default function Document() {
         <meta name="geo.position" content="6.5244;3.3792" />
         <meta name="ICBM" content="6.5244, 3.3792" />
         
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "J&L Powertools",
-              "image": "https://jlpowertools.vercel.app/Logo.jpg",
-              "description": "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "73 Cemetry Road",
-                "addressLocality": "Yaba",
-                "addressRegion": "Lagos",
-                "postalCode": "100001",
-                "addressCountry": "NG"
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+           "@type": "LocalBusiness",
+           "name": "J&L Powertools",
+            "image": "https://jlpowertools.vercel.app/Logo.png",
+           "description": "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
+            "address": {
+             "@type": "PostalAddress",
+             "streetAddress": "73 Cemetry Road",
+              "addressLocality": "Yaba",
+              "addressRegion": "Lagos",
+              "postalCode": "100001",
+             "addressCountry": "NG"
+            },
+           "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+2348035717860",
+                "contactType": "customer support",
+                "areaServed": "NG",
+                "availableLanguage": "English",
+                "name": "Hotline (Call & WhatsApp)"
               },
-              "telephone": "+2348123456789",
-              "openingHours": "Mo-Fr 08:00-17:00",
-              "priceRange": "₦₦₦₦"
-            })
-          }}
-        />
-      </Head>
+             {
+               "@type": "ContactPoint",
+                "telephone": "+2348123456789",
+               "contactType": "customer support",
+                "areaServed": "NG",
+                "availableLanguage": "English",
+               "name": "Customer Support (Call Only)"
+              }
+           ],
+            "openingHours": "Mo-Fr 08:00-17:00",
+            "priceRange": "₦₦₦₦"
+          })
+       }}
+      />
+</Head>
       <body>
         <Main />
         <NextScript />
@@ -56,7 +73,7 @@ export default function Document() {
           dangerouslySetInnerHTML={{
             __html: `
               window.whatsappWidget = {
-                phone: '2348123456789',
+                phone: '2348035717860',
                 callToAction: 'Chat with us on WhatsApp!'
               };
             `

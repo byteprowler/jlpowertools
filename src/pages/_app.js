@@ -41,7 +41,7 @@ const SEO_CONFIG = {
     { name: "business:contact_data:street_address", content: "73 Cemetry Road" },
     { name: "business:contact_data:locality", content: "Yaba" },
     { name: "business:contact_data:region", content: "Lagos" },
-    { name: "business:contact_data:phone_number", content: "+2348123456789" },
+    { name: "business:contact_data:phone_number", content: "+2348035717860" },
   ],
 };
 

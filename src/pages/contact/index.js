@@ -7,7 +7,7 @@ export default function ContactPage() {
     <>
       <NextSeo
         title="Scaffolding Supplier in West Africa | J&L Powertools Contact"
-        description="Lagos-based industrial ladder specialists serving Nigeria, Ghana, Benin & Togo. Visit our showroom at 73 Cemetery Street or call ☎ +234 818 407 7464."
+        description="Lagos-based industrial ladder specialists serving Nigeria, Ghana, Benin & Togo. Visit our showroom at 73 Cemetery Street or call ☎ +234 803 571 7860."
         canonical="https://www.jlpowertools.com.ng/contact"
         openGraph={{
           type: 'website',
@@ -29,6 +29,10 @@ export default function ContactPage() {
           {
             name: 'keywords',
             content: 'scaffolding Nigeria, ladders Ghana, construction equipment Benin, industrial ladders Togo, West Africa supplier'
+          },
+          {
+            name: 'bussiness:contact_data:phone_number',
+            content: '+2348035717860, +2348184077464', 
           }
         ]}
         jsonLd={{
@@ -54,7 +58,25 @@ export default function ContactPage() {
             },
             "geoRadius": 1000000 // Covers ~1000km radius from Lagos
           },
-          "telephone": "+2348123456789"
+          "telephone": [
+            "+2348035717860",
+            "+2348123456789",
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+2348035717860",
+              "contactType": "customer support",
+              "areaServed": ["NG", "GH", "BJ", "TG"],
+              "availableLanguage": "English",
+              "name": "Hotline (Call & WhatsApp)"
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+2348184877464",
+              "contactType": "customer support",
+            }
+          ]
         }}
       />
 
