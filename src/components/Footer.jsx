@@ -74,7 +74,7 @@ export default function Footer() {
                 target="_blank" rel="noopener noreferrer"
               >
                 <FaMapMarkerAlt className="mt-1 mr-2 flex-shrink-0" />
-                <span>73 Cemetry Street, Yaba, Lagos</span>
+                <span>73 Cemetry Street Ebutte-Metta, Yaba, Lagos</span>
               </Link>
               <div className="flex items-center">
                 <FaPhoneAlt className="mr-2" />

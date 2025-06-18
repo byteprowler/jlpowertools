@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow: /cart/
 Disallow: /checkout/
 
-Sitemap: https://www.jlpowertools.com.ng/sitemap.xml
+Sitemap: https://www.jlpowertools.biz/sitemap.xml

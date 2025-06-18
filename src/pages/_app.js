@@ -7,11 +7,11 @@ const SEO_CONFIG = {
   titleTemplate: "%s | J&L Powertools - Ladders & Scaffolding (Lagos)",
   defaultTitle: "J&L Powertools - Premium Construction Equipment Showroom in Lagos",
   description: "Visit our Lagos showroom for quality inspection of industrial scaffolding and ladders. Serving clients from Nigeria and across West Africa.",
-  canonical: "https://www.jlpowertools.com.ng",
+  canonical: "https://www.jlpowertools.biz",
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://www.jlpowertools.com.ng",
+    url: "https://www.jlpowertools.biz",
     siteName: "J&L Powertools",
     images: [
       {

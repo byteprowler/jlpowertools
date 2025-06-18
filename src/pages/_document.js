@@ -30,7 +30,7 @@ export default function Document() {
             "@context": "https://schema.org",
            "@type": "LocalBusiness",
            "name": "J&L Powertools",
-            "image": "https://jlpowertools.vercel.app/Logo.png",
+            "image": "https://jlpowertools.biz/Logo.png",
            "description": "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
             "address": {
              "@type": "PostalAddress",

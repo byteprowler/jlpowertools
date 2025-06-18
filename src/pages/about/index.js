@@ -9,7 +9,7 @@ export default function AboutPage() {
       <NextSeo
         title="About J&L Powertools LTD | Leading Scaffolding & Ladder Supplier in Nigeria"
         description="Since 2000, J&L Powertools LTD has been the trusted wholesale supplier of industrial scaffolding and aluminium ladders across West Africa. Learn our story."
-        canonical="https://www.jlpowertools.com.ng/about"
+        canonical="https://www.jlpowertools.biz/about"
         additionalMetaTags={[
           {
             name: "robots",

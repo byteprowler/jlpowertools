@@ -5,7 +5,7 @@ export async function getServerSideProps({ res }) {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <!-- Homepage -->
       <url>
-        <loc>https://www.jlpowertools.com.ng</loc>
+        <loc>https://www.jlpowertools.biz</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@ export async function getServerSideProps({ res }) {
       <!-- Blog Posts -->
       ${posts.map(post => `
         <url>
-          <loc>https://www.jlpowertools.com.ng/blog/${post.slug}</loc>
+          <loc>https://www.jlpowertools.biz/insights/${post.slug}</loc>
           <lastmod>${new Date(post.date).toISOString()}</lastmod>
           <changefreq>weekly</changefreq>
         </url>
@@ -23,7 +23,7 @@ export async function getServerSideProps({ res }) {
       <!-- Product Pages -->
       ${products.map(product => `
         <url>
-          <loc>https://www.jlpowertools.com.ng/products/${product.slug}</loc>
+          <loc>https://www.jlpowertools.biz/products/${product.slug}</loc>
           <lastmod>${new Date().toISOString()}</lastmod>
         </url>
       `).join('')}

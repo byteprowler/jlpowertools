@@ -38,14 +38,14 @@ export default function InsightsPost() {
       <NextSeo
         title={`${post.title} | J&L Powertools - Scaffolding Experts`}
         description={post.description}
-        canonical={`https://www.jlpowertools.com.ng/insights/${post.slug}`}
+        canonical={`https://www.jlpowertools.biz/insights/${post.slug}`}
         openGraph={{
           type: 'article',
           article: {
             publishedTime: post.date,
             tags: post.tags || ['construction', 'scaffolding', 'ladders'],
           },
-          url: `https://www.jlpowertools.com.ng/insights/${post.slug}`,
+          url: `https://www.jlpowertools.biz/insights/${post.slug}`,
           images: [
             {
               url: `/jlpics/insights/${post.featuredImage || 'default-og.jpg'}`,
@@ -143,7 +143,7 @@ export default function InsightsPost() {
 
 // Helper function for sharing
 const shareArticle = (platform, post) => {
-  const url = `https://www.jlpowertools.com.ng/insights/${post.slug}`;
+  const url = `https://www.jlpowertools.biz/insights/${post.slug}`;
   const text = `Check out this article from J&L Powertools LTD: ${post.title}`;
 
   switch(platform) {
