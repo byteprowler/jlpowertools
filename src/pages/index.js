@@ -132,9 +132,9 @@ export default function Home() {
                 alt={`${product.name} - Available at our Lagos showroom`}
                 className="rounded-t-xl w-full h-64 object-cover" />
               <div className="p-4 shadow-md rounded-t-xl overflow-hidden">
-                <h4 className="font-bold text-sm mt-1">{product.name}</h4>
-                <p className="text-gray-500 text-sm mt-1">Height: {product.height}</p>
-                <p className="text-gray-500 text-sm mt-1">Material: {product.material}</p>
+                <h4 className="font-bold text-lg mt-1">{product.name}</h4>
+                <p className="text-gray-500 font-bold mt-1">Height: {product.height}</p>
+                <p className="text-gray-500 font-bold mt-1">Material: {product.material}</p>
                 <Link href={'https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy'} className="text-yellow-600 font-semibold mt-2">Inspect in Lagos</Link>
               </div>
             </motion.div>
