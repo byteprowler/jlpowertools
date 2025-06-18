@@ -1,14 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  FaFacebookF, 
-  FaInstagram, 
-  FaLinkedinIn, 
+import {
   FaPhoneAlt,
   FaWhatsapp,
   FaMapMarkerAlt
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { motion } from 'framer-motion';
 import { CiMail } from "react-icons/ci";
 import Image from 'next/image';
@@ -17,33 +13,30 @@ import { NextSeo } from 'next-seo';
 export default function Footer() {
   return (
     <>
-      <NextSeo
-        noindex={false}
-        nofollow={false}
-      />
-      
+      <NextSeo noindex={false} nofollow={false} />
+
       <motion.footer
         className="bg-gray-900 text-white px-6 py-12 mt-20"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
+          
           {/* About Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
-           <Image 
-           src="/footer.png"
-           fiil
-           width={100}
-           height={100}
-           alt="J&L Powertools LTD Logo"
-           />
+            <Image 
+              src="/footer.png"
+              width={100}
+              height={100}
+              alt="J&L Powertools Logo"
+            />
             <p className="text-gray-300">
               Leading supplier of industrial scaffolding and aluminum ladders in Lagos, Nigeria. 
               Serving contractors across West Africa since 2000.
@@ -55,7 +48,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-300">
@@ -71,24 +64,28 @@ export default function Footer() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <h4 className="font-semibold text-lg mb-4">Our Showroom</h4>
             <address className="not-italic text-gray-300 space-y-2">
-              <Link href={'https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy'} className="flex items-start hover:text-[#FACC15]">
+              <Link 
+                href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy" 
+                className="flex items-start hover:text-[#FACC15]" 
+                target="_blank" rel="noopener noreferrer"
+              >
                 <FaMapMarkerAlt className="mt-1 mr-2 flex-shrink-0" />
                 <span>73 Cemetry Street, Yaba, Lagos</span>
               </Link>
               <div className="flex items-center">
                 <FaPhoneAlt className="mr-2" />
                 <a href="tel:+2348035717860" className="hover:text-[#FACC15] font-semibold transition-colors">
-                 Hotline: +234 803 571 7860
+                  Hotline: +234 803 571 7860
                 </a>
               </div>
               <div className="flex items-center">
                 <FaPhoneAlt className="mr-2" />
                 <a href="tel:+2348184077464" className="hover:text-[#FACC15] transition-colors">
-                 Alt Line: +234 818 407 7464
+                  Alt Line: +234 818 407 7464
                 </a>
               </div>
               <div className="flex items-center">
@@ -100,51 +97,15 @@ export default function Footer() {
             </address>
           </motion.div>
 
-          {/* Social Media Column */}     
+          {/* Social Media Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <h4 className="font-semibold text-lg mb-4">Connect With Us</h4>
             <div className="flex flex-wrap gap-3 mb-4">
-              <a 
-                href="https://facebook.com/jlpowertools" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-gray-700 hover:bg-[#1877F2] text-white p-2 rounded-full transition-colors"
-                aria-label="Facebook"
-              >
-                <FaFacebookF />
-              </a>
-              <a 
-                href="https://instagram.com/jlpowertools" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-gray-700 hover:bg-[#E1306C] text-white p-2 rounded-full transition-colors"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
-              <a 
-                href="https://twitter.com/jlpowertools" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-gray-700 hover:bg-black text-white p-2 rounded-full transition-colors"
-                aria-label="Twitter"
-              >
-                <FaXTwitter />
-              </a>
-              <a 
-                href="https://linkedin.com/company/jlpowertools" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-gray-700 hover:bg-[#0A66C2] text-white p-2 rounded-full transition-colors"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn />
-              </a>
               <a 
                 href="https://wa.me/2348035717860" 
                 target="_blank" 
@@ -156,8 +117,8 @@ export default function Footer() {
               </a>
             </div>
             <div className="text-gray-300 text-sm">
-              <p>Hours: Mon-Fri 8AM-5PM</p>
-              <p>Sat 9AM-4PM</p>
+              <p>Hours: Mon–Fri 8AM–5PM</p>
+              <p>Sat 9AM–4PM</p>
             </div>
           </motion.div>
         </div>
@@ -168,7 +129,7 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <p>&copy; 2000 - {new Date().getFullYear()} J&L Powertools LTD. All rights reserved.</p>
           <p className="mt-2">

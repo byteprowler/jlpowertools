@@ -145,10 +145,10 @@ export default function ProductsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+2348184077464"
+              href="tel:+2348035717860"
               className="flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium"
             >
-              <FaPhoneAlt /> +234 818 407 7464
+              <FaPhoneAlt /> +234 803 571 7860
             </a>
             <a
               href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy"

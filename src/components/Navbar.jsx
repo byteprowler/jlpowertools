@@ -127,7 +127,7 @@ const SideBar = ({ isOpen,setIsOpen, toggleSidebar, navLinks }) => {
 
             <div className='pb-8'>
               <div className='flex justify-center space-x-6 mb-6'>
-                <a 
+                {/* <a 
                   href="href://facebook.com/jlpowertools"
                   target='_blank'
                   rel='noopener noreferrer'
@@ -135,9 +135,9 @@ const SideBar = ({ isOpen,setIsOpen, toggleSidebar, navLinks }) => {
                   aria-label='Facebook'
                 >
                   <FaFacebook />
-                </a>
+                </a> */}
               <a
-                href=""
+                href={'https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy'}
                 target='_blank'
                 rel='noopener noreferrer' 
                 className='text-red-600 text-xl'
