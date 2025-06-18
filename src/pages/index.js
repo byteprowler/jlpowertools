@@ -233,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="px-6 bg-gray-50 py-20">
+      {/* <section className="px-6 bg-gray-50 py-20">
         <h2 className="text-3xl font-bold text-center mb-10">
           Trusted by Professionals Across West Africa
         </h2>
@@ -251,7 +251,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
     </>
   )
