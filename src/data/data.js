@@ -90,14 +90,14 @@ export const ladders = [
   {
     name: "6ft Aluminium Ladder",
     image: "/ladder-ceo.jpg",
-    height: "6ft",
-    material: "Aluminium",
+    height: "28ft, 32ft, 40ft",
+    material: "Fiberglass",
     category: "Extension",
   },
   {
     name: "Aluminium Scaffold Tower",
     image: "/aluminium-scaffold-tower.jpg",
-    height: "8ft",
+    height: "10m, 12m, 16m",
     material: "Aluminium",
     capacity: "270kg per platform",
     category: "Scaffold",

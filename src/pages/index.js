@@ -135,7 +135,7 @@ export default function Home() {
                 <h4 className="font-bold text-sm mt-1">{product.name}</h4>
                 <p className="text-gray-500 text-sm mt-1">Height: {product.height}</p>
                 <p className="text-gray-500 text-sm mt-1">Material: {product.material}</p>
-                <p className="text-yellow-600 font-semibold mt-2">Inspect in Lagos</p>
+                <Link href={'https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy'} className="text-yellow-600 font-semibold mt-2">Inspect in Lagos</Link>
               </div>
             </motion.div>
           ))}

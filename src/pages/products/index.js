@@ -132,7 +132,6 @@ export default function ProductsPage() {
             </motion.article>
           ))}
         </div>
-
         {/* Showroom CTA */}
         <motion.section 
           className="mt-16 bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-center"
