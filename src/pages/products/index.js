@@ -125,7 +125,7 @@ export default function ProductsPage() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-lg transition-colors text-sm"
                   >
-                    <FaMapMarkerAlt /> View
+                    <FaMapMarkerAlt /> See In Store
                   </a>
                 </div>
               </div>
