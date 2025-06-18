@@ -141,7 +141,7 @@ export default function ProductsPage() {
         >
           <h3 className="text-2xl font-bold mb-3">Visit Our Lagos Showroom</h3>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-            See and test our equipment in person at 73 Cemetry Street, Yaba, Lagos. Open Mon-Fri: 8AM-5PM, Sat: 9AM-4PM.
+            See and test our equipment in person at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos. Open Mon-Fri: 8AM-5PM, Sat: 9AM-4PM.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

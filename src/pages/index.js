@@ -206,7 +206,7 @@ export default function Home() {
                 While we don&apos;t offer delivery, our showroom in Yaba, Lagos welcomes clients from across West Africa for quality inspection and purchase.
               </p>
               <div className="space-y-2">
-                <p><strong>Address:</strong> 73 Cemetry Street, Yaba, Lagos 100001, Lagos, Nigeria.</p>
+                <p><strong>Address:</strong> 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, Lagos, Nigeria.</p>
                 <p><strong>Hours:</strong> Mon-Fri: 8AM - 5PM | Sat: 9AM - 4PM</p>
                 <p><strong>Hotline:</strong>{' '}<a className="hover:underline" href={"tel:+234803717860"}>+234 803 571 7860</a></p>
                 <p><strong>Alt Line:</strong>{' '}<a className='hover:underline' href={'tel:+2348184077464'}>+234 818 407 7464</a></p>
