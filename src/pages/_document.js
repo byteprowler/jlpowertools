@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en-NG"> 
       <Head>
+        <meta name="google-site-verification" content="gV33MiDhACZrwGXbYNqtsysuQng4T6c0BIvjsr6Xrw8" />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#FACC15" /> {/* Brand yellow */}
