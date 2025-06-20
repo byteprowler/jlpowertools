@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://www.jlpowertools.com.ng',
+  siteUrl: 'https://www.jlpowertools.biz',
   generateRobotsTxt: true,
   exclude: ['/admin/*', '/cart/*'],
   robotsTxtOptions: {
