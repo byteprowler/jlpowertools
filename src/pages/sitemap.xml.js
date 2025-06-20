@@ -25,10 +25,10 @@ export async function getServerSideProps({ res }) {
         <lastmod>${currentDate}</lastmod>
       </url>
 
-      <!-- Blog Posts -->
+      <!-- insights -->
       ${posts.map(post => `
         <url>
-          <loc>${SITE_URL}/blog/${post.slug}</loc>
+          <loc>${SITE_URL}/insights/${post.slug}</loc>
           <lastmod>${new Date(post.date).toISOString()}</lastmod>
           ${post.title.includes('Nigeria') ? '<priority>0.8</priority>' : ''}
         </url>

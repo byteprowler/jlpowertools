@@ -1,30 +1,87 @@
-
-
 const SEO = {
-  title: "Aluminium Ladder Store - Durable & Affordable",
-  description: "Buy high-quality aluminium ladders perfect for home, industrial, and commercial use. Affordable prices and nationwide delivery.",
-  canonical: "https://www.aluminiumladder.com", // Replace with actual domain
+  title: "J&L Powertools | Aluminium Ladders & Scaffolding in Yaba Since 1999",
+  description: "Visit our store at 73 Cemetery Street, Yaba, Lagos. Trusted aluminium ladder and scaffolding supplier for 25+ years. Serving industrial, commercial, and home needs.",
+  canonical: "https://www.jlpowertools.biz",
+  additionalMetaTags: [
+    {
+      name: "geo.position",
+      content: "6.5244;3.3792"
+    },
+    {
+      name: "ICBM",
+      content: "6.5244, 3.3792"
+    },
+    {
+      name: "business:contact_data:locality",
+      content: "Yaba"
+    },
+    {
+      name: "business:contact_data:postal_code",
+      content: "100001"
+    }
+  ],
   openGraph: {
-    type: 'website',
-    locale: 'en_NG',
-    url: 'https://www.aluminiumladder.com',
-    site_name: 'Aluminium Ladder Store',
-    title: "Aluminium Ladder Store - Durable & Affordable",
-    description: "High-quality aluminium ladders for your every need. Safe, strong, and reliable.",
+    type: "website",
+    locale: "en_NG",
+    url: "https://www.jlpowertools.biz",
+    site_name: "J&L Powertools (Yaba)",
+    title: "Ladder Supplier in Yaba | 73 Cemetery St Since 1999",
+    description: "Need durable ladders or scaffolding in Lagos? Stop by J&L Powertools at 73 Cemetery Street, Yaba, Ebutte-Metta. Open Mon-Sat.",
     images: [
       {
-        url: 'https://www.aluminiumladder.com/images/og-banner.jpg',
+        url: "https://www.jlpowertools.biz/images/storefront.jpg",
         width: 1200,
         height: 630,
-        alt: 'Aluminium Ladder Showcase',
+        alt: "J&L Powertools store at 73 Cemetery St, Yaba, Ebutte-Metta, Lagos",
+      }
+    ]
+  },
+  // twitter: {
+  //   handle: "@ladderbiz", // Only keep this if the Twitter account exists
+  //   site: "@ladderbiz",
+  //   cardType: "summary_large_image"
+  // },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "HardwareStore",
+    "name": "J&L Powertools",
+    "image": "https://www.jlpowertools.biz/images/storefront.jpg",
+    "url": "https://www.jlpowertools.biz",
+    "telephone": "+2348035717860",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "73 Cemetery Street",
+      "addressLocality": "Yaba",
+      "addressRegion": "Lagos",
+      "postalCode": "100001",
+      "addressCountry": "NG"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 6.5244,
+      "longitude": 3.3792
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
       },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "16:00"
+      }
     ],
-  },
-  twitter: {
-    handle: '@ladderbiz', // If client has Twitter
-    site: '@ladderbiz',
-    cardType: 'summary_large_image',
-  },
+    "foundingDate": "1999",
+    "hasMap": "https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9"
+  }
 };
-
-export default SEO;
