@@ -12,9 +12,9 @@ export const posts = [
   
         <p><strong>Top Features to Look For:</strong> When shopping for a ladder, Nigerian roofers should focus on features like non-slip feet, wide rungs, adjustable height, and reinforced joints. These features not only enhance usability but also reduce the risk of workplace injuries.</p>
   
-        <p><strong>Recommended Products:</strong> J&L Powertools offers a top-tier range of aluminum ladders built for Nigerian conditions—durable, non-slip, and easy to handle across homes, industrial sites, and roofing jobs.</p>
+        <p><strong>Recommended Products:</strong> J & L Powertools offers a top-tier range of aluminum ladders built for Nigerian conditions—durable, non-slip, and easy to handle across homes, industrial sites, and roofing jobs.</p>
   
-        <p><strong>Where to Buy:</strong> Roofers across Nigeria and West Africa can rely on J&L Powertools for quality aluminum ladders built to handle tough job sites. Visit their only branch at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, for in-person service and expert recommendations.</p>
+        <p><strong>Where to Buy:</strong> Roofers across Nigeria and West Africa can rely on J & L Powertools for quality aluminum ladders built to handle tough job sites. Visit their only branch at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, for in-person service and expert recommendations.</p>
   
         <p><strong>Final Thoughts:</strong> Investing in a top-quality aluminum ladder is a no-brainer for Nigerian roofers. It improves job performance, guarantees safety, and proves cost-effective in the long run. Stay high—literally and professionally—with the best tools for the job.</p>
 `
@@ -30,15 +30,15 @@ export const posts = [
 
           <p><strong>1. Step Ladders:</strong> These are perfect for indoor use—changing light bulbs, accessing top shelves, or doing small paint jobs. Step ladders are freestanding, stable, and reliable. Whether you're a homeowner, painter, or electrician, a good aluminum step ladder is your best friend for day-to-day tasks.</p>
 
-          <p><strong>2. Extension Ladders:</strong> Need serious height? Extension ladders are your go-to. Ideal for roofers, billboard installers, and construction workers, they offer adjustable length and stability when properly secured. J&L Powertools stocks quality aluminum extension ladders built for tough Nigerian job sites.</p>
+          <p><strong>2. Extension Ladders:</strong> Need serious height? Extension ladders are your go-to. Ideal for roofers, billboard installers, and construction workers, they offer adjustable length and stability when properly secured. J & L Powertools stocks quality aluminum extension ladders built for tough Nigerian job sites.</p>
 
           <p><strong>3. Platform Ladders:</strong> Designed for comfort and long-duration tasks, platform ladders come with a wide top step or standing platform. They’re popular among warehouse staff, event decorators, and supermarket workers who need balance and space while working at height.</p>
 
           <p><strong>Precautions:</strong> No matter the type, safety is key. Look for features like anti-slip feet, reinforced steps, and stabilizer bars. Always inspect your ladder before use and never compromise on build quality—especially in a high-risk environment.</p>
 
-          <p><strong>Where to Buy:</strong> All these ladder types and more are available at J&L Powertools—your trusted source for premium ladders in Nigeria and West Africa. Visit our branch at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, for expert guidance and reliable equipment.</p>
+          <p><strong>Where to Buy:</strong> All these ladder types and more are available at J & L Powertools—your trusted source for premium ladders in Nigeria and West Africa. Visit our branch at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, for expert guidance and reliable equipment.</p>
 
-          <p><strong>Final Thoughts:</strong> Matching the right ladder to the right job improves safety, saves time, and boosts efficiency. Whether you're at home or on a commercial site, J&L Powertools has the perfect ladder to help you reach your goals—literally.</p>
+          <p><strong>Final Thoughts:</strong> Matching the right ladder to the right job improves safety, saves time, and boosts efficiency. Whether you're at home or on a commercial site, J & L Powertools has the perfect ladder to help you reach your goals—literally.</p>
 `
     },
     {
@@ -56,9 +56,9 @@ export const posts = [
 
           <p><strong>Return on Investment:</strong> Good scaffolding isn’t a cost—it’s a long-term investment. It lasts for years, supports multiple workers at once, and eliminates the constant need for repositioning ladders. That means faster completion times and better work output for your team.</p>
 
-          <p><strong>Where to Buy:</strong> For trusted scaffolding solutions, visit J&L Powertools—your one-stop shop for quality, safety-rated equipment. We offer everything from compact indoor setups to large-scale industrial towers. You can find us at our branch: 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, Nigeria.</p>
+          <p><strong>Where to Buy:</strong> For trusted scaffolding solutions, visit J & L Powertools—your one-stop shop for quality, safety-rated equipment. We offer everything from compact indoor setups to large-scale industrial towers. You can find us at our branch: 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, Nigeria.</p>
 
-          <p><strong>Final Thoughts:</strong> No shortcuts in construction—especially when lives are on the line. Smart Nigerian businesses are investing in durable, certified scaffolding to increase productivity, improve safety, and gain client confidence. Don’t cut corners—elevate your work with scaffolds from J&L Powertools.</p>
+          <p><strong>Final Thoughts:</strong> No shortcuts in construction—especially when lives are on the line. Smart Nigerian businesses are investing in durable, certified scaffolding to increase productivity, improve safety, and gain client confidence. Don’t cut corners—elevate your work with scaffolds from J & L Powertools.</p>
 `
 
     }

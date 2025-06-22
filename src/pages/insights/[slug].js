@@ -36,7 +36,7 @@ export default function InsightsPost() {
   return (
     <>
       <NextSeo
-        title={`${post.title} | J&L Powertools - Scaffolding Experts`}
+        title={`${post.title} | J & L Powertools - Scaffolding Experts`}
         description={post.description}
         canonical={`https://www.jlpowertools.biz/insights/${post.slug}`}
         openGraph={{
@@ -144,7 +144,7 @@ export default function InsightsPost() {
 // Helper function for sharing
 const shareArticle = (platform, post) => {
   const url = `https://www.jlpowertools.biz/insights/${post.slug}`;
-  const text = `Check out this article from J&L Powertools LTD: ${post.title}`;
+  const text = `Check out this article from J & L Powertools LTD: ${post.title}`;
 
   switch(platform) {
     case 'Twitter':

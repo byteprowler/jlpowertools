@@ -4,21 +4,21 @@ import Head from "next/head";
 import Layout from "@/components/Layout";
 
 const SEO_CONFIG = {
-  titleTemplate: "%s | J&L Powertools - Ladders & Scaffolding (Lagos)",
-  defaultTitle: "J&L Powertools - Premium Construction Equipment Showroom in Lagos",
+  titleTemplate: "%s | J & L Powertools - Ladders & Scaffolding (Lagos)",
+  defaultTitle: "J & L Powertools - Premium Construction Equipment Showroom in Lagos",
   description: "Visit our Lagos showroom for quality inspection of industrial scaffolding and ladders. Serving clients from Nigeria and across West Africa.",
   canonical: "https://www.jlpowertools.biz",
   openGraph: {
     type: "website",
     locale: "en_NG",
     url: "https://www.jlpowertools.biz",
-    siteName: "J&L Powertools",
+    siteName: "J & L Powertools",
     images: [
       {
         url: "/Logo.png", // Local path
         width: 1200,
         height: 630,
-        alt: "J&L Powertools Lagos Showroom - Scaffolding & Ladders",
+        alt: "J & L Powertools Lagos Showroom - Scaffolding & Ladders",
       },
     ],
   },
@@ -30,7 +30,7 @@ const SEO_CONFIG = {
   additionalMetaTags: [
     {
       name: "keywords",
-      content: "Scaffolding showroom Lagos, buy ladders Nigeria, construction equipment West Africa, industrial ladders showroom, J&L Powertools",
+      content: "Scaffolding showroom Lagos, buy ladders Nigeria, construction equipment West Africa, industrial ladders showroom, J & L Powertools",
     },
     // Geo tags focused on Lagos only
     { name: "geo.region", content: "NG-LA" }, // Lagos State

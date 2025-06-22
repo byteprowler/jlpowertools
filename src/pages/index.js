@@ -18,19 +18,19 @@ export default function Home() {
   return (
     <>
     <NextSeo
-      title="Premium Aluminium Ladders & Scaffolding | J&L Powertools LTD (Lagos, Nigeria)"
+      title="Premium Aluminium Ladders & Scaffolding | J & L Powertools LTD (Lagos, Nigeria)"
       description="Nigeria's premier showroom for industrial ladders & scaffolding. Serving clients from across West Africa. Visit our Lagos facility for quality inspection."
       canonical="https://www.jlpowertools.biz"
       openGraph={{
         url: "https://www.jlpowertools.biz",
-        title: "Industrial Ladders & Scaffolding Showroom | J&L Powertools LTD",
+        title: "Industrial Ladders & Scaffolding Showroom | J & L Powertools LTD",
         description: "Wholesale construction equipment available at our Lagos facility",
         images: [
           {
             url: "/Logo.png", // Show actual showroom image
             width: 1200,
             height: 630,
-            alt: "J&L Powertools Lagos Showroom",
+            alt: "J & L Powertools Lagos Showroom",
           },
         ],
       }}
@@ -151,7 +151,7 @@ export default function Home() {
         </div>
       </section>
 
-       {/* RESTORED BLOG SECTION */}
+       {/* RESTORED Insights SECTION */}
       <div className="px-6 py-12">
         <h2 className="text-2xl text-center font-bold mb-6">Construction Insights</h2>
         <p className="text-center max-w-2xl mx-auto mb-8 text-gray-600">
@@ -171,7 +171,7 @@ export default function Home() {
                 src={post.image}
                 width={300}
                 height={200}
-                alt={`${post.title} - J&L Powertools Blog`}
+                alt={`${post.title} - J & L Powertools Insights`}
                 className="w-full h-40 object-cover mb-3 rounded-t-lg"
               />
               <h3 className="text-lg font-semibold">{post.title}</h3>
@@ -225,7 +225,7 @@ export default function Home() {
                   allowFullscreen 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="J&L Powertools LTD" 
+                  title="J & L Powertools LTD" 
                 />
             </div>
           </div>

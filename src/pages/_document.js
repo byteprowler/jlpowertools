@@ -9,11 +9,8 @@ export default function Document() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#FACC15" />
-        <meta name="author" content="J&L Powertools LTD" />
+        <meta name="author" content="J & L Powertools LTD" />
         <meta name="robots" content="index, follow" />
-        
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
 
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +29,7 @@ export default function Document() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "J&L Powertools",
+              name: "J & L Powertools",
               image: "https://jlpowertools.biz/Logo.png",
               description: "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
               address: {

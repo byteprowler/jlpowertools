@@ -7,8 +7,8 @@ export default function AboutPage() {
   return (
     <>
       <NextSeo
-        title="About J&L Powertools LTD | Leading Scaffolding & Ladder Supplier in Nigeria"
-        description="Since 2000, J&L Powertools LTD has been the trusted wholesale supplier of industrial scaffolding and aluminium ladders across West Africa. Learn our story."
+        title="About J & L Powertools LTD | Leading Scaffolding & Ladder Supplier in Nigeria"
+        description="Since 2000, J & L Powertools LTD has been the trusted wholesale supplier of industrial scaffolding and aluminium ladders across West Africa. Learn our story."
         canonical="https://www.jlpowertools.biz/about"
         additionalMetaTags={[
           {
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div>
             <Image
               src="/ladder-ceo.jpg"
-              alt="Managing Director of J&L Powertools at a construction site in Lagos"
+              alt="Managing Director of J & L Powertools at a construction site in Lagos"
               width={300}
               height={300}
               className="rounded-xl shadow-lg"
@@ -46,7 +46,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>
-                Founded in <strong>Lagos (2000)</strong>, J&L Powertools began as a small supplier of 
+                Founded in <strong>Lagos (2000)</strong>, J & L Powertools began as a small supplier of 
                 industrial ladders to local construction companies. Today, we serve <strong>over 500+ 
                 contractors</strong> across West Africa.
               </p>

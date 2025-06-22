@@ -63,7 +63,7 @@ export default function Insights() {
   return (
     <>
     <NextSeo
-    title="Construction Equipment Insights | J&L Powertools LTD Blog"
+    title="Construction Equipment Insights | J & L Powertools LTD Insights"
     description="Expert Articles on scaffolding safety and ladder maintenance"
     canonical="https://www.jlpowertools.biz/insights" />
     <main className="space-y-16">
