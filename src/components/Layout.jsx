@@ -1,6 +1,7 @@
 import Footer from './Footer';
 import Navbar from './Navbar';
 import React from 'react'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Inter, Open_Sans } from 'next/font/google'
 
 const inter = Inter({
@@ -21,6 +22,7 @@ export default function MainLayout({children}) {
       <Navbar />
       <div className="flex-grow">
       {children}
+      <SpeedInsights />
       </div>
       <Footer />
     </main>

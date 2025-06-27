@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
-
 import Loader from "@/components/Loader";
 import { posts } from "@/data/data";
 import { FaCalendarAlt, FaClock, FaShareAlt, FaFacebook, FaWhatsapp } from "react-icons/fa";
