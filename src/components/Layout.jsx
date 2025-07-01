@@ -12,7 +12,7 @@ const inter = Inter({
 const openSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans',
-  weight: ['400', '700'], // Only load needed weights
+  weight: ['400', '700'],
 });
 
 export default function MainLayout({children}) {    

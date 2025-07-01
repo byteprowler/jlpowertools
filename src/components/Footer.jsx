@@ -39,7 +39,7 @@ export default function Footer() {
             />
             <p className="text-gray-300">
               Leading supplier of industrial scaffolding and aluminum ladders in Lagos, Nigeria. 
-              Serving contractors across West Africa since 2000.
+              Serving contractors across West Africa for more than 25 years.
             </p>
           </motion.div>
 
