@@ -78,26 +78,25 @@ export default function Footer() {
               </Link>
               <div className="flex items-center">
                 <FaPhoneAlt className="mr-2" />
-                <a href="tel:+2348035717860" className="hover:text-[#FACC15] font-semibold transition-colors">
+                <Link href="tel:+2348035717860" className="hover:text-[#FACC15] font-semibold transition-colors">
                   Hotline: +234 803 571 7860
-                </a>
+                </Link>
               </div>
               <div className="flex items-center">
                 <FaPhoneAlt className="mr-2" />
-                <a href="tel:+2348184077464" className="hover:text-[#FACC15] transition-colors">
+                <Link href="tel:+2348184077464" className="hover:text-[#FACC15] transition-colors">
                   Alt Line: +234 818 407 7464
-                </a>
+                </Link>
               </div>
               <div className="flex items-center">
                 <CiMail className="mr-2 text-base" />
-                <a href="mailto:jlpowertools@yahoo.com" className="hover:text-[#FACC15] transition-colors">
+                <Link href="mailto:jlpowertools@yahoo.com" className="hover:text-[#FACC15] transition-colors">
                   jlpowertools@yahoo.com
-                </a>
+                </Link>
               </div>
             </address>
           </motion.div>
 
-          {/* Social Media Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +105,7 @@ export default function Footer() {
           >
             <h4 className="font-semibold text-lg mb-4">Connect With Us</h4>
             <div className="flex flex-wrap gap-3 mb-4">
-              <a 
+              <Link 
                 href="https://wa.me/2348035717860" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -114,7 +113,7 @@ export default function Footer() {
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp />
-              </a>
+              </Link>
             </div>
             <div className="text-gray-300 text-sm">
               <p>Hours: Mon–Fri 8AM–5PM</p>
@@ -133,7 +132,7 @@ export default function Footer() {
         >
           <p>&copy; 2000 - {new Date().getFullYear()} J & L Powertools LTD. All rights reserved.</p>
           <p className="mt-2">
-            Designed by <a href="https://byteprowler.vercel.app" target="_blank" rel="noopener" className="text-[#FACC15] hover:underline">ByteProwler</a>
+            Designed by <Link href="https://byteprowler.vercel.app" target="_blank" rel="noopener" className="text-[#FACC15] hover:underline">ByteProwler</Link>
           </p>
         </motion.div>
       </motion.footer>

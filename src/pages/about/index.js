@@ -29,11 +29,10 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Content Grid */}
         <div className="grid md:grid-cols-2 overflow-hidden gap-12 items-center">
           <div>
             <Image
-              src="/ladder-ceo.jpg"
+              src="/why-invest-in-scaffoldings.jpg"
               alt="Managing Director of J & L Powertools at a construction site in Lagos"
               width={300}
               height={300}

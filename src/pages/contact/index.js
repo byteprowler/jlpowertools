@@ -1,6 +1,7 @@
 import { NextSeo } from 'next-seo';
 import { FaWhatsapp, FaPhoneAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
@@ -15,7 +16,7 @@ export default function ContactPage() {
           url: 'https://www.jlpowertools.biz/contact',
           siteName: 'J & L Powertools',
           images: [{
-            url: '/jlpics/west-africa-coverage.jpg',
+            url: '/showroom.jpg',
             width: 1200,
             height: 630,
             alt: 'J & L Powertools West Africa Coverage',
@@ -56,11 +57,11 @@ export default function ContactPage() {
               "latitude": 6.485928,
               "longitude": 3.383022
             },
-            "geoRadius": 1000000 // Covers ~1000km radius from Lagos
+            "geoRadius": 1000000
           },
           "telephone": [
             "+2348035717860",
-            "+2348123456789",
+            "+2348184077464",
           ],
           "contactPoint": [
             {
@@ -82,8 +83,7 @@ export default function ContactPage() {
 
       <main className="px-4 mt-12 py-12 max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">Serving West Africa from Lagos</h1>
-        
-        {/* Location Strategy Section */}
+
         <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-10">
           <h2 className="text-xl font-bold mb-3 text-blue-800">Regional Coverage</h2>
           <p className="mb-4">
@@ -98,7 +98,6 @@ export default function ContactPage() {
           </ul>
         </div>
 
-        {/* Lagos HQ */}
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-4 flex items-center">
             <FaMapMarkerAlt className="text-red-500 mr-2" />
@@ -113,17 +112,26 @@ export default function ContactPage() {
                   Lagos, Nigeria
                 </p>
                 <div className="space-y-3">
-                  <a href="tel:+2348184077464" className="flex items-center text-lg hover:text-[#FACC15] transition-colors">
-                    <FaPhoneAlt className="mr-2" /> +234 818 407 7464
-                  </a>
-                  <a 
-                    href="https://wa.me/2348123456789" 
+                  <div className="flex items-center">
+                    <FaPhoneAlt className='mr-1' /><span className="mr-2 flex items-center">Hotline: {' '}</span>
+                  <Link href="tel:+2348135717860" className="flex items-center text-lg hover:text-[#FACC15] transition-colors">
+                    +234 813 571 7860
+                  </Link>
+                  </div>
+                  <div className="flex items-center">
+                    <FaPhoneAlt className='mr-1' /><span className="mr-2 flex items-center">Alt-line: {' '}</span>
+                  <Link href="tel:+2348184077464" className="flex items-center text-lg hover:text-[#FACC15] transition-colors">
+                    +234 818 407 7464
+                  </Link>
+                  </div>
+                  <Link 
+                    href="https://wa.me/2348135717860" 
                     target="_blank"
                     rel="noopener"
                     className="flex items-center text-lg hover:text-[#FACC15] transition-colors"
                   >
-                    <FaWhatsapp className="mr-2" /> WhatsApp Chat
-                  </a>
+                    <FaWhatsapp className="mr-2" /> +234 813 571 7860 
+                  </Link>
                 </div>
               </div>
               
@@ -147,7 +155,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* International Clients */}
         <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
           <h2 className="text-xl font-bold mb-3">For International Clients</h2>
           <p className="mb-4">

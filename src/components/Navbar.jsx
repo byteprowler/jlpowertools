@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
 import { FaMapMarkedAlt } from 'react-icons/fa';
-import { FaFacebook, FaWhatsapp, FaBlog } from 'react-icons/fa';
+import { FaWhatsapp, FaBlog } from 'react-icons/fa';
 import Image from 'next/image';
 import { Home, Info, Phone, Package } from 'lucide-react'
 import Link from 'next/link';
@@ -106,7 +106,7 @@ const SideBar = ({ isOpen,setIsOpen, toggleSidebar, navLinks }) => {
           className="fixed top-0 right-0 w-4/5 h-full p-6 bg-white text-black z-50 shadow-xl flex flex-col"
         >
             <h2 className="text-xl font-bold text-gray-800 mb-4">Menu</h2>
-          {/* TOP SECTION */}
+
           <div className="flex-1 space-y-0 pt-16">
             {navLinks.map((link) => (
               <Link
@@ -136,32 +136,32 @@ const SideBar = ({ isOpen,setIsOpen, toggleSidebar, navLinks }) => {
                 >
                   <FaFacebook />
                 </a> */}
-              <a
+              <Link
                 href={'https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy'}
                 target='_blank'
                 rel='noopener noreferrer' 
                 className='text-red-600 text-xl'
                 aria-label='Location'>
                 <FaMapMarkedAlt />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://wa.me/2348035717860"
                 target='_blank'
                 rel='noopener noreferrer' 
                 className='text-green-500 text-xl'
                 aria-label='Whatsapp'>
                 <FaWhatsapp />
-              </a>
+              </Link>
               </div>
-            <a
-              href="tel:+2348184077464"
+            <Link
+              href="tel:+2348135717860"
               className="flex items-center justify-center bg-black text-white py-3 px-6 rounded-lg font-medium">
                 <Phone className='mr-2 w-4 h-4' />
                 Call Now
-              </a>
+              </Link>
               <motion.div
               className="text-center text-xs text-gray-400 mt-4 pt-4 border-t border-gray-800">
-                <p className="text-[15px]">Designed by <a href="https://byteprowler.vercel.app" target='_blank' rel="noopener" className='text-[#FACC15] hover:underline'>ByteProwler</a></p>
+                <p className="text-[15px]">Designed by <Link href="https://byteprowler.vercel.app" target='_blank' rel="noopener" className='text-[#FACC15] hover:underline'>ByteProwler</Link></p>
               </motion.div>
             </div>
         </motion.nav>
@@ -235,7 +235,6 @@ export default function Navbar() {
         priority />
         </Link>
 
-      {/* Desktop Nav */}
       <div className="hidden md:flex space-x-6">
         {navLinks.map((link) => (
           <Link key={link.name} href={link.href} 
@@ -249,12 +248,10 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* Mobile Hamburger */}
       <div className="md:hidden z-[60]">
         <HamburgerButton toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} scrolled={scrolled} />
       </div>
 
-      {/* Sidebar */}
       <SideBar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar} navLinks={navLinks} />
     </nav>
   )

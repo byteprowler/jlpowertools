@@ -27,7 +27,7 @@ export default function Home() {
         description: "Wholesale construction equipment available at our Lagos facility",
         images: [
           {
-            url: "/Logo.png", // Show actual showroom image
+            url: "/Logo.png",
             width: 1200,
             height: 630,
             alt: "J & L Powertools Lagos Showroom",
@@ -47,12 +47,11 @@ export default function Home() {
     />
     
     <main className="space-y-20">
-      {/* Hero Section */}
       <section
         id="hero"
         className="relative min-h-screen flex flex-col overflow-hidden items-center justify-center text-center px-6 text-white">
         <Image
-          src="/ladder-ceo.jpg"
+          src="/why-invest-in-scaffoldings.jpg"
           alt="Hero"
           loading='lazy'
           fill
@@ -93,7 +92,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="px-6">
         <h2 className='text-3xl font-bold text-center mb-10'>Why Clients Across West Africa Choose Us</h2>
         <div className='grid md:grid-cols-3 gap-6'>
@@ -151,7 +149,6 @@ export default function Home() {
         </div>
       </section>
 
-       {/* RESTORED Insights SECTION */}
       <div className="px-6 py-12">
         <h2 className="text-2xl text-center font-bold mb-6">Construction Insights</h2>
         <p className="text-center max-w-2xl mx-auto mb-8 text-gray-600">
@@ -195,7 +192,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Location Section */}
       <section className="px-6 py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Our Office</h2>

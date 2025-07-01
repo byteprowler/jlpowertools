@@ -21,7 +21,7 @@ export const posts = [
     },
     {
       slug: "ladder-types-and-their-uses",
-      image: "/Logo.png",
+      image: "/ladder-types-and-their-uses.jpg",
       title: "Top 3 Ladder Types and Their Uses in Nigeria",
       description: ["Step, extension, and platform ladders—learn how each ladder type fits different Nigerian industries and home use cases."],
       date: "2025-05-05",
@@ -43,7 +43,7 @@ export const posts = [
     },
     {
       slug: "why-invest-in-scaffoldings",
-      image: "/ladder-ceo.jpg",
+      image: "/why-invest-in-scaffoldings.jpg",
       title: "Why Investing in Scaffolding Equipment Matters for Nigerian Businesses",
       description: ["Explore why quality scaffolding is a must-have for Nigerian construction, maintenance, and industrial sectors."],
       date: "05-05-2025",
@@ -67,7 +67,7 @@ export const posts = [
 export const products = [
     {
       name: "6ft Aluminium Ladder",
-      image: "/ladder-ceo.jpg",
+      image: "/why-invest-in-scaffoldings.jpg",
       height: "6ft",
       category: "Aluminium",
     },
@@ -89,7 +89,7 @@ export const products = [
 export const ladders = [
   {
     name: "6ft Aluminium Ladder",
-    image: "/ladder-ceo.jpg",
+    image: "/why-invest-in-scaffoldings.jpg",
     height: "28ft, 32ft, 40ft",
     material: "Fiberglass",
     category: "Extension",

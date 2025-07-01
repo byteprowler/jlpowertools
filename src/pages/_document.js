@@ -44,14 +44,14 @@ export default function Document() {
                 {
                   "@type": "ContactPoint",
                   telephone: "+2348035717860",
-                  contactType: "customer support",
+                  contactType: "customer support and inquiries",
                   areaServed: "NG",
                   availableLanguage: "English",
                   name: "Hotline (Call & WhatsApp)"
                 },
                 {
                   "@type": "ContactPoint",
-                  telephone: "+2348123456789",
+                  telephone: "+2348184077464",
                   contactType: "customer support",
                   areaServed: "NG",
                   availableLanguage: "English",
@@ -64,7 +64,6 @@ export default function Document() {
           }}
         />
 
-        {/* Google Analytics */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-5M4PWCLP7E"></Script>
         <script
           dangerouslySetInnerHTML={{
@@ -82,7 +81,6 @@ export default function Document() {
         <Main />
         <NextScript />
 
-        {/* WhatsApp Widget Script (optional, no external widget loaded here) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

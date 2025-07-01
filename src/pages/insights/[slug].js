@@ -15,7 +15,7 @@ export default function InsightsPost() {
     Twitter: <FaXTwitter />,
     Facebook: <FaFacebook />,
     LinkedIn: <FaLinkedinIn />,
-    WhatsApp: <FaWhatsapp />, // Placeholder, replace with actual LinkedIn icon
+    WhatsApp: <FaWhatsapp />,
   }
 
   const { slug } = router.query;
@@ -42,12 +42,12 @@ export default function InsightsPost() {
           type: 'article',
           article: {
             publishedTime: post.date,
-            tags: post.tags || ['construction', 'scaffolding', 'ladders'],
+            tags: post.tags || ['construction', 'scaffolding', 'ladders', 'safety', 'aluminium ladders', 'scaffolding safety'],
           },
           url: `https://www.jlpowertools.biz/insights/${post.slug}`,
           images: [
             {
-              url: `/jlpics/insights/${post.featuredImage || 'default-og.jpg'}`,
+              url: `/insights/${post.featuredImage || 'default-og.jpg'}`,
               width: 1200,
               height: 630,
               alt: post.title,
@@ -63,7 +63,6 @@ export default function InsightsPost() {
       />
 
       <main className="max-w-3xl mx-auto mt-12 px-4 sm:px-6 py-12">
-        {/* Back Button */}
         <button 
           onClick={() => router.push('/insights')}
           className="flex items-center text-[#FACC15] hover:text-yellow-600 mb-8 hover:cursor-pointer transition-colors"
@@ -72,7 +71,6 @@ export default function InsightsPost() {
           Back to insights
         </button>
 
-        {/* Article Header */}
         <article>
           <header className="mb-10">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -107,7 +105,6 @@ export default function InsightsPost() {
             )}
           </header>
 
-          {/* Article Content */}
           <div 
             className="prose max-w-none text-gray-700 prose-headings:text-gray-900
                       prose-a:text-[#FACC15] hover:prose-a:text-yellow-600
@@ -115,7 +112,6 @@ export default function InsightsPost() {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          {/* Share Buttons */}
           <div className="mt-12 pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold mb-4">Share this article</h3>
             <div className="flex gap-3">
@@ -140,7 +136,6 @@ export default function InsightsPost() {
   );
 }
 
-// Helper function for sharing
 const shareArticle = (platform, post) => {
   const url = `https://www.jlpowertools.biz/insights/${post.slug}`;
   const text = `Check out this article from J & L Powertools LTD: ${post.title}`;

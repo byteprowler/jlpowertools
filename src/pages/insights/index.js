@@ -17,7 +17,7 @@ const Typewrite = ({ examples }) => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setRestartKey((prev) => prev + 1); // re-trigger animation
+      setRestartKey((prev) => prev + 1); 
     }, SWAP_DELAY_IN_MS);
 
     return () => clearInterval(intervalId);
@@ -30,7 +30,7 @@ const Typewrite = ({ examples }) => {
         Description:{" "}
         {current.split("").map((l, i) => (
           <motion.span
-            key={`${restartKey}-${i}`} // force restart on key change
+            key={`${restartKey}-${i}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -69,14 +69,19 @@ export default function Insights() {
     <main className="space-y-16">
       <section
       id="hero"
-      className="relative min-h-screen flex space-y-8 flex-col overflow-hidden items-center justify-center text-center px-6 text-white"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1519143009590-e3800b9df468?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}>
+      className="relative min-h-screen flex space-y-8 flex-col overflow-hidden items-center justify-center text-center px-6 text-white">
+      <Image
+        src="https://images.unsplash.com/photo-1519143009590-e3800b9df468?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Hero"
+        fill
+        loading="lazy"
+        style={{ objectFit: "cover" , objectPosition: "center" }}
+       />
+       <div className="absolute inset-0 z-0"/>
+       <div className="relative z-10 max-w-3xl">
       <h1 className="text-6xl uppercase font-bold mb-8">Insights</h1>
       <p>Experts advice for the West African Construction professionals</p>
+       </div>
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
