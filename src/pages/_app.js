@@ -15,7 +15,7 @@ const SEO_CONFIG = {
     siteName: "J & L Powertools",
     images: [
       {
-        url: "/Logo.png", // Local path
+        url: "/Logo.webp", // Local path
         width: 1200,
         height: 630,
         alt: "J & L Powertools Lagos Showroom - Scaffolding & Ladders",

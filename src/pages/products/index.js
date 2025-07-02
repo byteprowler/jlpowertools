@@ -1,19 +1,44 @@
-"use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { NextSeo } from "next-seo";
+import CategoryFilter from "@/components/CategoryFilter";
 import { ladders } from "@/data/data";
 
-const uniqueCategories = ["All", ...new Set(ladders.map(l => l.category))];
-
 export default function ProductsPage() {
-  const [filter, setFilter] = useState("All");
+  const [filteredLadders, setFilteredLadders] = useState(ladders);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredLadders = filter === "All" 
-    ? ladders 
-    : ladders.filter(ladder => ladder.category === filter);
+  useEffect(() => {
+    let results = ladders;
+
+    if (selectedCategory !== 'All') {
+      results = results.filter(ladder => ladder.category === selectedCategory);
+    }
+
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      results = results.filter(ladder => {
+        const title = ladder?.name?.toLowerCase() || '';
+        const material = ladder?.material?.toLowerCase() || '';
+        const capacity = String(ladder?.capacity || '').toLowerCase();
+        const tags = Array.isArray(ladder?.tags) ? ladder.tags : [];
+
+        return (
+          title.includes(term) ||
+          material.includes(term) ||
+          capacity.includes(term) ||
+          tags.some(tag => tag.toLowerCase().includes(term))
+        );
+      });
+    }
+
+    setFilteredLadders(results);
+  }, [searchTerm, selectedCategory]);
+
+  const categories = Array.from(new Set(ladders.map(ladder => ladder.category)));
 
   return (
     <>
@@ -24,7 +49,7 @@ export default function ProductsPage() {
         openGraph={{
           url: 'https://www.jlpowertools.biz/products',
           images: [{
-            url: '/Logo.png',
+            url: '/Logo.webp',
             width: 1200,
             height: 630,
             alt: 'J & L Powertools product showcase',
@@ -33,7 +58,6 @@ export default function ProductsPage() {
       />
 
       <main className="px-4 mt-12 py-12 max-w-7xl mx-auto">
-        {/* Hero Section */}
         <section className="text-center mb-12">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -47,29 +71,24 @@ export default function ProductsPage() {
           </p>
         </section>
 
-        {/* Filter Controls */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          {uniqueCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setFilter(category)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === category 
-                  ? "bg-[#FACC15] text-black shadow-md"
-                  : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
+          <motion.input
+            whileFocus={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
+            type="text"
+            placeholder="Search Ladders"
+            className="w-full sm:flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FACC15]"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
 
-        {/* Products Grid */}
+          <CategoryFilter
+            categories={categories}
+            activeCategory={selectedCategory}
+            onSelect={setSelectedCategory}
+          />
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredLadders.map((ladder, index) => (
             <motion.article
@@ -80,7 +99,6 @@ export default function ProductsPage() {
               viewport={{ once: true, margin: "-50px" }}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              {/* Product Image */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src={ladder.image}
@@ -93,7 +111,6 @@ export default function ProductsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
 
-              {/* Product Info */}
               <div className="p-5">
                 <div className="flex justify-between items-start mb-2">
                   <h2 className="text-xl font-bold text-gray-800">{ladder.name}</h2>
@@ -108,7 +125,6 @@ export default function ProductsPage() {
                   <li><strong>Material:</strong> {ladder.material}</li>
                 </ul>
 
-                {/* Action Buttons */}
                 <div className="flex gap-3 mt-4">
                   <a
                     href={`https://wa.me/2348035717860?text=Hello%20J%26L%20Powertools,%20I'm%20interested%20in%20your%20${encodeURIComponent(ladder.name)}%20(model:%20${ladder.modelNumber || 'N/A'})`}
@@ -118,7 +134,7 @@ export default function ProductsPage() {
                   >
                     <FaWhatsapp /> Inquire
                   </a>
-                  
+
                   <a
                     href="https://goo.gl/maps/Z9SCxYUJy8mDDm926"
                     target="_blank"
@@ -132,8 +148,8 @@ export default function ProductsPage() {
             </motion.article>
           ))}
         </div>
-        {/* Showroom CTA */}
-        <motion.section 
+
+        <motion.section
           className="mt-16 bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

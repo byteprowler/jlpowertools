@@ -227,7 +227,7 @@ export default function Navbar() {
       }`}
     >
       <Link href={'/'} className="text-xl font-bold">
-        <Image src='/jlp.png' 
+        <Image src='/jlp.webp' 
         width={70} 
         height={150} 
         alt='J & L Powertools Logo' 

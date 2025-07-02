@@ -12,17 +12,14 @@ export default function Document() {
         <meta name="author" content="J & L Powertools LTD" />
         <meta name="robots" content="index, follow" />
 
-        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Geo Tags */}
         <meta name="geo.region" content="NG" />
         <meta name="geo.placename" content="Lagos" />
         <meta name="geo.position" content="6.5244;3.3792" />
         <meta name="ICBM" content="6.5244, 3.3792" />
 
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -30,7 +27,7 @@ export default function Document() {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "J & L Powertools",
-              image: "https://jlpowertools.biz/Logo.png",
+              image: "https://jlpowertools.biz/Logo.webp",
               description: "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
               address: {
                 "@type": "PostalAddress",

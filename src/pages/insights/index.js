@@ -74,7 +74,7 @@ export default function Insights() {
         src="https://images.unsplash.com/photo-1519143009590-e3800b9df468?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Hero"
         fill
-        loading="lazy"
+        priority
         style={{ objectFit: "cover" , objectPosition: "center" }}
        />
        <div className="absolute inset-0 z-0"/>

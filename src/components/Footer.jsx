@@ -32,7 +32,7 @@ export default function Footer() {
             viewport={{ once: false }}
           >
             <Image 
-              src="/footer.png"
+              src="/footer.webp"
               width={100}
               height={100}
               alt="J & L Powertools Logo"

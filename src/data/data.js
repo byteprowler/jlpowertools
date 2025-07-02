@@ -1,7 +1,7 @@
 export const posts = [
     {
       slug: "best-aluminum-ladders-nigeria",
-      image: "/Logo.png",
+      image: "/Logo.webp",
       title: "Best Aluminum Ladders for Nigerian Roofers",
       description: ["Discover the top aluminum ladders tailored for Nigerian roofers. Learn why they’re the safest, most efficient option in the market."],
       date: "2025-05-05",
@@ -21,7 +21,7 @@ export const posts = [
     },
     {
       slug: "ladder-types-and-their-uses",
-      image: "/ladder-types-and-their-uses.jpg",
+      image: "/ladder-types.webp",
       title: "Top 3 Ladder Types and Their Uses in Nigeria",
       description: ["Step, extension, and platform ladders—learn how each ladder type fits different Nigerian industries and home use cases."],
       date: "2025-05-05",
@@ -43,7 +43,7 @@ export const posts = [
     },
     {
       slug: "why-invest-in-scaffoldings",
-      image: "/why-invest-in-scaffoldings.jpg",
+      image: "/why-invest-in-scaffoldings.webp",
       title: "Why Investing in Scaffolding Equipment Matters for Nigerian Businesses",
       description: ["Explore why quality scaffolding is a must-have for Nigerian construction, maintenance, and industrial sectors."],
       date: "05-05-2025",
@@ -67,19 +67,19 @@ export const posts = [
 export const products = [
     {
       name: "6ft Aluminium Ladder",
-      image: "/why-invest-in-scaffoldings.jpg",
+      image: "/why-invest-in-scaffoldings.webp",
       height: "6ft",
       category: "Aluminium",
     },
     {
       name: "Extension Ladder",
-      image: "/extension-ladder.jpg",
+      image: "/extension-ladder.webp",
       height: "16ft",
       category: "Extension",
     },
     {
     name: "Aluminium Scaffold Tower",
-    image: "/aluminium-scaffold-tower.jpg",
+    image: "/aluminium-scaffold-tower.webp",
     height: "8ft",
     material: "Aluminium",
     category: "Scaffold",
@@ -88,15 +88,15 @@ export const products = [
  
 export const ladders = [
   {
-    name: "6ft Aluminium Ladder",
-    image: "/why-invest-in-scaffoldings.jpg",
+    name: "6ft Fiberglass Ladder",
+    image: "/why-invest-in-scaffoldings.webp",
     height: "28ft, 32ft, 40ft",
     material: "Fiberglass",
     category: "Extension",
   },
   {
     name: "Aluminium Scaffold Tower",
-    image: "/aluminium-scaffold-tower.jpg",
+    image: "/aluminium-scaffold-tower.webp",
     height: "10m, 12m, 16m",
     material: "Aluminium",
     capacity: "270kg per platform",
@@ -104,21 +104,15 @@ export const ladders = [
   },
   {
     name: "Extension Ladder",
-    image: "/extension-ladder.jpg",
+    image: "/extension-ladder.webp",
     height: "32ft",
     capacity: "150kg",
     material: "Fiberglass",
     category: "Extension",
   },
-  // {
-  //   name: "Frame Scaffolding",
-  //   image: "/frame-scaffolding.jpg",
-  //   height: "16ft",
-  //   category: "Extension",
-  // },
   {
     name: "4ft Fiberglass Step Ladder",
-    image: "/step-ladder.jpg",
+    image: "/step-ladder.webp",
     height: "4ft",
     capacity: "6.4kg",
     material: "Fiberglass",
@@ -126,7 +120,7 @@ export const ladders = [
   },
   {
     name: "8ft Aluminium Step Ladder",
-    image: "/step-ladder2.jpg",
+    image: "/step-ladder2.webp",
     height: "8ft",
     capacity: "136kg",
     material: "Aluminium",
@@ -134,7 +128,7 @@ export const ladders = [
   },
   {
     name: "3-Section Aluminium Ladder",
-    image: "/3-section.jpg",
+    image: "/3-section.webp",
     height: "36ft",
     capacity: "345kg",
     material: "Aluminium",

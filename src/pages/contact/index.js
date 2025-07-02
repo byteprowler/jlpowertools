@@ -16,7 +16,7 @@ export default function ContactPage() {
           url: 'https://www.jlpowertools.biz/contact',
           siteName: 'J & L Powertools',
           images: [{
-            url: '/showroom.jpg',
+            url: '/store-front.webp',
             width: 1200,
             height: 630,
             alt: 'J & L Powertools West Africa Coverage',
@@ -40,7 +40,7 @@ export default function ContactPage() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "J & L Powertools LTD",
-          "image": "/Logo.png",
+          "image": "/Logo.webp",
           "description": "Industrial scaffolding and ladder supplier serving West Africa",
           "address": {
             "@type": "PostalAddress",

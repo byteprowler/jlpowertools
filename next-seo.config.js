@@ -29,23 +29,18 @@ const SEO = {
     description: "Need durable ladders or scaffolding in Lagos? Stop by J & L Powertools at 73 Cemetery Street, Yaba, Ebutte-Metta. Open Mon-Sat.",
     images: [
       {
-        url: "https://www.jlpowertools.biz/images/storefront.jpg",
+        url: "https://www.jlpowertools.biz/store-front.webp",
         width: 1200,
         height: 630,
         alt: "J & L Powertools store at 73 Cemetery St, Yaba, Ebutte-Metta, Lagos",
       }
     ]
   },
-  // twitter: {
-  //   handle: "@ladderbiz", // Only keep this if the Twitter account exists
-  //   site: "@ladderbiz",
-  //   cardType: "summary_large_image"
-  // },
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "HardwareStore",
     "name": "J & L Powertools",
-    "image": "https://www.jlpowertools.biz/images/storefront.jpg",
+    "image": "https://www.jlpowertools.biz/store-front.webp",
     "url": "https://www.jlpowertools.biz",
     "telephone": "+2348035717860",
     "address": {

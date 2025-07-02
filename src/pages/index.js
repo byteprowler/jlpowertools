@@ -27,7 +27,7 @@ export default function Home() {
         description: "Wholesale construction equipment available at our Lagos facility",
         images: [
           {
-            url: "/Logo.png",
+            url: "/Logo.webp",
             width: 1200,
             height: 630,
             alt: "J & L Powertools Lagos Showroom",
@@ -51,9 +51,9 @@ export default function Home() {
         id="hero"
         className="relative min-h-screen flex flex-col overflow-hidden items-center justify-center text-center px-6 text-white">
         <Image
-          src="/why-invest-in-scaffoldings.jpg"
+          src="/why-invest-in-scaffoldings.webp"
           alt="Hero"
-          loading='lazy'
+          priority
           fill
           style={{ objectFit: "cover", objectPosition: "center"}} 
         />
@@ -168,6 +168,7 @@ export default function Home() {
                 src={post.image}
                 width={300}
                 height={200}
+                loading='lazy'
                 alt={`${post.title} - J & L Powertools Insights`}
                 className="w-full h-40 object-cover mb-3 rounded-t-lg"
               />
