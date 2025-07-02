@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
-import Layout from "@/components/Layout";
+import MainLayout from "@/components/Layout";
 
 const SEO_CONFIG = {
   titleTemplate: "%s | J & L Powertools - Ladders & Scaffolding (Lagos)",
@@ -15,7 +15,7 @@ const SEO_CONFIG = {
     siteName: "J & L Powertools",
     images: [
       {
-        url: "/Logo.webp", // Local path
+        url: "/Logo.webp",
         width: 1200,
         height: 630,
         alt: "J & L Powertools Lagos Showroom - Scaffolding & Ladders",
@@ -32,13 +32,12 @@ const SEO_CONFIG = {
       name: "keywords",
       content: "Scaffolding showroom Lagos, buy ladders Nigeria, construction equipment West Africa, industrial ladders showroom, J & L Powertools",
     },
-    // Geo tags focused on Lagos only
-    { name: "geo.region", content: "NG-LA" }, // Lagos State
+    { name: "geo.region", content: "NG-LA" },
     { name: "geo.placename", content: "Ikeja, Lagos" },
     { name: "geo.position", content: "6.5244;3.3792" },
     { name: "ICBM", content: "6.5244, 3.3792" },
-    // Business verification
-    { name: "business:contact_data:street_address", content: "73 Cemetry Road" },
+
+    { name: "business:contact_data:street_address", content: "73 Cemetry Road Ebutte-Metta" },
     { name: "business:contact_data:locality", content: "Yaba" },
     { name: "business:contact_data:region", content: "Lagos" },
     { name: "business:contact_data:phone_number", content: "+2348035717860" },
@@ -47,16 +46,14 @@ const SEO_CONFIG = {
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
+    <MainLayout>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Preconnect to Google Maps */}
         <link rel="preconnect" href="https://maps.googleapis.com" />
-        {/* Francophone support */}
         <meta property="og:locale:alternate" content="fr_FR" />
       </Head>
       <DefaultSeo {...SEO_CONFIG} />
       <Component {...pageProps} />
-    </Layout>
+    </MainLayout>
   );
 }

@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
 import { FaMapMarkedAlt } from 'react-icons/fa';

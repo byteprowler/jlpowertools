@@ -43,7 +43,6 @@ export default function Footer() {
             </p>
           </motion.div>
 
-          {/* Quick Links Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +58,6 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Showroom Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +115,7 @@ export default function Footer() {
             </div>
             <div className="text-gray-300 text-sm">
               <p>Hours: Mon–Fri 8AM–5PM</p>
-              <p>Sat 9AM–4PM</p>
+              <p>Sat 9AM{'-'}4PM</p>
             </div>
           </motion.div>
         </div>
