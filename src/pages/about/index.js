@@ -33,7 +33,7 @@ export default function AboutPage() {
           <div>
             <Image
               src="/why-invest-in-scaffoldings.webp"
-              alt="Managing Director of J & L Powertools at a construction site in Lagos"
+              alt="Managing Director of J & L Powertools LTDat a construction site in Lagos"
               width={300}
               height={300}
               className="rounded-xl shadow-lg"
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>
-                Founded in <strong>Lagos (2000)</strong>, J & L Powertools began as a small supplier of 
+                Founded in <strong>Lagos (2000)</strong>, J & L Powertools LTDbegan as a small supplier of 
                 industrial ladders to local construction companies. Today, we serve <strong>over 500+ 
                 contractors</strong> across West Africa.
               </p>

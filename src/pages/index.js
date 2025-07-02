@@ -30,7 +30,7 @@ export default function Home() {
             url: "/Logo.webp",
             width: 1200,
             height: 630,
-            alt: "J & L Powertools Lagos Showroom",
+            alt: "J & L Powertools LTDLagos Showroom",
           },
         ],
       }}
@@ -169,7 +169,7 @@ export default function Home() {
                 width={300}
                 height={200}
                 loading='lazy'
-                alt={`${post.title} - J & L Powertools Insights`}
+                alt={`${post.title} - J & L Powertools LTDInsights`}
                 className="w-full h-40 object-cover mb-3 rounded-t-lg"
               />
               <h3 className="text-lg font-semibold">{post.title}</h3>

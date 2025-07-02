@@ -35,7 +35,7 @@ export default function Footer() {
               src="/footer.webp"
               width={100}
               height={100}
-              alt="J & L Powertools Logo"
+              alt="J & L Powertools LTDLogo"
             />
             <p className="text-gray-300">
               Leading supplier of industrial scaffolding and aluminum ladders in Lagos, Nigeria. 

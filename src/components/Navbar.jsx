@@ -228,7 +228,7 @@ export default function Navbar() {
         <Image src='/jlp.webp' 
         width={70} 
         height={150} 
-        alt='J & L Powertools Logo' 
+        alt='J & L Powertools LTDLogo' 
         className='overflow-hidden rounded-sm'
         priority />
         </Link>

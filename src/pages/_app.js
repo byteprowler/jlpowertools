@@ -4,8 +4,8 @@ import Head from "next/head";
 import MainLayout from "@/components/Layout";
 
 const SEO_CONFIG = {
-  titleTemplate: "%s | J & L Powertools - Ladders & Scaffolding (Lagos)",
-  defaultTitle: "J & L Powertools - Premium Construction Equipment Showroom in Lagos",
+  titleTemplate: "%s | J & L Powertools LTD- Ladders & Scaffolding (Lagos)",
+  defaultTitle: "J & L Powertools LTD- Premium Construction Equipment Showroom in Lagos",
   description: "Visit our Lagos showroom for quality inspection of industrial scaffolding and ladders. Serving clients from Nigeria and across West Africa.",
   canonical: "https://www.jlpowertools.biz",
   openGraph: {
@@ -18,7 +18,7 @@ const SEO_CONFIG = {
         url: "/Logo.webp",
         width: 1200,
         height: 630,
-        alt: "J & L Powertools Lagos Showroom - Scaffolding & Ladders",
+        alt: "J & L Powertools LTDLagos Showroom - Scaffolding & Ladders",
       },
     ],
   },

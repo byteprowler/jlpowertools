@@ -12,9 +12,9 @@ export const posts = [
   
         <p><strong>Top Features to Look For:</strong> When shopping for a ladder, Nigerian roofers should focus on features like non-slip feet, wide rungs, adjustable height, and reinforced joints. These features not only enhance usability but also reduce the risk of workplace injuries.</p>
   
-        <p><strong>Recommended Products:</strong> J & L Powertools offers a top-tier range of aluminum ladders built for Nigerian conditions—durable, non-slip, and easy to handle across homes, industrial sites, and roofing jobs.</p>
+        <p><strong>Recommended Products:</strong> J & L Powertools LTD offers a top-tier range of aluminum ladders built for Nigerian conditions—durable, non-slip, and easy to handle across homes, industrial sites, and roofing jobs.</p>
   
-        <p><strong>Where to Buy:</strong> Roofers across Nigeria and West Africa can rely on J & L Powertools for quality aluminum ladders built to handle tough job sites. Visit their only branch at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, for in-person service and expert recommendations.</p>
+        <p><strong>Where to Buy:</strong> Roofers across Nigeria and West Africa can rely on J & L Powertools LTD for quality aluminum ladders built to handle tough job sites. Visit their only branch at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, for in-person service and expert recommendations.</p>
   
         <p><strong>Final Thoughts:</strong> Investing in a top-quality aluminum ladder is a no-brainer for Nigerian roofers. It improves job performance, guarantees safety, and proves cost-effective in the long run. Stay high—literally and professionally—with the best tools for the job.</p>
 `
@@ -30,7 +30,7 @@ export const posts = [
 
           <p><strong>1. Step Ladders:</strong> These are perfect for indoor use—changing light bulbs, accessing top shelves, or doing small paint jobs. Step ladders are freestanding, stable, and reliable. Whether you're a homeowner, painter, or electrician, a good aluminum step ladder is your best friend for day-to-day tasks.</p>
 
-          <p><strong>2. Extension Ladders:</strong> Need serious height? Extension ladders are your go-to. Ideal for roofers, billboard installers, and construction workers, they offer adjustable length and stability when properly secured. J & L Powertools stocks quality aluminum extension ladders built for tough Nigerian job sites.</p>
+          <p><strong>2. Extension Ladders:</strong> Need serious height? Extension ladders are your go-to. Ideal for roofers, billboard installers, and construction workers, they offer adjustable length and stability when properly secured. J & L Powertools LTD stocks quality aluminum extension ladders built for tough Nigerian job sites.</p>
 
           <p><strong>3. Platform Ladders:</strong> Designed for comfort and long-duration tasks, platform ladders come with a wide top step or standing platform. They’re popular among warehouse staff, event decorators, and supermarket workers who need balance and space while working at height.</p>
 
@@ -38,7 +38,7 @@ export const posts = [
 
           <p><strong>Where to Buy:</strong> All these ladder types and more are available at J & L Powertools—your trusted source for premium ladders in Nigeria and West Africa. Visit our branch at 73 Cemetry Street Ebutte-Metta, Yaba, Lagos 100001, for expert guidance and reliable equipment.</p>
 
-          <p><strong>Final Thoughts:</strong> Matching the right ladder to the right job improves safety, saves time, and boosts efficiency. Whether you're at home or on a commercial site, J & L Powertools has the perfect ladder to help you reach your goals—literally.</p>
+          <p><strong>Final Thoughts:</strong> Matching the right ladder to the right job improves safety, saves time, and boosts efficiency. Whether you're at home or on a commercial site, J & L Powertools LTD has the perfect ladder to help you reach your goals—literally.</p>
 `
     },
     {
@@ -60,8 +60,33 @@ export const posts = [
 
           <p><strong>Final Thoughts:</strong> No shortcuts in construction—especially when lives are on the line. Smart Nigerian businesses are investing in durable, certified scaffolding to increase productivity, improve safety, and gain client confidence. Don’t cut corners—elevate your work with scaffolds from J & L Powertools.</p>
 `
+    },
+    {
+      slug: "how-to-spot-fake-ladders-nigeria",
+      image: "https://plus.unsplash.com/premium_photo-1677529102407-0d075eb2cbb9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "How to Spot Fake Aluminum Ladders in Nigeria",
+      description: ["Avoid injury and financial loss by learning how to identify counterfeit ladders commonly sold in Nigerian markets."],
+      date: "2025-07-02",
+      content: `
+        <p>Not all ladders are created equal—and in Nigeria's booming construction scene, fake ladders are flooding the market. These substandard products may look legit at first glance, but they're built with poor materials, unstable joints, and fake safety markings.</p>
 
-    }
+        <p><strong>Why It Matters:</strong> A fake ladder isn't just a bad investment, it's a safety hazard. Collapsing mid-use can cause severe injuries and set your project back days or weeks.</p>
+
+        <p><strong>How to Identify Fake Ladders:</strong></p>
+        <ul>
+          <li>🚩 No manufacturer branding or serial number</li>
+          <li>🚩 Flimsy frame that bends under light weight</li>
+          <li>🚩 Slippery or smooth rungs (no grip texture)</li>
+          <li>🚩 Cheap plastic feet instead of rubber</li>
+          <li>🚩 Weld marks that look rough or unfinished</li>
+        </ul>
+
+        <p><strong>Buy Smart:</strong> Only purchase ladders from verified dealers like <strong>J & L Powertools LTD</strong>. Our products come with proper safety certifications and have been stress-tested to meet Nigerian and West African job site standards.</p>
+
+        <p><strong>Where to Find Authentic Gear:</strong> Visit our official branch at <strong>73 Cemetry Street, Ebutte-Metta, Yaba, Lagos</strong>. You can inspect products before purchase and get advice directly from our technical team.</p>
+
+        <p><strong>Final Thoughts:</strong> Don’t let a fake ladder cut your progress short. Invest in certified aluminum ladders that are built to last and protect lives. Your crew—and your wallet—will thank you later.</p>
+`}
 ];
 
 export const products = [

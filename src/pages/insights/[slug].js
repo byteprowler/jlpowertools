@@ -35,7 +35,7 @@ export default function InsightsPost() {
   return (
     <>
       <NextSeo
-        title={`${post.title} | J & L Powertools - Scaffolding Experts`}
+        title={`${post.title} | J & L Powertools LTD- Scaffolding Experts`}
         description={post.description}
         canonical={`https://www.jlpowertools.biz/insights/${post.slug}`}
         openGraph={{

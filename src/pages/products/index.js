@@ -43,7 +43,7 @@ export default function ProductsPage() {
   return (
     <>
       <NextSeo
-        title="Premium Ladders & Scaffolding | J & L Powertools Lagos"
+        title="Premium Ladders & Scaffolding | J & L Powertools LTDLagos"
         description="Inspect industrial-grade ladders and scaffolding at our Lagos showroom. Available for contractors across Nigeria."
         canonical="https://www.jlpowertools.biz/products"
         openGraph={{
@@ -52,7 +52,7 @@ export default function ProductsPage() {
             url: '/Logo.webp',
             width: 1200,
             height: 630,
-            alt: 'J & L Powertools product showcase',
+            alt: 'J & L Powertools LTDproduct showcase',
           }]
         }}
       />
