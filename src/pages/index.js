@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
     <NextSeo
-      title="Premium Aluminium Ladders & Scaffolding | J & L Powertools LTD (Lagos, Nigeria)"
+      title="Aluminium Ladders & Scaffolding | J & L Powertools LTD"
       description="Nigeria's premier showroom for industrial ladders & scaffolding. Serving clients from across West Africa. Visit our Lagos facility for quality inspection."
       canonical="https://www.jlpowertools.biz"
       openGraph={{
