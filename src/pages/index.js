@@ -59,10 +59,10 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/60 z-0"/>
         <div className="relative z-10 max-w-3xl">
-          <motion.h1
+          <motion.span
             className="text-5xl md:text-6xl font-extrabold mb-2">
             <DrawCircleText />
-          </motion.h1>
+          </motion.span>
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
