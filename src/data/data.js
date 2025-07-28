@@ -1,7 +1,7 @@
 export const posts = [
     {
       slug: "best-aluminum-ladders-nigeria",
-      image: "/Logo.webp",
+      image: "https://plus.unsplash.com/premium_vector-1750228666006-19063d8c993a?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Best Aluminum Ladders for Nigerian Roofers",
       description: ["Discover the top aluminum ladders tailored for Nigerian roofers. Learn why they’re the safest, most efficient option in the market."],
       date: "2025-05-05",
@@ -89,7 +89,7 @@ export const posts = [
 `},
 {
   slug: "scaffolding-safety-rainy-season",
-  image: "/scaffolding-safety-rain.webp",
+  image: "https://images.unsplash.com/vector-1747330794373-9210743903c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFpbnl8ZW58MHx8MHx8fDA%3D",
   title: "Scaffolding Safety Tips for Nigeria's Rainy Season",
   description: ["Protect your crew with these crucial scaffolding safety practices during Nigeria’s rainy months."],
   date: "2025-07-03",
@@ -107,8 +107,7 @@ export const posts = [
     <p>All scaffolds at J & L Powertools are built for the elements—lightweight, rust-resistant aluminum that stands up to West African weather.</p>
 
     <p><strong>Final Thought:</strong> Don’t risk worker injury. Prepare for the rains with proper scaffolding gear and safety checks—your site will stay productive and protected.</p>
-  `
-}
+  `}
 ];
 
 export const products = [
