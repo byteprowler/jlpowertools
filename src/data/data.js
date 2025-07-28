@@ -86,7 +86,29 @@ export const posts = [
         <p><strong>Where to Find Authentic Gear:</strong> Visit our official branch at <strong>73 Cemetry Street, Ebutte-Metta, Yaba, Lagos</strong>. You can inspect products before purchase and get advice directly from our technical team.</p>
 
         <p><strong>Final Thoughts:</strong> Don’t let a fake ladder cut your progress short. Invest in certified aluminum ladders that are built to last and protect lives. Your crew—and your wallet—will thank you later.</p>
-`}
+`},
+{
+  slug: "scaffolding-safety-rainy-season",
+  image: "/scaffolding-safety-rain.webp",
+  title: "Scaffolding Safety Tips for Nigeria's Rainy Season",
+  description: ["Protect your crew with these crucial scaffolding safety practices during Nigeria’s rainy months."],
+  date: "2025-07-03",
+  content: `
+    <p>Rainy season in Nigeria means slippery work environments, strong winds, and increased risk for scaffold-related accidents. It’s not just about delays—it’s about protecting lives.</p>
+
+    <p><strong>Key Safety Tips:</strong></p>
+    <ul>
+      <li>✔️ Always inspect for rust or loose joints before each use</li>
+      <li>✔️ Avoid using scaffolds during heavy rain or thunderstorms</li>
+      <li>✔️ Install anti-slip planks and proper drainage under the scaffold</li>
+      <li>✔️ Ensure guardrails and toe boards are always in place</li>
+    </ul>
+
+    <p>All scaffolds at J & L Powertools are built for the elements—lightweight, rust-resistant aluminum that stands up to West African weather.</p>
+
+    <p><strong>Final Thought:</strong> Don’t risk worker injury. Prepare for the rains with proper scaffolding gear and safety checks—your site will stay productive and protected.</p>
+  `
+}
 ];
 
 export const products = [

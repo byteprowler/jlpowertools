@@ -114,12 +114,12 @@ export default function InsightsPost() {
 
           <div className="mt-12 pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold mb-4">Share this article</h3>
-            <div className="flex gap-3">
+            <div className="flex flex-col lg:flex-row gap-3">
               {['Twitter', 'Facebook', 'LinkedIn', 'WhatsApp'].map((platform) => (
                 <button
                   key={platform}
                   onClick={() => shareArticle(platform, post)}
-                  className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors"
+                  className="flex  items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors"
                 >
                   <FaShareAlt />
                   {platform}
