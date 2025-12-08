@@ -77,7 +77,7 @@ const HamburgerButton = ({ isOpen, toggleSidebar, scrolled }) => {
 
 
 
-const SideBar = ({ isOpen,setIsOpen, toggleSidebar, navLinks }) => {
+const SideBar = ({ isOpen, setIsOpen, navLinks }) => {
   const pathname = usePathname();
 
   return (

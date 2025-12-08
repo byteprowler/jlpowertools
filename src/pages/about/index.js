@@ -44,7 +44,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>
-                Founded in <strong>Lagos (2000)</strong>, J & L Powertools LTDbegan as a small supplier of 
+                Founded in <strong>Lagos (2000)</strong>, J & L Powertools LTD began as a small supplier of 
                 industrial ladders to local construction companies. Today, we serve <strong>over 500+ 
                 contractors</strong> across West Africa.
               </p>
