@@ -40,6 +40,23 @@ const VARIANTS = {
   },
 }
 
+const getSeasonalDecoration = () => {
+  const month = new Date().getMonth() + 1;
+
+  if (month === 12) return "/decorations/santa-hat.png";
+
+  if (month === 1) return "/decorations/fireworks.png";
+
+  if (month === 2) return "/decorations/hearts.png";
+
+  if (month === 4) return "/decorations/crescent.png";
+
+  if (month === 10) return "/decorations/green-flag.png";
+
+  return null;
+};
+
+
 const HamburgerButton = ({ isOpen, toggleSidebar, scrolled }) => {
   const hamburgerColor = isOpen ? 'bg-black' : (scrolled ? 'bg-black' : 'bg-gray-500');
 
@@ -224,14 +241,27 @@ export default function Navbar() {
         scrolled ? "bg-white shadow text-gray-800" : "bg-inherit text-gray-600"
       }`}
     >
+      <div className='relative w-[70px] h-[50px]'>
       <Link href={'/'} className="text-xl font-bold">
         <Image src='/jlp.webp' 
         width={70} 
         height={150} 
-        alt='J & L Powertools LTDLogo' 
+        alt='J & L Powertools LTD Logo' 
         className='overflow-hidden rounded-sm'
-        priority />
-        </Link>
+        priority 
+        />
+      </Link>
+
+      {getSeasonalDecoration() && (
+        <Image
+          src={getSeasonalDecoration()}
+          width={40}
+          height={40}
+          alt="Seasonal decoration"
+          className="absolute -top-2 -right-2"
+        />
+      )}
+      </div>
 
       <div className="hidden md:flex space-x-6">
         {navLinks.map((link) => (
