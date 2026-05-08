@@ -1,13 +1,11 @@
-User-Agent: Googlebot
+# *
+User-agent: *
 Allow: /
-Disallow: /private/
+Disallow: /admin
+Disallow: /cart
 
-User-Agent: Applebot
-Allow: /
-Disallow: /private/
+# Host
+Host: https://www.jlpowertools.biz
 
-User-Agent: Bingbot
-Allow: /
-Disallow: /private/
-
+# Sitemaps
 Sitemap: https://www.jlpowertools.biz/sitemap.xml

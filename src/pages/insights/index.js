@@ -1,125 +1,107 @@
 import Link from "next/link";
 import { posts } from "@/data/data";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaClock } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
+import AnimatedSection from "@/components/AnimatedSection";
 
-const LETTER_DELAY = 0.050;
-const BOX_FADE_DURATION = 0.25;
-
-const SWAP_DELAY_IN_MS = 50000;
-
-const Typewrite = ({ examples }) => {
-  const [restartKey, setRestartKey] = useState(0);
-  const current = examples[restartKey % examples.length];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setRestartKey((prev) => prev + 1); 
-    }, SWAP_DELAY_IN_MS);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  return (
-    <p className="mb-2.5 text-sm font-light uppercase">
-      <span className="inline-block size-2 rounded-md bg-neutral-950" />
-      <span className="ml-2">
-        Description:{" "}
-        {current.split("").map((l, i) => (
-          <motion.span
-            key={`${restartKey}-${i}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              delay: i * LETTER_DELAY,
-              duration: 0,
-            }}
-            className="relative"
-          >
-            {l}
-            <motion.span
-              className="absolute bottom-[3px] left-[1px] right-0 top-[3px] bg-neutral-950"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{
-                delay: i * LETTER_DELAY,
-                times: [0, 0.1, 1],
-                duration: BOX_FADE_DURATION,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.span>
-        ))}
-      </span>
-    </p>
-  );
-};
-
+function getReadTime(content) {
+  const words = (content || '').split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
 
 export default function Insights() {
+  const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <>
-    <NextSeo
-    title="Construction Equipment Insights | J & L Powertools LTD Insights"
-    description="Expert Articles on scaffolding safety and ladder maintenance"
-    canonical="https://www.jlpowertools.biz/insights" />
-    <main className="space-y-16">
-      <section
-      id="hero"
-      className="relative min-h-screen flex space-y-8 flex-col overflow-hidden items-center justify-center text-center px-6 text-white">
-      <Image
-        src="https://images.unsplash.com/photo-1519143009590-e3800b9df468?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Hero"
-        fill
-        priority
-        style={{ objectFit: "cover" , objectPosition: "center" }}
-       />
-       <div className="absolute inset-0 z-0"/>
-       <div className="relative z-10 max-w-3xl">
-      <h1 className="text-6xl uppercase font-bold mb-8">Insights</h1>
-      <p>Experts advice for the West African Construction professionals</p>
-       </div>
-      </section>
+      <NextSeo
+        title="Construction & Scaffolding Insights | J & L Powertools LTD"
+        description="Expert articles on industrial ladders, scaffolding safety, and construction access equipment for contractors in Nigeria and West Africa."
+        canonical="https://www.jlpowertools.biz/insights"
+        additionalMetaTags={[{
+          name: 'keywords',
+          content: 'scaffolding safety Nigeria, aluminium ladder tips, construction equipment insights, ladder types Nigeria, scaffolding West Africa',
+        }]}
+      />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-      <ul className="space-y-12 divide-y divide-gray-200">
-        {posts.map((post) => (
-          <motion.li 
-          key={post.slug}
-          className="pt-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}>
-            <Link href={`/insights/${post.slug}`} className="group">
-              <article className="flex flex-col md:flex-row gap-6">
-                <div className="relative w-full md:w-64 h-48 overflow-hidden rounded-lg bg-gray-100">
-                  {post.image && (
-                    <Image
-                     src={post.image}
-                     alt={""}
-                     fill
-                     loading="lazy"
-                     className="object-cover" />
-                  )}
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-gray-900 group-hover:text-[#FACC15] transition-colors">{post.title}</h2>
-                  <Typewrite examples={post.description} />
-                  <div className="flex items-center mt-3 text-sm text-gray-500">
-                    <FaCalendarAlt className="mr-2" />
-                    {new Date(post.date).toLocaleDateString("en-NG")}
-                  </div>
-                </div>
-              </article>
-            </Link>
-          </motion.li>
-        ))}
-      </ul>
-      </div>
-    </main>
+      <main>
+
+        {/* Hero */}
+        <section
+          id="hero"
+          className="relative h-80 md:h-96 flex items-center justify-center overflow-hidden"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1519143009590-e3800b9df468?q=80&w=1384&auto=format&fit=crop"
+            alt="Construction site insights — J & L Powertools Nigeria"
+            fill
+            priority
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10 text-center text-white px-6 mt-10">
+            <h1 className="text-5xl font-extrabold mb-3 uppercase tracking-tight">Insights</h1>
+            <p className="text-white/80 text-lg max-w-xl mx-auto">
+              Expert advice for construction professionals across West Africa
+            </p>
+          </div>
+        </section>
+
+        {/* Articles */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+          <p className="text-sm text-gray-500 mb-8">{sortedPosts.length} articles published</p>
+
+          <ul className="space-y-10 divide-y divide-gray-100">
+            {sortedPosts.map((post, i) => (
+              <AnimatedSection key={post.slug} delay={i * 0.05} className="pt-10 first:pt-0">
+                <Link href={`/insights/${post.slug}`} className="group">
+                  <article className="flex flex-col md:flex-row gap-6">
+                    {/* Image */}
+                    <div className="relative w-full md:w-60 h-44 flex-shrink-0 overflow-hidden rounded-xl bg-gray-100">
+                      {post.image && (
+                        <Image
+                          src={post.image}
+                          alt={`${post.title} — J & L Powertools Insights`}
+                          fill
+                          loading={i < 2 ? "eager" : "lazy"}
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, 240px"
+                        />
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex flex-col justify-center flex-1">
+                      <h2 className="text-xl font-bold text-gray-900 group-hover:text-[#FACC15] transition-colors mb-2">
+                        {post.title}
+                      </h2>
+                      <p className="text-gray-500 text-sm mb-3 line-clamp-2">
+                        {Array.isArray(post.description) ? post.description[0] : post.description}
+                      </p>
+                      <div className="flex items-center gap-4 text-xs text-gray-400">
+                        <span className="flex items-center gap-1">
+                          <FaCalendarAlt />
+                          {new Date(post.date).toLocaleDateString("en-NG", { year: "numeric", month: "long", day: "numeric" })}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <FaClock />
+                          {getReadTime(post.content)} min read
+                        </span>
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-[#FACC15] text-sm font-semibold mt-3">
+                        Read Article <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </div>
+                  </article>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </ul>
+        </div>
+      </main>
     </>
   );
 }

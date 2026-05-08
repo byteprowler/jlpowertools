@@ -1,23 +1,35 @@
 @import "tailwindcss";
 
-/* Poppins (for modern Nigerian businesses) */
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/poppins-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap; /* Prevents layout shift */
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/poppins-bold.woff2') format('woff2');
-  font-weight: 700;
-  font-display: swap;
+/* ── Brand tokens ────────────────────────────────────── */
+:root {
+  --color-brand-yellow: #FACC15;
+  --color-brand-yellow-dark: #eab308;
+  --color-brand-dark: #111827;
+  --color-brand-dark-2: #1f2937;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+  --transition-base: 200ms ease;
 }
 
-/* Open Sans (great for Yoruba/English content) */
-@font-face {
-  font-family: 'Open Sans';
-  src: url('/fonts/opensans-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
+/* ── Base ────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Reduced motion ──────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Utility ─────────────────────────────────────────── */
+.brand-yellow { color: var(--color-brand-yellow); }
+.bg-brand-yellow { background-color: var(--color-brand-yellow); }
+.border-brand-yellow { border-color: var(--color-brand-yellow); }

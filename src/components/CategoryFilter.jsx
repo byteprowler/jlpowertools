@@ -52,10 +52,10 @@ export default function CategoryFilter({ categories, activeCategory, onSelect })
     <div className="relative w-full md:w-48">
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#FACC15]"
         whileTap={{ scale: 0.98 }}
       >
-        <span className={`font-medium ${isOpen ? "text-blue-600" : ""}`}>
+        <span className={`font-medium ${isOpen ? "text-[#FACC15]" : ""}`}>
           {activeCategory}
         </span>
 
@@ -78,8 +78,8 @@ export default function CategoryFilter({ categories, activeCategory, onSelect })
               <motion.li
                 key={category}
                 variants={itemVariants}
-                className={`px-3 py-2 cursor-pointer hover:bg-blue-50 ${
-                  activeCategory === category ? "bg-blue-100 text-blue-600" : ""
+                className={`px-3 py-2 cursor-pointer hover:bg-yellow-50 ${
+                  activeCategory === category ? "bg-yellow-100 text-yellow-700 font-semibold" : ""
                 }`}
                 onClick={() => {
                   onSelect(category);
