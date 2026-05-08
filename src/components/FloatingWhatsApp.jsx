@@ -7,7 +7,7 @@ export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = React.useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
       <AnimatePresence>
         {showTooltip && (
           <motion.span

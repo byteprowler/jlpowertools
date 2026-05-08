@@ -12,12 +12,12 @@ const VARIANTS = {
     closed: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "35%"] },
   },
   middle: {
-    open: { rotate: ["0deg", "0deg", "-45deg"] },
-    closed: { rotate: ["-45deg", "0deg", "0deg"] },
+    open: { rotate: ["0deg", "0deg", "-45deg"], opacity: 0 },
+    closed: { rotate: ["-45deg", "0deg", "0deg"], opacity: 1 },
   },
   bottom: {
-    open: { rotate: ["0deg", "0deg", "45deg"], bottom: ["35%", "50%", "50%"], left: "50%" },
-    closed: { rotate: ["45deg", "0deg", "0deg"], bottom: ["50%", "50%", "35%"], left: "calc(50% + 10px)" },
+    open: { rotate: ["0deg", "0deg", "-45deg"], bottom: ["35%", "50%", "50%"], left: "50%" },
+    closed: { rotate: ["-45deg", "0deg", "0deg"], bottom: ["50%", "50%", "35%"], left: "calc(50% + 10px)" },
   },
 };
 
@@ -32,20 +32,22 @@ const getSeasonalDecoration = () => {
 };
 
 const HamburgerButton = ({ isOpen, toggleSidebar, scrolled }) => {
-  const hamburgerColor = isOpen ? 'bg-black' : (scrolled ? 'bg-black' : 'bg-gray-500');
+  const hamburgerColor = isOpen ? 'bg-gray-900' : (scrolled ? 'bg-gray-900' : 'bg-white');
   return (
-    <MotionConfig transition={{ duration: 0.5, ease: "easeInOut" }}>
+    <MotionConfig transition={{ duration: 0.4, ease: "easeInOut" }}>
       <motion.button
         initial={false}
         animate={isOpen ? "open" : "closed"}
         onClick={toggleSidebar}
         aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-expanded={isOpen}
-        className="relative z-[60] h-11 w-10 rounded-full transition-colors"
+        className="relative z-[110] h-12 w-12 rounded-full flex items-center justify-center transition-colors hover:bg-black/5"
       >
-        <motion.span variants={VARIANTS.top} className={`absolute h-1 w-8 ${hamburgerColor}`} style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }} />
-        <motion.span variants={VARIANTS.middle} className={`absolute h-1 w-8 ${hamburgerColor}`} style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }} />
-        <motion.span variants={VARIANTS.bottom} className={`absolute h-1 w-4 ${hamburgerColor}`} style={{ x: "-50%", y: "50%", bottom: "35%", left: "calc(50% + 10px)" }} />
+        <div className="relative h-6 w-8">
+          <motion.span variants={VARIANTS.top} className={`absolute h-1 w-8 ${hamburgerColor} rounded-full`} style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }} />
+          <motion.span variants={VARIANTS.middle} className={`absolute h-1 w-8 ${hamburgerColor} rounded-full`} style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }} />
+          <motion.span variants={VARIANTS.bottom} className={`absolute h-1 w-4 ${hamburgerColor} rounded-full`} style={{ x: "-50%", y: "50%", bottom: "35%", left: "calc(50% + 10px)" }} />
+        </div>
       </motion.button>
     </MotionConfig>
   );
@@ -53,94 +55,126 @@ const HamburgerButton = ({ isOpen, toggleSidebar, scrolled }) => {
 
 const SideBar = ({ isOpen, setIsOpen, navLinks }) => {
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [setIsOpen]);
+
   return (
     <AnimatePresence>
-      <>
-        {isOpen && (
+      {isOpen && (
+        <>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md"
             onClick={() => setIsOpen(false)}
           />
-        )}
-        {isOpen && (
           <motion.nav
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed top-0 right-0 w-4/5 h-full p-6 bg-white text-black z-50 shadow-2xl flex flex-col"
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-white text-gray-900 z-[105] shadow-2xl flex flex-col"
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Menu</h2>
-
-            <div className="flex-1 space-y-0 pt-16">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`flex items-center text-lg p-3 rounded-lg transition-colors ${
-                    pathname === link.href
-                      ? "bg-[#FACC15] text-black font-medium"
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.icon}
-                  <span className="ml-3">{link.name}</span>
-                </Link>
-              ))}
+            {/* Header / Branding */}
+            <div className="p-6 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="relative w-10 h-10">
+                  <Image src="/jlp.webp" fill alt="JLP Logo" className="object-contain" />
+                </div>
+                <span className="font-bold text-lg tracking-tight">J&L Powertools</span>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="Close menu"
+              >
+                <motion.div whileTap={{ scale: 0.9 }}>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </motion.div>
+              </button>
             </div>
 
-            <div className="pb-8 space-y-4">
-              <div className="flex justify-center space-x-6">
-                <Link
-                  href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9?g_st=com.google.maps.preview.copy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-red-600 text-xl"
-                  aria-label="Get directions to our showroom"
+            {/* Nav Links */}
+            <div className="flex-1 overflow-y-auto py-6 px-4 space-y-1">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center gap-4 px-4 py-4 rounded-xl transition-all ${
+                      isActive
+                        ? "bg-[#FACC15] text-gray-900 font-bold shadow-sm"
+                        : "text-gray-600 hover:bg-gray-50 active:scale-[0.98]"
+                    }`}
+                  >
+                    <span className={isActive ? "text-gray-900" : "text-gray-400"}>
+                      {link.icon}
+                    </span>
+                    <span className="text-lg">{link.name}</span>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Footer / CTAs */}
+            <div className="p-6 bg-gray-50 space-y-3">
+              <div className="grid grid-cols-2 gap-3 mb-2">
+                <a
+                  href="tel:+2348035717860"
+                  className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-[#FACC15] transition-colors"
                 >
-                  <FaMapMarkedAlt />
-                </Link>
-                <Link
+                  <Phone className="w-5 h-5 text-[#FACC15]" />
+                  <span className="text-xs font-semibold">Call Now</span>
+                </a>
+                <a
                   href="https://wa.me/2348035717860"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-500 text-xl"
-                  aria-label="WhatsApp J & L Powertools"
+                  className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-green-500 transition-colors"
                 >
-                  <FaWhatsapp />
-                </Link>
+                  <FaWhatsapp className="w-5 h-5 text-green-500" />
+                  <span className="text-xs font-semibold">WhatsApp</span>
+                </a>
               </div>
-
-              <a
-                href="tel:+2348035717860"
-                className="flex items-center justify-center bg-[#FACC15] text-gray-900 py-3 px-6 rounded-full font-bold"
-              >
-                <Phone className="mr-2 w-4 h-4" />
-                +234 803 571 7860
-              </a>
 
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center bg-gray-900 text-white py-3 px-6 rounded-full font-semibold"
+                className="flex items-center justify-center gap-2 bg-gray-900 text-white w-full py-4 rounded-2xl font-bold shadow-lg hover:bg-black transition-all active:scale-[0.98]"
               >
                 Request a Quote
               </Link>
 
-              <p className="text-center text-xs text-gray-400 pt-4 border-t border-gray-200">
-                Designed by{' '}
-                <Link href="https://byteprowler.vercel.app" target="_blank" rel="noopener" className="text-[#FACC15] hover:underline">
-                  ByteProwler
-                </Link>
-              </p>
+              <Link
+                href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-[#FACC15] text-gray-900 w-full py-4 rounded-2xl font-bold shadow-md hover:bg-[#eab308] transition-all active:scale-[0.98]"
+              >
+                <FaMapMarkedAlt className="w-5 h-5" />
+                Visit Showroom
+              </Link>
+
+              <div className="pt-4 text-center">
+                <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">
+                  Professional Industrial Solutions
+                </p>
+              </div>
             </div>
           </motion.nav>
-        )}
-      </>
+        </>
+      )}
     </AnimatePresence>
   );
 };
@@ -156,8 +190,17 @@ export default function Navbar() {
   useEffect(() => { setMounted(true) }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isSidebarOpen ? "hidden" : "auto";
-    return () => { document.body.style.overflow = "auto" };
+    if (isSidebarOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    };
   }, [isSidebarOpen]);
 
   useEffect(() => {
@@ -186,7 +229,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`px-6 md:px-8 py-4 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`px-6 md:px-8 py-4 flex justify-between items-center fixed top-0 left-0 w-full transition-all duration-500 ${
+        isSidebarOpen ? "z-[200]" : "z-50"
+      } ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm text-gray-800"
           : "bg-transparent text-white"
@@ -245,8 +290,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Mobile hamburger */}
-      <div className="md:hidden z-[60]">
+      <div className="md:hidden">
         <HamburgerButton toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} scrolled={scrolled} />
       </div>
 
