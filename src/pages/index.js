@@ -81,6 +81,9 @@ export default function Home() {
             alt: "J & L Powertools LTD — Lagos Ladder & Scaffolding Showroom",
           }],
         }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
         additionalMetaTags={[
           { name: "keywords", content: "industrial ladders Lagos, aluminium ladders Nigeria, scaffolding supplier Lagos, scaffold tower Nigeria, buy ladders Lagos, construction equipment Nigeria, ladders and scaffolding Lagos" },
           { name: "geo.placename", content: "Lagos, Nigeria" },

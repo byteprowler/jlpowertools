@@ -21,6 +21,15 @@ export default function Insights() {
         title="Construction & Scaffolding Insights | J & L Powertools LTD"
         description="Expert articles on industrial ladders, scaffolding safety, and construction access equipment for contractors in Nigeria and West Africa."
         canonical="https://www.jlpowertools.biz/insights"
+        openGraph={{
+          url: 'https://www.jlpowertools.biz/insights',
+          title: 'Construction & Scaffolding Insights | J & L Powertools LTD',
+          description: 'Expert articles on industrial ladders, scaffolding safety, and construction access equipment for contractors in Nigeria and West Africa.',
+          images: [{ url: 'https://www.jlpowertools.biz/why-invest-in-scaffoldings.webp', width: 1200, height: 630, alt: 'J & L Powertools Insights — Construction Equipment Blog' }],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
         additionalMetaTags={[{
           name: 'keywords',
           content: 'scaffolding safety Nigeria, aluminium ladder tips, construction equipment insights, ladder types Nigeria, scaffolding West Africa',

@@ -15,10 +15,10 @@ const SEO_CONFIG = {
     siteName: "J & L Powertools",
     images: [
       {
-        url: "/Logo.webp",
+        url: "https://www.jlpowertools.biz/Logo.webp",
         width: 1200,
         height: 630,
-        alt: "J & L Powertools LTDLagos Showroom - Scaffolding & Ladders",
+        alt: "J & L Powertools LTD Lagos Showroom - Scaffolding & Ladders",
       },
     ],
   },
@@ -33,11 +33,11 @@ const SEO_CONFIG = {
       content: "Scaffolding showroom Lagos, buy ladders Nigeria, construction equipment West Africa, industrial ladders showroom, J & L Powertools",
     },
     { name: "geo.region", content: "NG-LA" },
-    { name: "geo.placename", content: "Ikeja, Lagos" },
-    { name: "geo.position", content: "6.5244;3.3792" },
-    { name: "ICBM", content: "6.5244, 3.3792" },
+    { name: "geo.placename", content: "Lagos, Nigeria" },
+    { name: "geo.position", content: "6.4859;3.3830" },
+    { name: "ICBM", content: "6.4859, 3.3830" },
 
-    { name: "business:contact_data:street_address", content: "73 Cemetry Road Ebutte-Metta" },
+    { name: "business:contact_data:street_address", content: "73 Cemetery Street, Ebutte-Metta" },
     { name: "business:contact_data:locality", content: "Yaba" },
     { name: "business:contact_data:region", content: "Lagos" },
     { name: "business:contact_data:phone_number", content: "+2348035717860" },
