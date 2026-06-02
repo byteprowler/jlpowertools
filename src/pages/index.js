@@ -370,7 +370,7 @@ export default function Home() {
                       <MapPin className="w-5 h-5 text-[#FACC15] flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-gray-900">Address</p>
-                        <p className="text-sm">73 Cemetery Street, Ebutte-Metta, Yaba, Lagos 100001, Nigeria</p>
+                        <p className="text-sm">73 Cemetery Street, Ebute-Metta, Yaba, Lagos 100001, Nigeria</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">

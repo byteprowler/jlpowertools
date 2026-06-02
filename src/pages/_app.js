@@ -4,8 +4,8 @@ import Head from "next/head";
 import MainLayout from "@/components/Layout";
 
 const SEO_CONFIG = {
-  titleTemplate: "%s | J & L Powertools LTD- Ladders & Scaffolding (Lagos)",
-  defaultTitle: "J & L Powertools LTD- Premium Construction Equipment Showroom in Lagos",
+  titleTemplate: "%s | J & L Powertools LTD - Ladders & Scaffolding (Lagos)",
+  defaultTitle: "J & L Powertools LTD - Premium Construction Equipment Showroom in Lagos",
   description: "Visit our Lagos showroom for quality inspection of industrial scaffolding and ladders. Serving clients from Nigeria and across West Africa.",
   canonical: "https://www.jlpowertools.biz",
   openGraph: {
@@ -37,7 +37,7 @@ const SEO_CONFIG = {
     { name: "geo.position", content: "6.4859;3.3830" },
     { name: "ICBM", content: "6.4859, 3.3830" },
 
-    { name: "business:contact_data:street_address", content: "73 Cemetery Street, Ebutte-Metta" },
+    { name: "business:contact_data:street_address", content: "73 Cemetery Street, Ebute-Metta" },
     { name: "business:contact_data:locality", content: "Yaba" },
     { name: "business:contact_data:region", content: "Lagos" },
     { name: "business:contact_data:phone_number", content: "+2348035717860" },

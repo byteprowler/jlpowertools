@@ -19,7 +19,7 @@ const organizationSchema = {
   "logo": "https://www.jlpowertools.biz/Logo.webp",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "73 Cemetery Street, Ebutte-Metta",
+    "streetAddress": "73 Cemetery Street, Ebute-Metta",
     "addressLocality": "Yaba",
     "addressRegion": "Lagos",
     "addressCountry": "NG"
@@ -205,7 +205,7 @@ export default function AboutPage() {
 
         <CTABanner
           heading="Visit Our Lagos Showroom"
-          subheading="73 Cemetery Street, Ebutte-Metta, Yaba, Lagos. Open Mon–Sat. No appointment needed."
+          subheading="73 Cemetery Street, Ebute-Metta, Yaba, Lagos. Open Mon–Sat. No appointment needed."
         />
       </main>
     </>

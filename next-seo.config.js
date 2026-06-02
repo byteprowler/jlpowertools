@@ -1,5 +1,5 @@
 const SEO = {
-  title: "J & L Powertools LTD| Aluminium Ladders & Scaffolding in Yaba Since 1999",
+  title: "J & L Powertools LTD | Aluminium Ladders & Scaffolding in Yaba Since 1999",
   description: "Visit our store at 73 Cemetery Street, Yaba, Lagos. Trusted aluminium ladder and scaffolding supplier for 25+ years. Serving industrial, commercial, and home needs.",
   canonical: "https://www.jlpowertools.biz",
   additionalMetaTags: [
@@ -24,15 +24,15 @@ const SEO = {
     type: "website",
     locale: "en_NG",
     url: "https://www.jlpowertools.biz",
-    site_name: "J & L Powertools LTD(Yaba)",
+    site_name: "J & L Powertools LTD (Yaba)",
     title: "Ladder Supplier in Yaba | 73 Cemetery St Since 1999",
-    description: "Need durable ladders or scaffolding in Lagos? Stop by J & L Powertools LTDat 73 Cemetery Street, Yaba, Ebutte-Metta. Open Mon-Sat.",
+    description: "Need durable ladders or scaffolding in Lagos? Stop by J & L Powertools LTD at 73 Cemetery Street, Yaba, Ebute-Metta. Open Mon-Sat.",
     images: [
       {
         url: "https://www.jlpowertools.biz/store-front.webp",
         width: 1200,
         height: 630,
-        alt: "J & L Powertools LTDstore at 73 Cemetery St, Yaba, Ebutte-Metta, Lagos",
+        alt: "J & L Powertools LTD store at 73 Cemetery St, Yaba, Ebute-Metta, Lagos",
       }
     ]
   },

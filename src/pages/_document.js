@@ -31,7 +31,7 @@ export default function Document() {
               description: "Leading supplier of aluminium ladders and scaffolding in Nigeria & West Africa",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "73 Cemetery Street, Ebutte-Metta",
+                streetAddress: "73 Cemetery Street, Ebute-Metta",
                 addressLocality: "Yaba",
                 addressRegion: "Lagos",
                 postalCode: "100001",

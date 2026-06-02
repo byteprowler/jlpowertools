@@ -94,7 +94,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-semibold text-gray-900">Address</p>
                       <p className="text-sm leading-relaxed">
-                        73 Cemetery Street, Ebutte-Metta,<br />
+                        73 Cemetery Street, Ebute-Metta,<br />
                         Yaba, Lagos 100001, Nigeria
                       </p>
                     </div>

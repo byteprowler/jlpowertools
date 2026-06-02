@@ -165,7 +165,7 @@ export default function ProductsPage() {
           <AnimatedSection className="mt-14 bg-yellow-50 border border-yellow-200 rounded-2xl p-8 text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Can&apos;t find what you need?</h3>
             <p className="text-gray-600 mb-5 max-w-lg mx-auto">
-              We carry more products in our Lagos showroom than are listed here. WhatsApp us with your requirements and we&apos;ll help you find the right product.
+              We carry more products in our Lagos showroom than those listed here. WhatsApp us with your requirements and we&apos;ll help you find the right product.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a

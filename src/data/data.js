@@ -2,22 +2,22 @@ export const posts = [
   {
     slug: "best-aluminum-ladders-nigeria",
     image: "https://plus.unsplash.com/premium_vector-1750228666006-19063d8c993a?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Best Aluminum Ladders for Nigerian Roofers",
-    description: ["Discover the top aluminum ladders tailored for Nigerian roofers. Learn why they're the safest, most efficient option in the market."],
+    title: "Best Aluminium Ladders for Nigerian Roofers",
+    description: ["Discover the top aluminium ladders tailored for Nigerian roofers. Learn why they're the safest, most efficient option in the market."],
     date: "2025-05-05",
     keywords: ["aluminium ladders Nigeria", "ladders for roofers", "buy ladders Lagos", "best ladder Nigeria"],
     content: `
-      <p>If you're a professional roofer in Nigeria, the right aluminum ladder can make or break your efficiency and safety on the job. With Nigeria's varied climate conditions and unique roofing structures, aluminum ladders have become the go-to solution for many roofers looking for lightweight durability, portability, and strength.</p>
+      <p>If you're a professional roofer in Nigeria, the right aluminium ladder can make or break your safety and efficiency on the job. With Nigeria's varied climate conditions and unique roofing structures, aluminium ladders have become the go-to solution for many roofers looking for lightweight durability, portability, and strength.</p>
 
-      <p><strong>Why Choose Aluminum?</strong> Unlike wooden ladders that warp or steel ladders that rust quickly, aluminum ladders resist corrosion, are easier to carry, and last significantly longer. This is especially important in coastal regions like Lagos or Port Harcourt, where moisture and humidity are high.</p>
+      <p><strong>Why Choose Aluminium?</strong> Unlike wooden ladders that warp or steel ladders that rust quickly, aluminium ladders resist corrosion, are easier to carry, and last significantly longer. This is especially important in coastal regions like Lagos or Port Harcourt, where moisture and humidity are high.</p>
 
       <p><strong>Top Features to Look For:</strong> When shopping for a ladder, Nigerian roofers should focus on features like non-slip feet, wide rungs, adjustable height, and reinforced joints. These features not only enhance usability but also reduce the risk of workplace injuries.</p>
 
-      <p><strong>Recommended Products:</strong> J &amp; L Powertools LTD offers a top-tier range of aluminum ladders built for Nigerian conditions — durable, non-slip, and easy to handle across homes, industrial sites, and roofing jobs.</p>
+      <p><strong>Recommended Products:</strong> J &amp; L Powertools LTD offers a top-tier range of aluminium ladders built for Nigerian conditions — durable, non-slip, and easy to handle across homes, industrial sites, and roofing jobs.</p>
 
-      <p><strong>Where to Buy:</strong> Roofers across Nigeria and West Africa can rely on J &amp; L Powertools LTD for quality aluminum ladders built to handle tough job sites. Visit our only branch at 73 Cemetery Street, Ebutte-Metta, Yaba, Lagos 100001, for in-person service and expert recommendations.</p>
+      <p><strong>Where to Buy:</strong> Roofers across Nigeria and West Africa can rely on J &amp; L Powertools LTD for quality aluminium ladders built to handle tough job sites. Visit our branch at 73 Cemetery Street, Ebute-Metta, Yaba, Lagos 100001, for in-person service and expert recommendations.</p>
 
-      <p><strong>Final Thoughts:</strong> Investing in a top-quality aluminum ladder is a no-brainer for Nigerian roofers. It improves job performance, guarantees safety, and proves cost-effective in the long run. Stay high — literally and professionally — with the best tools for the job.</p>
+      <p><strong>Final Thoughts:</strong> Investing in a top-quality aluminium ladder is a no-brainer for Nigerian roofers. It improves job performance, guarantees safety, and proves cost-effective in the long run. Reach new heights — both literally and professionally — with the best tools for the job.</p>
 `
   },
   {
@@ -30,15 +30,15 @@ export const posts = [
     content: `
         <p>When it comes to ladders, one size doesn't fit all jobs. Different tasks across Nigeria require specific ladder types, and using the wrong one can result in poor performance — or worse, serious injuries. In this article, we'll highlight the top three ladder types: step, extension, and platform ladders, and how they serve both industrial and home users across Nigeria and West Africa.</p>
 
-        <p><strong>1. Step Ladders:</strong> These are perfect for indoor use — changing light bulbs, accessing top shelves, or doing small paint jobs. Step ladders are freestanding, stable, and reliable. Whether you're a homeowner, painter, or electrician, a good aluminum step ladder is your best friend for day-to-day tasks.</p>
+        <p><strong>1. Step Ladders:</strong> These are perfect for indoor use — changing light bulbs, accessing top shelves, or doing small paint jobs. Step ladders are freestanding, stable, and reliable. Whether you're a homeowner, painter, or electrician, a good aluminium step ladder is your best friend for day-to-day tasks.</p>
 
-        <p><strong>2. Extension Ladders:</strong> Need serious height? Extension ladders are your go-to. Ideal for roofers, billboard installers, and construction workers, they offer adjustable length and stability when properly secured. J &amp; L Powertools LTD stocks quality aluminum extension ladders built for tough Nigerian job sites.</p>
+        <p><strong>2. Extension Ladders:</strong> Need serious height? Extension ladders are your go-to. Ideal for roofers, billboard installers, and construction workers, they offer adjustable length and stability when properly secured. J &amp; L Powertools LTD stocks quality aluminium extension ladders built for tough Nigerian job sites.</p>
 
         <p><strong>3. Platform Ladders:</strong> Designed for comfort and long-duration tasks, platform ladders come with a wide top step or standing platform. They're popular among warehouse staff, event decorators, and supermarket workers who need balance and space while working at height.</p>
 
         <p><strong>Precautions:</strong> No matter the type, safety is key. Look for features like anti-slip feet, reinforced steps, and stabilizer bars. Always inspect your ladder before use and never compromise on build quality — especially in a high-risk environment.</p>
 
-        <p><strong>Where to Buy:</strong> All these ladder types and more are available at J &amp; L Powertools — your trusted source for premium ladders in Nigeria and West Africa. Visit our branch at 73 Cemetery Street, Ebutte-Metta, Yaba, Lagos 100001, for expert guidance and reliable equipment.</p>
+        <p><strong>Where to Buy:</strong> All these ladder types and more are available at J &amp; L Powertools — your trusted source for premium ladders in Nigeria and West Africa. Visit our branch at 73 Cemetery Street, Ebute-Metta, Yaba, Lagos 100001, for expert guidance and reliable equipment.</p>
 
         <p><strong>Final Thoughts:</strong> Matching the right ladder to the right job improves safety, saves time, and boosts efficiency. Whether you're at home or on a commercial site, J &amp; L Powertools LTD has the perfect ladder to help you reach your goals — literally.</p>
 `
@@ -55,26 +55,26 @@ export const posts = [
 
         <p><strong>The Importance of Safety:</strong> Falls from heights remain one of the top causes of job site injuries in Nigeria. Investing in quality scaffolding significantly lowers the risk of accidents, keeps your operations compliant with safety regulations, and protects your workers' lives.</p>
 
-        <p><strong>Types of Scaffolds:</strong> In the local market, both steel and aluminum scaffolds are used — but aluminum is gaining popularity due to its lightweight build and rust resistance, especially in humid areas like Bayelsa or Warri. Tube-and-coupler systems and mobile scaffolds with wheels offer flexibility for projects that demand mobility and quick setup.</p>
+        <p><strong>Types of Scaffolds:</strong> In the local market, both steel and aluminium scaffolds are used — but aluminium is gaining popularity due to its lightweight build and rust resistance, especially in humid areas like Bayelsa or Warri. Tube-and-coupler systems and mobile scaffolds with wheels offer flexibility for projects that demand mobility and quick setup.</p>
 
         <p><strong>Return on Investment:</strong> Good scaffolding isn't a cost — it's a long-term investment. It lasts for years, supports multiple workers at once, and eliminates the constant need for repositioning ladders. That means faster completion times and better work output for your team.</p>
 
-        <p><strong>Where to Buy:</strong> For trusted scaffolding solutions, visit J &amp; L Powertools — your one-stop shop for quality, safety-rated equipment. We offer everything from compact indoor setups to large-scale industrial towers. You can find us at our branch: 73 Cemetery Street, Ebutte-Metta, Yaba, Lagos 100001, Nigeria.</p>
+        <p><strong>Where to Buy:</strong> For trusted scaffolding solutions, visit J &amp; L Powertools — your one-stop shop for quality, safety-rated equipment. We offer everything from compact indoor setups to large-scale industrial towers. You can find us at our branch: 73 Cemetery Street, Ebute-Metta, Yaba, Lagos 100001, Nigeria.</p>
 
-        <p><strong>Final Thoughts:</strong> No shortcuts in construction — especially when lives are on the line. Smart Nigerian businesses are investing in durable, certified scaffolding to increase productivity, improve safety, and gain client confidence. Don't cut corners — elevate your work with scaffolds from J &amp; L Powertools.</p>
+        <p><strong>Final Thoughts:</strong> There are no shortcuts in construction — especially when lives are on the line. Smart Nigerian businesses are investing in durable, certified scaffolding to increase productivity, improve safety, and gain client confidence. Don't cut corners — elevate your work with scaffolds from J &amp; L Powertools.</p>
 `
   },
   {
     slug: "how-to-spot-fake-ladders-nigeria",
     image: "https://plus.unsplash.com/premium_photo-1677529102407-0d075eb2cbb9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "How to Spot Fake Aluminum Ladders in Nigeria",
+    title: "How to Spot Fake Aluminium Ladders in Nigeria",
     description: ["Avoid injury and financial loss by learning how to identify counterfeit ladders commonly sold in Nigerian markets."],
     date: "2025-07-02",
     keywords: ["fake ladders Nigeria", "counterfeit aluminium ladder", "trusted ladder supplier Nigeria", "certified ladders Lagos"],
     content: `
-      <p>Not all ladders are created equal — and in Nigeria's booming construction scene, fake ladders are flooding the market. These substandard products may look legit at first glance, but they're built with poor materials, unstable joints, and fake safety markings.</p>
+      <p>Not all ladders are created equal — and in Nigeria's booming construction scene, fake ladders are flooding the market. These substandard products may look legitimate at first glance, but they're built with poor materials, unstable joints, and fake safety markings.</p>
 
-      <p><strong>Why It Matters:</strong> A fake ladder isn't just a bad investment, it's a safety hazard. Collapsing mid-use can cause severe injuries and set your project back days or weeks.</p>
+      <p><strong>Why It Matters:</strong> A fake ladder is not just a bad investment; it is a serious safety hazard. Collapsing mid-use can cause severe injuries and set your project back days or weeks.</p>
 
       <p><strong>How to Identify Fake Ladders:</strong></p>
       <ul>
@@ -87,9 +87,9 @@ export const posts = [
 
       <p><strong>Buy Smart:</strong> Only purchase ladders from verified dealers like <strong>J &amp; L Powertools LTD</strong>. Our products come with proper safety certifications and have been stress-tested to meet Nigerian and West African job site standards.</p>
 
-      <p><strong>Where to Find Authentic Gear:</strong> Visit our official branch at <strong>73 Cemetery Street, Ebutte-Metta, Yaba, Lagos</strong>. You can inspect products before purchase and get advice directly from our technical team.</p>
+      <p><strong>Where to Find Authentic Gear:</strong> Visit our official branch at <strong>73 Cemetery Street, Ebute-Metta, Yaba, Lagos</strong>. You can inspect products before purchase and get advice directly from our technical team.</p>
 
-      <p><strong>Final Thoughts:</strong> Don't let a fake ladder cut your progress short. Invest in certified aluminum ladders that are built to last and protect lives. Your crew — and your wallet — will thank you later.</p>
+      <p><strong>Final Thoughts:</strong> Don't let a fake ladder cut your progress short. Invest in certified aluminium ladders that are built to last and protect lives. Your crew — and your wallet — will thank you later.</p>
 `
   },
   {
@@ -100,7 +100,7 @@ export const posts = [
     date: "2025-07-03",
     keywords: ["scaffolding safety Nigeria", "rainy season construction safety", "scaffold inspection Lagos", "safe scaffolding West Africa"],
     content: `
-    <p>Rainy season in Nigeria means slippery work environments, strong winds, and increased risk for scaffold-related accidents. It's not just about delays — it's about protecting lives.</p>
+    <p>The rainy season in Nigeria means slippery work environments, strong winds, and increased risk for scaffold-related accidents. It's not just about delays — it's about protecting lives.</p>
 
     <p><strong>Key Safety Tips:</strong></p>
     <ul>
@@ -110,9 +110,9 @@ export const posts = [
       <li>✔️ Ensure guardrails and toe boards are always in place</li>
     </ul>
 
-    <p>All scaffolds at J &amp; L Powertools are built for the elements — lightweight, rust-resistant aluminum that stands up to West African weather.</p>
+    <p>All scaffolds at J &amp; L Powertools are built for the elements — lightweight, rust-resistant aluminium that stands up to West African weather.</p>
 
-    <p><strong>Final Thought:</strong> Don't risk worker injury. Prepare for the rains with proper scaffolding gear and safety checks — your site will stay productive and protected.</p>
+    <p><strong>Final Thought:</strong> Don't risk worker injuries. Prepare for the rains with proper scaffolding gear and safety checks — your site will stay productive and protected.</p>
   `
   }
 ];
@@ -211,7 +211,7 @@ export const ladders = [
 export const faqs = [
   {
     question: "Where can I buy industrial ladders in Lagos?",
-    answer: "J & L Powertools LTD has a dedicated showroom at 73 Cemetery Street, Ebutte-Metta, Yaba, Lagos. You can visit us Monday to Friday (8AM–5PM) or Saturday (9AM–4PM) to inspect and purchase industrial ladders in person.",
+    answer: "J & L Powertools LTD has a dedicated showroom at 73 Cemetery Street, Ebute-Metta, Yaba, Lagos. You can visit us Monday to Friday (8AM–5PM) or Saturday (9AM–4PM) to inspect and purchase industrial ladders in person.",
   },
   {
     question: "Do you sell aluminium scaffolding in Nigeria?",

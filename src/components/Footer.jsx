@@ -17,7 +17,7 @@ const localBusinessSchema = {
   "email": "jlpowertools@yahoo.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "73 Cemetery Street, Ebutte-Metta",
+    "streetAddress": "73 Cemetery Street, Ebute-Metta",
     "addressLocality": "Yaba",
     "addressRegion": "Lagos",
     "postalCode": "100001",
@@ -123,7 +123,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <FaMapMarkerAlt className="mt-1 mr-2 flex-shrink-0 text-[#FACC15]" />
-                <span>73 Cemetery Street, Ebutte-Metta, Yaba, Lagos</span>
+                <span>73 Cemetery Street, Ebute-Metta, Yaba, Lagos</span>
               </Link>
 
               <div className="flex items-center">

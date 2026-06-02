@@ -83,7 +83,7 @@ const SideBar = ({ isOpen, setIsOpen, navLinks }) => {
             className="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-white text-gray-900 z-[105] shadow-2xl flex flex-col"
           >
             {/* Header / Branding */}
-            <div className="p-6 border-b border-gray-100 flex items-center justify-between">
+            <div className="p-6 border-b border-gray-100 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3">
                 <div className="relative w-10 h-10">
                   <Image src="/jlp.webp" fill alt="JLP Logo" className="object-contain" />
@@ -103,76 +103,80 @@ const SideBar = ({ isOpen, setIsOpen, navLinks }) => {
               </button>
             </div>
 
-            {/* Nav Links */}
-            <div className="flex-1 overflow-y-auto py-6 px-4 space-y-1">
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`flex items-center gap-4 px-4 py-4 rounded-xl transition-all ${
-                      isActive
-                        ? "bg-[#FACC15] text-gray-900 font-bold shadow-sm"
-                        : "text-gray-600 hover:bg-gray-50 active:scale-[0.98]"
-                    }`}
-                  >
-                    <span className={isActive ? "text-gray-900" : "text-gray-400"}>
-                      {link.icon}
-                    </span>
-                    <span className="text-lg">{link.name}</span>
-                  </Link>
-                );
-              })}
-            </div>
-
-            {/* Footer / CTAs */}
-            <div className="p-6 bg-gray-50 space-y-3">
-              <div className="grid grid-cols-2 gap-3 mb-2">
-                <a
-                  href="tel:+2348035717860"
-                  className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-[#FACC15] transition-colors"
-                >
-                  <Phone className="w-5 h-5 text-[#FACC15]" />
-                  <span className="text-xs font-semibold">Call Now</span>
-                </a>
-                <a
-                  href="https://wa.me/2348035717860"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-green-500 transition-colors"
-                >
-                  <FaWhatsapp className="w-5 h-5 text-green-500" />
-                  <span className="text-xs font-semibold">WhatsApp</span>
-                </a>
+            {/* Scrollable body wrapper */}
+            <div className="flex-1 overflow-y-auto flex flex-col justify-between">
+              {/* Nav Links */}
+              <div className="py-6 px-4 space-y-1">
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center gap-4 px-4 py-4 rounded-xl transition-all ${
+                        isActive
+                          ? "bg-[#FACC15] text-gray-900 font-bold shadow-sm"
+                          : "text-gray-600 hover:bg-gray-50 active:scale-[0.98]"
+                      }`}
+                    >
+                      <span className={isActive ? "text-gray-900" : "text-gray-400"}>
+                        {link.icon}
+                      </span>
+                      <span className="text-lg">{link.name}</span>
+                    </Link>
+                  );
+                })}
               </div>
 
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center gap-2 bg-gray-900 text-white w-full py-4 rounded-2xl font-bold shadow-lg hover:bg-black transition-all active:scale-[0.98]"
-              >
-                Request a Quote
-              </Link>
+              {/* Footer / CTAs */}
+              <div className="p-6 bg-gray-50 space-y-3 mt-auto shrink-0">
+                <div className="grid grid-cols-2 gap-3 mb-2">
+                  <a
+                    href="tel:+2348035717860"
+                    className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-[#FACC15] transition-colors"
+                  >
+                    <Phone className="w-5 h-5 text-[#FACC15]" />
+                    <span className="text-xs font-semibold">Call Now</span>
+                  </a>
+                  <a
+                    href="https://wa.me/2348035717860"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-green-500 transition-colors"
+                  >
+                    <FaWhatsapp className="w-5 h-5 text-green-500" />
+                    <span className="text-xs font-semibold">WhatsApp</span>
+                  </a>
+                </div>
 
-              <Link
-                href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-[#FACC15] text-gray-900 w-full py-4 rounded-2xl font-bold shadow-md hover:bg-[#eab308] transition-all active:scale-[0.98]"
-              >
-                <FaMapMarkedAlt className="w-5 h-5" />
-                Visit Showroom
-              </Link>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center gap-2 bg-gray-900 text-white w-full py-4 rounded-2xl font-bold shadow-lg hover:bg-black transition-all active:scale-[0.98]"
+                >
+                  Request a Quote
+                </Link>
 
-              <div className="pt-4 text-center">
-                <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">
-                  Professional Industrial Solutions
-                </p>
+                <Link
+                  href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-[#FACC15] text-gray-900 w-full py-4 rounded-2xl font-bold shadow-md hover:bg-[#eab308] transition-all active:scale-[0.98]"
+                >
+                  <FaMapMarkedAlt className="w-5 h-5" />
+                  Visit Showroom
+                </Link>
+
+                <div className="pt-4 text-center">
+                  <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">
+                    Professional Industrial Solutions
+                  </p>
+                </div>
               </div>
             </div>
           </motion.nav>
+
         </>
       )}
     </AnimatePresence>

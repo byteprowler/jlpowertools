@@ -39,7 +39,7 @@ export default function TrustStats() {
             A Track Record Built on Trust
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Over two decades supplying industrial ladders and scaffolding to contractors across West Africa.
+            Over two decades of supplying industrial ladders and scaffolding to contractors across West Africa.
           </p>
         </AnimatedSection>
 
