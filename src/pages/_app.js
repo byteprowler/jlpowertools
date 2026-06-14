@@ -2,6 +2,8 @@ import "@/styles/globals.css";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
 import MainLayout from "@/components/Layout";
+import MicrosoftClarity from "@/components/analytics/MicrosoftClarity";
+import PostHogProvider from "@/components/analytics/PostHogProvider";
 
 const SEO_CONFIG = {
   titleTemplate: "%s | J & L Powertools LTD - Ladders & Scaffolding (Lagos)",
@@ -46,14 +48,17 @@ const SEO_CONFIG = {
 
 export default function App({ Component, pageProps }) {
   return (
-    <MainLayout>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://maps.googleapis.com" />
-        <meta property="og:locale:alternate" content="fr_FR" />
-      </Head>
-      <DefaultSeo {...SEO_CONFIG} />
-      <Component {...pageProps} />
-    </MainLayout>
+    <PostHogProvider>
+      <MainLayout>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="preconnect" href="https://maps.googleapis.com" />
+          <meta property="og:locale:alternate" content="fr_FR" />
+        </Head>
+        <DefaultSeo {...SEO_CONFIG} />
+        <MicrosoftClarity />
+        <Component {...pageProps} />
+      </MainLayout>
+    </PostHogProvider>
   );
 }
