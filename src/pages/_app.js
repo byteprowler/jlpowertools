@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
 import MainLayout from "@/components/Layout";
-import MicrosoftClarity from "@/components/analytics/MicrosoftClarity";
+import ClarityProvider from "@/components/analytics/MicrosoftClarity";
 import PostHogProvider from "@/components/analytics/PostHogProvider";
 
 const SEO_CONFIG = {
@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }) {
           <meta property="og:locale:alternate" content="fr_FR" />
         </Head>
         <DefaultSeo {...SEO_CONFIG} />
-        <MicrosoftClarity />
+        <ClarityProvider />
         <Component {...pageProps} />
       </MainLayout>
     </PostHogProvider>
