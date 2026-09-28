@@ -101,7 +101,7 @@ export default function InsightsPost({ post, related }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildArticleSchema(post)) }}
       />
 
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-16">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-12 pb-16">
 
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-gray-500 mb-6">

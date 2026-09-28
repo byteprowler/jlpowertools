@@ -1,305 +1,296 @@
-import React, { useState, useEffect } from 'react'
-import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
-import { FaMapMarkedAlt, FaWhatsapp, FaBlog } from 'react-icons/fa';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { Home, Info, Phone, Package } from 'lucide-react'
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
+import { BookOpen, Home, Info, MapPin, Menu, Package, Phone, X } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
-const VARIANTS = {
-  top: {
-    open: { rotate: ["0deg", "0deg", "45deg"], top: ["35%", "50%", "50%"] },
-    closed: { rotate: ["45deg", "0deg", "0deg"], top: ["50%", "50%", "35%"] },
-  },
-  middle: {
-    open: { rotate: ["0deg", "0deg", "-45deg"], opacity: 0 },
-    closed: { rotate: ["-45deg", "0deg", "0deg"], opacity: 1 },
-  },
-  bottom: {
-    open: { rotate: ["0deg", "0deg", "-45deg"], bottom: ["35%", "50%", "50%"], left: "50%" },
-    closed: { rotate: ["-45deg", "0deg", "0deg"], bottom: ["50%", "50%", "35%"], left: "calc(50% + 10px)" },
-  },
+const NAV_LINKS = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Products', href: '/products', icon: Package },
+  { name: 'Insights', href: '/insights', icon: BookOpen },
+  { name: 'About', href: '/about', icon: Info },
+  { name: 'Contact', href: '/contact', icon: Phone },
+];
+
+const isActivePath = (pathname, href) => {
+  if (href === '/') return pathname === '/';
+  return pathname === href || pathname.startsWith(`${href}/`);
 };
 
-const getSeasonalDecoration = () => {
-  const month = new Date().getMonth() + 1;
-  if (month === 12) return "/decorations/santa-hat.png";
-  if (month === 1) return "/decorations/fireworks.png";
-  if (month === 2) return "/decorations/hearts.png";
-  if (month === 4) return "/decorations/crescent.png";
-  if (month === 10) return "/decorations/green-flag.png";
-  return null;
-};
-
-const HamburgerButton = ({ isOpen, toggleSidebar, scrolled }) => {
-  const hamburgerColor = isOpen ? 'bg-gray-900' : (scrolled ? 'bg-gray-900' : 'bg-white');
+function Logo() {
   return (
-    <MotionConfig transition={{ duration: 0.4, ease: "easeInOut" }}>
-      <motion.button
-        initial={false}
-        animate={isOpen ? "open" : "closed"}
-        onClick={toggleSidebar}
-        aria-label={isOpen ? "Close menu" : "Open menu"}
-        aria-expanded={isOpen}
-        className="relative z-[110] h-12 w-12 rounded-full flex items-center justify-center transition-colors hover:bg-black/5"
-      >
-        <div className="relative h-6 w-8">
-          <motion.span variants={VARIANTS.top} className={`absolute h-1 w-8 ${hamburgerColor} rounded-full`} style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }} />
-          <motion.span variants={VARIANTS.middle} className={`absolute h-1 w-8 ${hamburgerColor} rounded-full`} style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }} />
-          <motion.span variants={VARIANTS.bottom} className={`absolute h-1 w-4 ${hamburgerColor} rounded-full`} style={{ x: "-50%", y: "50%", bottom: "35%", left: "calc(50% + 10px)" }} />
-        </div>
-      </motion.button>
-    </MotionConfig>
+    <Link href="/" aria-label="J & L Powertools home" className="inline-flex items-center">
+      <span className="relative block h-[50px] w-[70px]">
+        <Image
+          src="/jlp.webp"
+          alt="J & L Powertools LTD Logo"
+          fill
+          priority
+          sizes="70px"
+          className="object-contain"
+        />
+      </span>
+    </Link>
   );
-};
+}
 
-const SideBar = ({ isOpen, setIsOpen, navLinks }) => {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === 'Escape') setIsOpen(false);
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [setIsOpen]);
-
+function DesktopNav({ pathname }) {
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md"
-            onClick={() => setIsOpen(false)}
-          />
-          <motion.nav
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-white text-gray-900 z-[105] shadow-2xl flex flex-col"
-          >
-            {/* Header / Branding */}
-            <div className="p-6 border-b border-gray-100 flex items-center justify-between shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="relative w-10 h-10">
-                  <Image src="/jlp.webp" fill alt="JLP Logo" className="object-contain" />
-                </div>
-                <span className="font-bold text-lg tracking-tight">J&L Powertools</span>
-              </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-                aria-label="Close menu"
-              >
-                <motion.div whileTap={{ scale: 0.9 }}>
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </motion.div>
-              </button>
-            </div>
+    <nav aria-label="Primary navigation" className="hidden items-center gap-6 md:flex">
+      {NAV_LINKS.map((link) => {
+        const active = isActivePath(pathname, link.href);
 
-            {/* Scrollable body wrapper */}
-            <div className="flex-1 overflow-y-auto flex flex-col justify-between">
-              {/* Nav Links */}
-              <div className="py-6 px-4 space-y-1">
-                {navLinks.map((link) => {
-                  const isActive = pathname === link.href;
-                  return (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`flex items-center gap-4 px-4 py-4 rounded-xl transition-all ${
-                        isActive
-                          ? "bg-[#FACC15] text-gray-900 font-bold shadow-sm"
-                          : "text-gray-600 hover:bg-gray-50 active:scale-[0.98]"
-                      }`}
-                    >
-                      <span className={isActive ? "text-gray-900" : "text-gray-400"}>
-                        {link.icon}
-                      </span>
-                      <span className="text-lg">{link.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-
-              {/* Footer / CTAs */}
-              <div className="p-6 bg-gray-50 space-y-3 mt-auto shrink-0">
-                <div className="grid grid-cols-2 gap-3 mb-2">
-                  <a
-                    href="tel:+2348035717860"
-                    className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-[#FACC15] transition-colors"
-                  >
-                    <Phone className="w-5 h-5 text-[#FACC15]" />
-                    <span className="text-xs font-semibold">Call Now</span>
-                  </a>
-                  <a
-                    href="https://wa.me/2348035717860"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-2 bg-white border border-gray-200 p-3 rounded-2xl hover:border-green-500 transition-colors"
-                  >
-                    <FaWhatsapp className="w-5 h-5 text-green-500" />
-                    <span className="text-xs font-semibold">WhatsApp</span>
-                  </a>
-                </div>
-
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 bg-gray-900 text-white w-full py-4 rounded-2xl font-bold shadow-lg hover:bg-black transition-all active:scale-[0.98]"
-                >
-                  Request a Quote
-                </Link>
-
-                <Link
-                  href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-[#FACC15] text-gray-900 w-full py-4 rounded-2xl font-bold shadow-md hover:bg-[#eab308] transition-all active:scale-[0.98]"
-                >
-                  <FaMapMarkedAlt className="w-5 h-5" />
-                  Visit Showroom
-                </Link>
-
-                <div className="pt-4 text-center">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">
-                    Professional Industrial Solutions
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.nav>
-
-        </>
-      )}
-    </AnimatePresence>
-  );
-};
-
-export default function Navbar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const pathname = usePathname();
-
-  const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
-
-  useEffect(() => { setMounted(true) }, []);
-
-  useEffect(() => {
-    if (!isSidebarOpen) return;
-
-    const originalBodyOverflow = document.body.style.overflow;
-    const originalHtmlOverflow = document.documentElement.style.overflow;
-
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = originalBodyOverflow;
-      document.documentElement.style.overflow = originalHtmlOverflow;
-    };
-  }, [isSidebarOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.getElementById('hero');
-      if (heroSection) {
-        setScrolled(window.scrollY > heroSection.offsetHeight - 80);
-      } else {
-        setScrolled(window.scrollY > 50);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: "Home", href: "/", icon: <Home className="w-5 h-5" /> },
-    { name: "Products", href: "/products", icon: <Package className="w-5 h-5" /> },
-    { name: "Insights", href: "/insights", icon: <FaBlog className="w-5 h-5" /> },
-    { name: "About", href: "/about", icon: <Info className="w-5 h-5" /> },
-    { name: "Contact", href: "/contact", icon: <Phone className="w-5 h-5" /> },
-  ];
-
-  if (!mounted) return null;
-
-  return (
-    <nav
-      className={`px-6 md:px-8 py-4 flex justify-between items-center fixed top-0 left-0 w-full transition-all duration-500 ${
-        isSidebarOpen ? "z-[200]" : "z-50"
-      } ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm text-gray-800"
-          : "bg-transparent text-white"
-      }`}
-    >
-      {/* Logo */}
-      <div className="relative w-[70px] h-[50px]">
-        <Link href="/" aria-label="J & L Powertools Home">
-          <Image
-            src="/jlp.webp"
-            width={70}
-            height={50}
-            alt="J & L Powertools LTD Logo"
-            className="rounded-sm object-contain"
-            priority
-          />
-        </Link>
-        {getSeasonalDecoration() && (
-          <Image
-            src={getSeasonalDecoration()}
-            width={40}
-            height={40}
-            alt="Seasonal decoration"
-            className="absolute -top-2 -right-2"
-          />
-        )}
-      </div>
-
-      {/* Desktop nav */}
-      <div className="hidden md:flex items-center space-x-6">
-        {navLinks.map((link) => (
+        return (
           <Link
-            key={link.name}
+            key={link.href}
             href={link.href}
-            className={`font-medium transition-colors relative group ${
-              pathname === link.href
-                ? 'text-[#FACC15]'
-                : scrolled
-                ? 'text-gray-700 hover:text-[#FACC15]'
-                : 'text-white/90 hover:text-white'
+            aria-current={active ? 'page' : undefined}
+            className={`group relative font-medium transition-colors ${
+              active ? 'text-[#FACC15]' : 'text-gray-700 hover:text-[#FACC15]'
             }`}
           >
             {link.name}
-            <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#FACC15] transition-all duration-300 ${
-              pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
-            }`} />
+            <span
+              className={`absolute -bottom-1 left-0 h-0.5 bg-[#FACC15] transition-all duration-300 ${
+                active ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}
+            />
           </Link>
-        ))}
+        );
+      })}
 
-        {/* Get a Quote CTA */}
-        <Link
-          href="/contact"
-          className="ml-2 inline-flex items-center gap-1.5 bg-[#FACC15] hover:bg-[#eab308] text-gray-900 font-semibold px-5 py-2 rounded-full transition-colors shadow-sm text-sm"
-        >
-          Get a Quote
-        </Link>
-      </div>
-
-      <div className="md:hidden">
-        <HamburgerButton toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} scrolled={scrolled} />
-      </div>
-
-      <SideBar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar} navLinks={navLinks} />
+      <Link
+        href="/contact"
+        className="ml-2 inline-flex items-center gap-1.5 rounded-full bg-[#FACC15] px-5 py-2 text-sm font-semibold text-gray-900 shadow-sm transition-colors hover:bg-[#eab308]"
+      >
+        Get a Quote
+      </Link>
     </nav>
+  );
+}
+
+function MobileDrawer({ isOpen, onClose, pathname }) {
+  const panelRef = useRef(null);
+  const closeButtonRef = useRef(null);
+  const [shouldRender, setShouldRender] = useState(isOpen);
+
+  useEffect(() => {
+    if (isOpen) {
+      setShouldRender(true);
+      return undefined;
+    }
+
+    const closeTimer = window.setTimeout(() => setShouldRender(false), 300);
+
+    return () => window.clearTimeout(closeTimer);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousOverscroll = document.body.style.overscrollBehavior;
+
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overscrollBehavior = 'contain';
+
+    const focusTimer = window.setTimeout(() => closeButtonRef.current?.focus(), 0);
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        onClose();
+        return;
+      }
+
+      if (event.key !== 'Tab' || !panelRef.current) return;
+
+      const focusable = panelRef.current.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (!first || !last) return;
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.clearTimeout(focusTimer);
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overscrollBehavior = previousOverscroll;
+    };
+  }, [isOpen, onClose]);
+
+  if (!shouldRender) return null;
+
+  return (
+    <div
+      className={`fixed inset-0 z-[70] h-dvh w-[100dvw] overflow-hidden md:hidden ${
+        isOpen ? 'pointer-events-auto' : 'pointer-events-none'
+      }`}
+      aria-hidden={!isOpen}
+      inert={isOpen ? undefined : true}
+    >
+      <button
+        type="button"
+        aria-label="Close menu"
+        onClick={onClose}
+        className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-200 ${
+          isOpen ? 'opacity-100' : 'opacity-0'
+        }`}
+        tabIndex={-1}
+      />
+
+      <aside
+        ref={panelRef}
+        id="mobile-navigation"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+        className={`absolute right-0 top-0 flex h-dvh w-[86%] max-w-sm flex-col bg-white text-gray-900 shadow-2xl transition-transform duration-300 ease-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex shrink-0 items-center justify-between border-b border-gray-100 px-6 py-4">
+          <div className="flex items-center gap-3">
+            <Logo />
+            <span className="text-lg font-bold tracking-tight">J&L Powertools</span>
+          </div>
+          <button
+            ref={closeButtonRef}
+            type="button"
+            onClick={onClose}
+            aria-label="Close menu"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-gray-700 transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FACC15]"
+          >
+            <X className="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+
+        <nav aria-label="Mobile primary navigation" className="flex-1 overflow-y-auto px-4 py-6">
+          <div className="space-y-1">
+            {NAV_LINKS.map((link) => {
+              const Icon = link.icon;
+              const active = isActivePath(pathname, link.href);
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={onClose}
+                  aria-current={active ? 'page' : undefined}
+                  className={`flex items-center gap-4 rounded-xl px-4 py-4 text-lg transition-colors ${
+                    active
+                      ? 'bg-[#FACC15] font-bold text-gray-900'
+                      : 'text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
+                  {link.name}
+                </Link>
+              );
+            })}
+          </div>
+        </nav>
+
+        <div className="shrink-0 space-y-3 border-t border-gray-100 bg-gray-50 p-6">
+          <div className="grid grid-cols-2 gap-3">
+            <a
+              href="tel:+2348035717860"
+              onClick={onClose}
+              className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white p-3 text-sm font-semibold transition-colors hover:border-[#FACC15]"
+            >
+              <Phone className="h-5 w-5 text-[#FACC15]" aria-hidden="true" />
+              Call Now
+            </a>
+            <a
+              href="https://wa.me/2348035717860"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onClose}
+              className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white p-3 text-sm font-semibold transition-colors hover:border-green-500"
+            >
+              <FaWhatsapp className="h-5 w-5 text-green-500" aria-hidden="true" />
+              WhatsApp
+            </a>
+          </div>
+
+          <Link
+            href="/contact"
+            onClick={onClose}
+            className="flex w-full items-center justify-center rounded-2xl bg-gray-900 py-4 font-bold text-white shadow-lg transition-colors hover:bg-black"
+          >
+            Request a Quote
+          </Link>
+
+          <a
+            href="https://maps.app.goo.gl/mKRjzvTuGq9cpZHU9"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#FACC15] py-4 font-bold text-gray-900 shadow-md transition-colors hover:bg-[#eab308]"
+          >
+            <MapPin className="h-5 w-5" aria-hidden="true" />
+            Visit Showroom
+          </a>
+        </div>
+      </aside>
+    </div>
+  );
+}
+
+export default function Navbar() {
+  const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const toggleMenu = useCallback(() => setMenuOpen((open) => !open), []);
+
+  useEffect(() => {
+    closeMenu();
+  }, [router.asPath, closeMenu]);
+
+  return (
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-gray-100 bg-white/95 text-gray-900 shadow-sm backdrop-blur-md">
+        <div className="mx-auto flex h-[82px] w-full max-w-7xl items-center justify-between px-6 md:px-8">
+          <Logo />
+          <DesktopNav pathname={router.pathname} />
+
+          <button
+            type="button"
+            onClick={toggleMenu}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-full text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FACC15] md:hidden"
+          >
+            {menuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-7 w-7" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+      </header>
+
+      <div className="h-[82px] shrink-0" aria-hidden="true" />
+
+      <MobileDrawer isOpen={menuOpen} onClose={closeMenu} pathname={router.pathname} />
+    </>
   );
 }

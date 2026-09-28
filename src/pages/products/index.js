@@ -83,7 +83,7 @@ export default function ProductsPage() {
       <main className="pb-0">
 
         {/* Page Hero */}
-        <section className="bg-gray-900 pt-28 pb-16 px-6 text-white text-center">
+        <section className="bg-gray-900 pt-16 pb-16 px-6 text-white text-center">
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 max-w-3xl mx-auto">
               Industrial Ladders & Scaffolding in Lagos, Nigeria

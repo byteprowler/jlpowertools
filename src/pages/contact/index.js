@@ -54,7 +54,7 @@ export default function ContactPage() {
       <main>
 
         {/* Hero */}
-        <section className="bg-gray-900 pt-28 pb-16 px-6 text-white text-center">
+        <section className="bg-gray-900 pt-16 pb-16 px-6 text-white text-center">
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
               Contact J & L Powertools
